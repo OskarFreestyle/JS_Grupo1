@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 3fc4c9194be3a754887d4a2df7202e7e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: CasablancaAntique
+  fontNames:
+  - CasablancaAntique
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 1138ee15181d1de40ab1ba4b666e72ff, type: 3}
+  - {fileID: 12800000, guid: 8bfe397b6d0738f4a97f22970bc88adb, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

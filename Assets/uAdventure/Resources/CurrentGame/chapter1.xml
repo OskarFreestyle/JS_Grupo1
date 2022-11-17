@@ -1,0 +1,792 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<eAdventure version="3">
+  <player>
+    <resources name="">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </player>
+  <character id="Balta" behaviour="normal">
+    <resources name="">
+      <asset type="standup" uri="assets/animation/Balta" />
+      <asset type="standright" uri="assets/animation/Balta" />
+      <asset type="walkdown" uri="assets/animation/Balta" />
+      <asset type="speakup" uri="assets/animation/Balta" />
+      <asset type="walkright" uri="assets/animation/Balta" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/animation/Balta" />
+      <asset type="speakdown" uri="assets/animation/Balta" />
+      <asset type="speakright" uri="assets/animation/Balta" />
+      <asset type="standdown" uri="assets/animation/Balta" />
+      <asset type="useright" uri="assets/animation/Balta" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FF0000" />
+      <bordercolor color="#FFFF00" />
+    </textcolor>
+    <description>
+      <name>Balta</name>
+      <brief>Baltasar Fernandez</brief>
+      <detailed>This is Baltasar Fernandez</detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="BuildingEvacuation" guid="a5fe91b9-872c-4014-8020-f7f10ddb973a" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <scene id="PlayerOffice" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="">
+      <condition>
+        <inactive flag="PhoneAnswered" />
+      </condition>
+      <asset type="bgmusic" uri="assets/audio/telephone.mp3" />
+      <asset type="standup" uri="assets/special/EmptyImage" />
+      <asset type="background" uri="assets/background/PlayerOffice.jpg" />
+    </resources>
+    <resources name="">
+      <condition>
+        <active flag="PhoneAnswered" />
+      </condition>
+      <asset type="background" uri="assets/background/PlayerOffice.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="300" />
+    <exits>
+      <exit rectangular="yes" x="509" y="55" width="157" height="350" hasInfluenceArea="no" idTarget="DepartmentArea" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="Leave the office" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="PhoneAnswered" />
+        </condition>
+      </exit>
+      <exit rectangular="yes" x="509" y="55" width="157" height="350" hasInfluenceArea="no" idTarget="PlayerOffice" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="Leave the office" cursor-path="" sound-path="" />
+        <condition>
+          <inactive flag="PhoneAnswered" />
+        </condition>
+        <effect>
+          <speak-player guid="149114c8-fc77-4e5d-a18b-ed228e4c0f54">The phone is ringing!</speak-player>
+          <condition />
+        </effect>
+      </exit>
+    </exits>
+    <objects>
+      <object-ref idTarget="Phone" x="400" y="600" scale="1" glow="yes" layer="0" hasInfluenceArea="no" />
+    </objects>
+  </scene>
+  <scene id="DepartmentArea" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="">
+      <asset type="standup" uri="assets/special/EmptyImage" />
+      <asset type="background" uri="assets/background/DepartmentArea.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="300" />
+    <exits>
+      <exit rectangular="yes" x="548" y="76" width="174" height="461" hasInfluenceArea="no" idTarget="HallStart" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="Exit the hallway" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+  </scene>
+  <scene id="HallStart" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="">
+      <asset type="standup" uri="assets/special/EmptyImage" />
+      <asset type="background" uri="assets/background/HallStart.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="300" />
+    <exits>
+      <exit rectangular="yes" x="111" y="175" width="121" height="362" hasInfluenceArea="no" idTarget="OfficeOnFire" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="Check office" cursor-path="" sound-path="" />
+        <effect>
+          <activate flag="CheckedOfficeOnFire" guid="a6e176de-4140-4737-97d6-3e78d8559844" />
+          <condition />
+        </effect>
+        <post-effect>
+          <speak-player guid="64f43a7c-07af-4426-8d63-96fcb3eba6f1">Oh, my god!</speak-player>
+          <condition />
+          <speak-player guid="2db62193-24e9-48d1-b33a-e4b95b8ab2c1">I can not control this fire on my own ...</speak-player>
+          <condition />
+          <speak-player guid="89c7432d-3ebe-4720-a01f-2bb7f7c7f434">We must raise the alarm and start evacuating the building immediately</speak-player>
+          <condition />
+        </post-effect>
+      </exit>
+      <exit rectangular="yes" x="310" y="156" width="266" height="223" hasInfluenceArea="no" idTarget="HallMiddle" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="Move ahead" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="CheckedOfficeOnFire" />
+        </condition>
+      </exit>
+      <exit rectangular="yes" x="310" y="156" width="266" height="223" hasInfluenceArea="no" idTarget="HallStart" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="Move ahead" cursor-path="" sound-path="" />
+        <condition>
+          <inactive flag="CheckedOfficeOnFire" />
+        </condition>
+        <effect>
+          <speak-player guid="976b5c6c-ccc5-4f98-abc6-6b77cf3a3b73">I must check office 411 first!</speak-player>
+          <condition />
+          <activate flag="TriesToWalkByOfficeOnFire" guid="e76e63f2-15ef-4350-aebc-b94b1dbba276" />
+          <condition />
+        </effect>
+      </exit>
+    </exits>
+    <active-areas>
+      <active-area id="ExtinguisherArea" rectangular="yes" x="22" y="149" width="72" height="184" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>Extinguisher</name>
+          <brief>It is a fire extinguisher</brief>
+          <detailed>It is a fire extinguisher</detailed>
+        </description>
+        <actions>
+          <use needsGoTo="yes" keepDistance="10" not-effects="no">
+            <condition>
+              <inactive flag="CheckedOfficeOnFire" />
+            </condition>
+            <effect>
+              <speak-player guid="a3273e81-7ef1-44dd-96d3-31d2ccec38a6">I should check the fire first</speak-player>
+              <condition />
+            </effect>
+          </use>
+          <use needsGoTo="yes" keepDistance="10" not-effects="no">
+            <condition>
+              <active flag="CheckedOfficeOnFire" />
+            </condition>
+            <effect>
+              <speak-player guid="1c70e2fe-0076-438d-b970-958443ed64d8">I am not going to be able to extinguish the fire with this, it's better to focus on the alarm ...</speak-player>
+              <condition />
+            </effect>
+          </use>
+        </actions>
+      </active-area>
+    </active-areas>
+  </scene>
+  <scene id="OfficeOnFire" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="">
+      <asset type="bgmusic" uri="assets/audio/fire_small.mp3" />
+      <asset type="standup" uri="assets/special/EmptyImage" />
+      <asset type="background" uri="assets/background/OfficeOnFire.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="300" />
+    <exits>
+      <exit rectangular="yes" x="0" y="463" width="799" height="134" hasInfluenceArea="no" idTarget="HallStart" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="Leave the office" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+  </scene>
+  <scene id="HallMiddle" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="">
+      <asset type="standup" uri="assets/special/EmptyImage" />
+      <asset type="background" uri="assets/background/HallMiddle.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="300" />
+    <exits>
+      <exit rectangular="yes" x="168" y="154" width="74" height="355" hasInfluenceArea="no" idTarget="TeacherOffices" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="Check teachers offices" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="AlarmActivated" />
+        </condition>
+      </exit>
+      <exit rectangular="yes" x="168" y="154" width="74" height="355" hasInfluenceArea="no" idTarget="HallMiddle" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="Check teachers offices" cursor-path="" sound-path="" />
+        <condition>
+          <inactive flag="AlarmActivated" />
+        </condition>
+        <effect>
+          <speak-player guid="193ea03e-1b61-4ac9-96c5-18ceafee1ed3">First, I have to activate the fire alarm</speak-player>
+          <condition />
+          <activate flag="TriesToMoveOnWithoutActivatingAlarm" guid="14394513-f456-4c1e-91c3-eb102037c742" />
+          <condition />
+        </effect>
+      </exit>
+      <exit rectangular="yes" x="307" y="202" width="210" height="205" hasInfluenceArea="no" idTarget="HallEnd" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="Move ahead" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="CheckedOffice412" />
+          <active flag="CheckedOffice413" />
+          <active flag="CheckedOffice414" />
+          <active flag="CheckedOffice415" />
+        </condition>
+      </exit>
+      <exit rectangular="yes" x="307" y="202" width="210" height="205" hasInfluenceArea="no" idTarget="HallMiddle" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="Move ahead" cursor-path="" sound-path="" />
+        <condition>
+          <either>
+            <inactive flag="CheckedOffice412" />
+            <inactive flag="CheckedOffice413" />
+            <inactive flag="CheckedOffice414" />
+            <inactive flag="CheckedOffice415" />
+          </either>
+        </condition>
+        <effect>
+          <speak-player guid="aff1c87f-43fb-4c75-89d2-57ce9275979f">I should alert the teachers of the wing that falls to me before leaving the building</speak-player>
+          <condition />
+        </effect>
+      </exit>
+    </exits>
+    <active-areas>
+      <active-area id="AlarmArea" rectangular="yes" x="49" y="233" width="60" height="57" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>Fire Alarm</name>
+          <brief>Fire Alarm</brief>
+          <detailed>I activate it to start the building evacuation notice</detailed>
+        </description>
+        <actions>
+          <use needsGoTo="yes" keepDistance="10" not-effects="no">
+            <effect>
+              <activate flag="AlarmActivated" guid="257b6bf1-01c4-40b6-a195-e2153be59423" />
+              <condition />
+              <speak-player guid="b64da1c8-e481-4566-a8d3-8bcdb3face7f">OK, I activated the alarm</speak-player>
+              <condition />
+            </effect>
+          </use>
+        </actions>
+      </active-area>
+    </active-areas>
+  </scene>
+  <scene id="TeacherOffices" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="">
+      <asset type="standup" uri="assets/special/EmptyImage" />
+      <asset type="background" uri="assets/background/TeacherOffices.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="300" />
+    <exits>
+      <exit rectangular="yes" x="2" y="492" width="797" height="107" hasInfluenceArea="no" idTarget="HallMiddle" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="Go back" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+    <active-areas>
+      <active-area id="Office412Area" rectangular="yes" x="67" y="107" width="109" height="494" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>Office 412</name>
+          <brief>It's the office 412</brief>
+          <detailed>It's the office 412, one of the offices I must check in case of evacuation</detailed>
+        </description>
+        <actions>
+          <use needsGoTo="yes" keepDistance="10" not-effects="no">
+            <effect>
+              <activate flag="CheckedOffice412" guid="a191a066-7aa4-4cdc-bdc4-8290eb0f775e" />
+              <condition />
+              <speak-player guid="d6f7804f-c4d7-4297-9931-be9e160234dd">There's no one in here</speak-player>
+              <condition />
+            </effect>
+          </use>
+        </actions>
+      </active-area>
+      <active-area id="Office413Area" rectangular="yes" x="234" y="186" width="46" height="390" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>Office 413</name>
+          <brief>It's office 413</brief>
+          <detailed>It's the office 413, one of the offices I must check in case of evacuation</detailed>
+        </description>
+        <actions>
+          <use needsGoTo="yes" keepDistance="10" not-effects="no">
+            <effect>
+              <activate flag="CheckedOffice413" guid="c509d46f-1297-4c56-9d57-ea293d7c23a7" />
+              <condition />
+              <speak-player guid="1dd9d34c-f12e-43e7-bbb0-290b66e13ace">There's no one in here</speak-player>
+              <condition />
+            </effect>
+          </use>
+        </actions>
+      </active-area>
+      <active-area id="Office414Area" rectangular="yes" x="514" y="206" width="43" height="357" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>Office 414</name>
+          <brief>It's office 414</brief>
+          <detailed>It's the office 414, one of the offices I must check in case of evacuation</detailed>
+        </description>
+        <actions>
+          <use needsGoTo="yes" keepDistance="10" not-effects="no">
+            <effect>
+              <trigger-scene idTarget="OccupiedOffice" x="729" y="462" transitionTime="0" transitionType="0" guid="aaae69bf-c8d3-4f3d-8768-0ba125f2eb0d" />
+              <condition />
+              <activate flag="StartConversation" guid="a6b5bde3-b136-40a3-b170-f930e8f810ec" />
+              <condition />
+              <trigger-conversation idTarget="BuildingEvacuation" guid="159b5aa9-ca2e-4399-8c7d-c62fb816b80a" />
+              <condition>
+                <inactive flag="FinishConversation" />
+              </condition>
+            </effect>
+          </use>
+        </actions>
+      </active-area>
+      <active-area id="Office415Area" rectangular="yes" x="623" y="157" width="120" height="436" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>Office 415</name>
+          <brief>It's office 415</brief>
+          <detailed>It's the office 415, one of the offices I must check in case of evacuation</detailed>
+        </description>
+        <actions>
+          <use needsGoTo="yes" keepDistance="10" not-effects="no">
+            <effect>
+              <activate flag="CheckedOffice415" guid="21ea9242-ecb6-4d06-8db7-90765f228e7c" />
+              <condition />
+              <speak-player guid="0526c3f4-6a73-46d1-8e28-04e09e981b02">There's no one in here</speak-player>
+              <condition />
+            </effect>
+          </use>
+        </actions>
+      </active-area>
+    </active-areas>
+  </scene>
+  <scene id="OccupiedOffice" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="">
+      <asset type="standup" uri="assets/special/EmptyImage" />
+      <asset type="background" uri="assets/background/OccupiedOffice.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="300" />
+    <exits>
+      <exit rectangular="yes" x="1" y="489" width="797" height="69" hasInfluenceArea="no" idTarget="TeacherOffices" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="Leave the office" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+    <characters>
+      <character-ref idTarget="Balta" x="400" y="600" scale="1" orientation="2" glow="yes" layer="0" hasInfluenceArea="no">
+        <condition>
+          <inactive flag="FinishConversation" />
+        </condition>
+      </character-ref>
+    </characters>
+  </scene>
+  <scene id="HallEnd" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="">
+      <asset type="standup" uri="assets/special/EmptyImage" />
+      <asset type="background" uri="assets/background/HallEnd.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="300" />
+    <exits>
+      <exit rectangular="yes" x="516" y="200" width="125" height="309" hasInfluenceArea="no" idTarget="StairsAndElevator" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="Move ahead" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+  </scene>
+  <scene id="StairsAndElevator" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="">
+      <asset type="standup" uri="assets/special/EmptyImage" />
+      <asset type="background" uri="assets/background/Elevators.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="300" />
+    <exits>
+      <exit rectangular="yes" x="237" y="210" width="204" height="227" hasInfluenceArea="no" idTarget="StairsEnding" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="Leave the building" cursor-path="" sound-path="" />
+        <effect>
+          <activate flag="GameOver" guid="ca10ca75-9cdf-4ece-aa8f-f8f6f9ac6b32" />
+          <condition />
+        </effect>
+      </exit>
+    </exits>
+    <active-areas>
+      <active-area id="ElevatorArea" rectangular="yes" x="560" y="49" width="150" height="466" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>Elevator</name>
+          <brief>It is the elevator to exit</brief>
+          <detailed>It's the elevator, it must not be used in fire case</detailed>
+        </description>
+        <actions>
+          <use needsGoTo="yes" keepDistance="10" not-effects="no">
+            <effect>
+              <activate flag="UsesTheElevator" guid="cdca74f5-1f04-47af-8999-4d0c83d15f58" />
+              <condition />
+              <trigger-cutscene idTarget="ElevatorEnding" guid="911d4bb0-82e2-4593-9914-3971b0488758" />
+              <condition />
+            </effect>
+          </use>
+        </actions>
+      </active-area>
+    </active-areas>
+  </scene>
+  <slidescene id="ElevatorEnding" start="no" idTarget="FireVideo" destinyX="-1" destinyY="-1" transitionTime="0" transitionType="0" next="new-scene" class="" type="">
+    <documentation>
+    </documentation>
+    <resources name="">
+      <asset type="slides" uri="assets/animation/Elevator" />
+    </resources>
+    <name>Final Ascensor</name>
+  </slidescene>
+  <slidescene id="Introduction" start="yes" idTarget="PlayerOffice" destinyX="-1" destinyY="-1" transitionTime="0" transitionType="0" next="new-scene" class="accesible" type="screen">
+    <documentation>
+    </documentation>
+    <effect>
+      <generate-object idTarget="ProtocolBook" guid="e07f6d81-d092-4558-a3ad-0e799add02e9" />
+      <condition />
+    </effect>
+    <resources name="">
+      <asset type="slides" uri="assets/animation/Intro" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
+  <slidescene id="PhoneConversation" start="no" idTarget="PlayerOffice" destinyX="-1" destinyY="-1" transitionTime="0" transitionType="0" next="new-scene" class="" type="">
+    <documentation>
+    </documentation>
+    <resources name="">
+      <asset type="slides" uri="assets/animation/Phone" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
+  <slidescene id="StairsEnding" start="no" next="end-chapter" class="" type="">
+    <documentation>
+    </documentation>
+    <resources name="">
+      <asset type="slides" uri="assets/animation/End" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
+  <slidescene id="MaximumTime" start="no" idTarget="FireVideo" destinyX="-1" destinyY="-1" transitionTime="0" transitionType="0" next="new-scene" class="" type="">
+    <documentation>
+    </documentation>
+    <resources name="">
+      <asset type="slides" uri="assets/animation/LimitTime" />
+    </resources>
+    <name>Tiempo Maximo</name>
+  </slidescene>
+  <slidescene id="PanicEnding" start="no" idTarget="FireVideo" destinyX="-1" destinyY="-1" transitionTime="0" transitionType="0" next="new-scene" class="" type="">
+    <documentation>
+    </documentation>
+    <resources name="">
+      <asset type="slides" uri="assets/animation/PanicEnd" />
+    </resources>
+    <name>Final Panico</name>
+  </slidescene>
+  <videoscene canSkip="yes" id="FireVideo" start="no" next="end-chapter" class="" type="">
+    <documentation>
+    </documentation>
+    <resources name="">
+      <asset type="slides" uri="assets/special/EmptyAnimation" />
+      <asset type="video" uri="assets/video/flame.mpg" />
+    </resources>
+    <name>
+    </name>
+  </videoscene>
+  <book id="EvacuationProtocol" xNextPage="707" yNextPage="507" xPreviousPage="20" yPreviousPage="507">
+    <resources name="">
+      <asset type="background" uri="assets/background/book.jpg" />
+    </resources>
+    <text>
+      <title>Evacuation Protocol Computer Science Building</title>This is the protocol to be followed by staff after receiving an alarm of fire.<bullet>Check if the delivered fire notice is real.</bullet><bullet>If possible, put out the fire with extinguishers.</bullet><bullet>Otherwise activate the nearest fire alarm.</bullet><bullet>Warn personnel located in the control area of the emergency evacuation.</bullet><bullet>Leave the building using the stairs (never the elevator).</bullet></text>
+  </book>
+  <object id="Phone" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="">
+      <condition>
+        <inactive flag="PhoneAnswered" />
+      </condition>
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="image" uri="assets/image/PhoneRinging.png" />
+    </resources>
+    <resources name="">
+      <condition>
+        <active flag="PhoneAnswered" />
+      </condition>
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+      <asset type="image" uri="assets/image/Phone.png" />
+    </resources>
+    <description>
+      <name>Phone</name>
+      <brief>Phone</brief>
+      <detailed>That's my phone</detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="10" not-effects="no">
+        <effect>
+          <activate flag="PhoneAnswered" guid="194f660e-53bb-4419-afba-cd60a0313131" />
+          <condition />
+          <trigger-cutscene idTarget="PhoneConversation" guid="856ed04d-ceda-47b4-ada1-b420997aac47" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="ProtocolBook" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="">
+      <asset type="icon" uri="assets/icon/BookIcon.png" />
+      <asset type="image" uri="assets/image/BookIcon.png" />
+    </resources>
+    <description>
+      <name>Evacuation protocol</name>
+      <brief>It's the book with the building evacuation protocol</brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="yes" keepDistance="10" not-effects="no">
+        <effect>
+          <trigger-book idTarget="EvacuationProtocol" guid="420be63f-19f8-432c-89dc-fea47869180c" />
+          <condition />
+        </effect>
+      </examine>
+      <use needsGoTo="yes" keepDistance="10" not-effects="no">
+        <effect>
+          <trigger-book idTarget="EvacuationProtocol" guid="f51f9b02-2036-45ac-8a77-36bf4553d867" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <graph-conversation id="BuildingEvacuation">
+    <dialogue-node nodeindex="0">
+      <speak-char idTarget="Balta">
+        <resources name="No name" />
+        <text>Hey Pablo, what's that noise?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>There's a fire in the buliding, we must evacuate all staff immediately</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Balta">
+        <resources name="No name" />
+        <text>And where is the fire?</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" x="-1" y="-1">
+      <speak-player>
+        <text>That doesn't matter at all!</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>In office 411</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>In office 411, it's a huge fire. Every man for himself!</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2">
+      <speak-char idTarget="Balta">
+        <resources name="No name" />
+        <text>You're not helping me, I can't know where to go</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3">
+      <speak-char idTarget="Balta">
+        <resources name="No name" />
+        <text>Wow, it's everyone OK?</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="5" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4">
+      <speak-char idTarget="Balta">
+        <resources name="No name" />
+        <text>Help! Run!</text>
+      </speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="PanicSituationFlag" guid="ef28d839-acd5-4859-a28c-bbb9abfd4039" />
+          <condition />
+          <activate flag="GameOver" guid="4f7e7704-75d4-48c6-9374-fc4171c96ac5" />
+          <condition />
+          <trigger-cutscene idTarget="PanicEnding" guid="7cdd548e-219b-4b33-9f89-4348aa7d0cc5" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <option-node nodeindex="5" x="-1" y="-1">
+      <speak-player>
+        <text>The office was empty. I guess everyone fled when the fire started.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="6" />
+      <speak-player>
+        <text>I think we lost all the helpers, every man for himself!</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="7" />
+    </option-node>
+    <dialogue-node nodeindex="6">
+      <speak-char idTarget="Balta">
+        <resources name="No name" />
+        <text>Ok, fine, let me finish this backups and I'll be downstairs in a minute...</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="8" />
+    </dialogue-node>
+    <dialogue-node nodeindex="7">
+      <end-conversation>
+        <effect>
+          <activate flag="GameOver" guid="8b395728-9bcb-4bff-82fc-727906d9895c" />
+          <condition />
+          <activate flag="PanicSituationFlag" guid="4ac790fd-0649-4225-b6d7-fb7e865d2791" />
+          <condition />
+          <trigger-cutscene idTarget="PanicEnding" guid="fde8ea99-c841-45c3-b885-c733ccfc2f06" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <option-node nodeindex="8" x="-1" y="-1">
+      <speak-player>
+        <text>No way! It's a serious fire, we must keep calm but evacuate fast.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="9" />
+      <speak-player>
+        <text>Don't be silly, we have to evacuate the building NOW!</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="10" />
+    </option-node>
+    <dialogue-node nodeindex="9">
+      <child nodeindex="11" />
+    </dialogue-node>
+    <dialogue-node nodeindex="10">
+      <child nodeindex="11" />
+    </dialogue-node>
+    <dialogue-node nodeindex="11">
+      <speak-char idTarget="Balta">
+        <resources name="No name" />
+        <text>Ok, fine, take it easy, I didn't think  it was so urgent...</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Well, it is, we have to move fast, but calmly.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Balta">
+        <resources name="No name" />
+        <text>OK, let me get my things and we go</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="12" />
+    </dialogue-node>
+    <option-node nodeindex="12" x="-1" y="-1">
+      <speak-player>
+        <text>Ok, but hurry up</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="13" />
+      <speak-player>
+        <text>I said no, you can't check anything. We leave now.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="14" />
+    </option-node>
+    <dialogue-node nodeindex="13">
+      <end-conversation>
+        <effect>
+          <activate flag="DejaQueBaltaSeEntretenga" guid="9220be4a-f8ae-4d56-8bce-df58425b4078" />
+          <condition />
+          <activate flag="CheckedOffice414" guid="fcd2abf1-3f76-47ca-b508-b707a8a21f7b" />
+          <condition />
+          <activate flag="FinishConversation" guid="489558da-e889-4fd2-8ea5-02b4e1cc98dd" />
+          <condition />
+          <trigger-scene idTarget="TeacherOffices" x="405" y="504" transitionTime="0" transitionType="0" guid="7e17f34b-6dff-495e-b016-f8433746271f" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="14">
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="TeacherOffices" x="403" y="502" transitionTime="0" transitionType="0" guid="cca11a4f-ca66-43d5-8120-43980ab609f3" />
+          <condition />
+          <activate flag="CheckedOffice414" guid="e3dea4f7-a5a5-4984-91d6-2c7a3e4ede1d" />
+          <condition />
+          <activate flag="FinishConversation" guid="e40e2c1f-7fd5-421b-a6e3-0e6756cae2fb" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <timer time="240" usesEndCondition="yes" multipleStarts="yes" runsInLoop="yes" showTime="no" displayName="timer" countDown="yes" showWhenStopped="no">
+    <init-condition>
+      <active flag="PhoneAnswered" />
+    </init-condition>
+    <end-condition>
+      <active flag="GameOver" />
+    </end-condition>
+    <effect>
+      <activate flag="TimeLimitExpired" guid="2ae99798-86ae-4053-8310-43236785411a" />
+      <condition />
+      <activate flag="GameOver" guid="6e87dbbc-34c1-4d03-8bef-4ec85f14014f" />
+      <condition />
+      <trigger-cutscene idTarget="MaximumTime" guid="a82d15f7-1588-4200-ab59-7f4137d65926" />
+      <condition />
+    </effect>
+  </timer>
+</eAdventure>

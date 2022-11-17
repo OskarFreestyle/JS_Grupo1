@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment> Project Configuration </comment>
+<entry key="Chapter0.OccupiedOffice.Visible">true</entry>
+<entry key="Chapter0.OfficeInFire.Y">66</entry>
+<entry key="Chapter0.OfficeInFire.X">149</entry>
+<entry key="Chapter0.PlayerOffice.Y">263</entry>
+<entry key="Chapter0.PlayerOffice.X">621</entry>
+<entry key="Chapter0.HallEnd.Visible">true</entry>
+<entry key="Chapter0.TeacherOffices.Visible">true</entry>
+<entry key="Chapter0.OccupiedOffice.Y">78</entry>
+<entry key="Chapter0.HallMiddle.Y">488</entry>
+<entry key="Chapter0.OccupiedOffice.X">465</entry>
+<entry key="Chapter0.HallMiddle.X">183</entry>
+<entry key="Chapter0.PlayerOffice.Visible">true</entry>
+<entry key="Chapter0.HallStart.Visible">true</entry>
+<entry key="autosave">yes</entry>
+<entry key="Chapter0.StairsAndElevator.Visible">true</entry>
+<entry key="Chapter0.OfficeInFire.Visible">true</entry>
+<entry key="Chapter0.OfficeOnFire.Visible">true</entry>
+<entry key="Chapter0.DepartmentArea.Y">545</entry>
+<entry key="Chapter0.DepartmentArea.X">759</entry>
+<entry key="Chapter0.TeacherOffices.Y">131</entry>
+<entry key="Chapter0.OfficeOnFire.Y">224</entry>
+<entry key="Chapter0.TeacherOffices.X">619</entry>
+<entry key="Chapter0.OfficeOnFire.X">529</entry>
+<entry key="Chapter0.DepartmentArea.Visible">true</entry>
+<entry key="Chapter0.HallStart.Y">461</entry>
+<entry key="Chapter0.HallStart.X">289</entry>
+<entry key="Chapter0.StairsAndElevator.Y">363</entry>
+<entry key="Chapter0.HallEnd.Y">211</entry>
+<entry key="Chapter0.StairsAndElevator.X">128</entry>
+<entry key="Chapter0.HallEnd.X">428</entry>
+<entry key="Chapter0.HallMiddle.Visible">true</entry>
+</properties>
+

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<game-descriptor versionNumber="37">
+  <title>Evacuation Protocol for the Computer Science Building</title>
+  <description>The game purpose is to learn the steps of the evacuation protocol in case of fire. The game allows you to navigate scenarios made with actual School photographs.</description>
+  <application-identifier>es.e-ucm.kiddo</application-identifier>
+  <configuration keepShowing="no" keyboard-navigation="disabled" defaultClickAction="showDetails" perspective="regular" dragBehaviour="considerNonTargets" show-save-load="yes" show-reset="yes" autosave="no" save-on-suspend="no" restore-after-open="no">
+    <gui type="contextual" inventoryPosition="icon" inventoryImage="assets/special/DefaultInventory.png" inventoryX="675" inventoryY="550" inventoryScale="0.2">
+      <cursors>
+        <cursor type="default" uri="gui/cursors/Cursor-Default.png" />
+        <cursor type="exit" uri="gui/cursors/Cursor-Exit.png" />
+        <cursor type="over" uri="gui/cursors/Cursor-Action.png" />
+        <cursor type="action" uri="gui/cursors/Cursor-Action.png" />
+      </cursors>
+      <arrows>
+        <arrow type="default" uri="gui/cursors/Cursor-Default.png" />
+        <arrow type="exit" uri="gui/cursors/Cursor-Exit.png" />
+        <arrow type="over" uri="gui/cursors/Cursor-Action.png" />
+        <arrow type="action" uri="gui/cursors/Cursor-Action.png" />
+      </arrows>
+    </gui>
+    <mode playerTransparent="yes" />
+    <graphics mode="windowed" />
+  </configuration>
+  <extension-objects>
+    <tracker rawCopy="yes" storageType="LOCAL" traceFormat="CSV" host="" trackingCode="" flushInterval="3" debug="no" />
+  </extension-objects>
+  <contents>
+    <chapter path="chapter1.xml">
+      <title>
+      </title>
+      <description>
+      </description>
+    </chapter>
+  </contents>
+</game-descriptor>
