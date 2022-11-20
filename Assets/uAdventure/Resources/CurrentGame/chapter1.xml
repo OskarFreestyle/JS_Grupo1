@@ -61,11 +61,73 @@
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <effect>
-          <trigger-conversation idTarget="BuildingEvacuation" guid="a5fe91b9-872c-4014-8020-f7f10ddb973a" />
+          <trigger-conversation idTarget="GermanEscena2" guid="a5fe91b9-872c-4014-8020-f7f10ddb973a" />
           <condition />
         </effect>
       </talk-to>
     </actions>
+  </character>
+  <character id="German" behaviour="normal">
+    <resources name="German">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="iPhoneCharacter" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/animation/IphoneStatic.eaa.xml" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
   </character>
   <scene id="PlayerOffice" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -88,17 +150,8 @@
     </name>
     <default-initial-position x="400" y="300" />
     <exits>
-      <exit rectangular="yes" x="509" y="55" width="157" height="350" hasInfluenceArea="no" idTarget="DepartmentArea" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="509" y="55" width="157" height="350" hasInfluenceArea="no" idTarget="Breakfast" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="Leave the office" cursor-path="" sound-path="" />
-        <condition>
-          <active flag="PhoneAnswered" />
-        </condition>
-      </exit>
-      <exit rectangular="yes" x="509" y="55" width="157" height="350" hasInfluenceArea="no" idTarget="PlayerOffice" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="Leave the office" cursor-path="" sound-path="" />
-        <condition>
-          <inactive flag="PhoneAnswered" />
-        </condition>
         <effect>
           <speak-player guid="149114c8-fc77-4e5d-a18b-ed228e4c0f54">The phone is ringing!</speak-player>
           <condition />
@@ -106,7 +159,7 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="Phone" x="400" y="600" scale="1" glow="yes" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="Phone" x="400" y="598" scale="1" glow="yes" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="DepartmentArea" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -459,6 +512,104 @@
       </active-area>
     </active-areas>
   </scene>
+  <scene id="Breakfast" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="Yes Whats">
+      <condition>
+        <active flag="iPhoneWhatsappReceived" />
+      </condition>
+      <asset type="background" uri="assets/background/SalonDesayuno.png" />
+      <asset type="bgmusic" uri="assets/audio/telephone.mp3" />
+    </resources>
+    <resources name="No Whats">
+      <condition>
+        <inactive flag="iPhoneWhatsappReceived" />
+      </condition>
+      <asset type="background" uri="assets/background/SalonDesayuno.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="iPhone" x="1300" y="1100" scale="0.2926049" glow="no" layer="0" hasInfluenceArea="no" />
+    </objects>
+  </scene>
+  <scene id="WhatsAppConversation" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="PrimerMSG">
+      <condition>
+        <inactive flag="NextWhats" />
+      </condition>
+      <asset type="background" uri="assets/background/Whatsapp.png" />
+    </resources>
+    <resources name="SegundoMSG">
+      <condition>
+        <active flag="NextWhats" />
+      </condition>
+      <asset type="background" uri="assets/background/Whatsapp2.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="452" y="319" width="98" height="252" hasInfluenceArea="no" idTarget="GermanHouse" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+    <active-areas>
+      <active-area id="ActiveAreaId" rectangular="yes" x="163" y="447" width="244" height="103" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <custom name="AdvancedMSG" needsGoTo="no" keepDistance="0" not-effects="no">
+            <resources name="No name">
+              <asset type="buttonNormal" uri="assets/special/EmptyAnimation" />
+              <asset type="buttonOver" uri="assets/special/EmptyAnimation" />
+              <asset type="buttonPressed" uri="assets/special/EmptyAnimation" />
+            </resources>
+            <documentation>Pasa MSG</documentation>
+            <effect>
+              <increment var="NumMSG" value="1" guid="98c57450-4d4b-4237-8eb1-949e1f58e397" />
+              <condition />
+              <activate flag="NextWhats" guid="ff334c6b-f0be-431c-8c09-567ac0a606f6" />
+              <condition />
+              <play-sound background="no" uri="assets/audio/fire_small.mp3" guid="2fa578e4-b7eb-4f19-b190-d12a4f828591" />
+              <condition />
+            </effect>
+          </custom>
+        </actions>
+      </active-area>
+    </active-areas>
+  </scene>
+  <scene id="GermanHouse" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="Salon">
+      <asset type="background" uri="assets/background/CasaGerman.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="199" y="40" width="25" height="93" hasInfluenceArea="no" idTarget="PanicEnding" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="FinishEscene2" />
+        </condition>
+      </exit>
+    </exits>
+    <characters>
+      <character-ref idTarget="Balta" x="137" y="172" scale="0.1952381" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
   <slidescene id="ElevatorEnding" start="no" idTarget="FireVideo" destinyX="-1" destinyY="-1" transitionTime="0" transitionType="0" next="new-scene" class="" type="">
     <documentation>
     </documentation>
@@ -467,15 +618,17 @@
     </resources>
     <name>Final Ascensor</name>
   </slidescene>
-  <slidescene id="Introduction" start="yes" idTarget="PlayerOffice" destinyX="-1" destinyY="-1" transitionTime="0" transitionType="0" next="new-scene" class="accesible" type="screen">
+  <slidescene id="Introduction" start="yes" idTarget="Breakfast" destinyX="-1" destinyY="-1" transitionTime="100" transitionType="1" next="new-scene" class="accesible" type="screen">
     <documentation>
     </documentation>
     <effect>
       <generate-object idTarget="ProtocolBook" guid="e07f6d81-d092-4558-a3ad-0e799add02e9" />
       <condition />
+      <activate flag="iPhoneWhatsappReceived" guid="e8f3f236-5b1f-4a76-a7db-ed1bd5577e59" />
+      <condition />
     </effect>
     <resources name="">
-      <asset type="slides" uri="assets/animation/Intro" />
+      <asset type="slides" uri="assets/animation/Intro.eaa.xml" />
     </resources>
     <name>
     </name>
@@ -532,14 +685,14 @@
       <title>Evacuation Protocol Computer Science Building</title>This is the protocol to be followed by staff after receiving an alarm of fire.<bullet>Check if the delivered fire notice is real.</bullet><bullet>If possible, put out the fire with extinguishers.</bullet><bullet>Otherwise activate the nearest fire alarm.</bullet><bullet>Warn personnel located in the control area of the emergency evacuation.</bullet><bullet>Leave the building using the stairs (never the elevator).</bullet></text>
   </book>
   <object id="Phone" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
-    <resources name="">
+    <resources name="vibra">
       <condition>
         <inactive flag="PhoneAnswered" />
       </condition>
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
       <asset type="image" uri="assets/image/PhoneRinging.png" />
     </resources>
-    <resources name="">
+    <resources name="no vibra">
       <condition>
         <active flag="PhoneAnswered" />
       </condition>
@@ -588,8 +741,40 @@
       </use>
     </actions>
   </object>
+  <object id="iPhone" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="Quieto">
+      <condition>
+        <inactive flag="iPhoneWhatsappReceived" />
+      </condition>
+      <asset type="image" uri="assets/image/iPhone.png" />
+      <asset type="icon" uri="assets/icon/iPhone.png" />
+    </resources>
+    <resources name="Vibra">
+      <condition>
+        <active flag="iPhoneWhatsappReceived" />
+      </condition>
+      <asset type="image" uri="assets/image/iPhoneVibra.png" />
+      <asset type="icon" uri="assets/icon/iPhoneVibra.png" />
+    </resources>
+    <description>
+      <name>iPhone</name>
+      <brief>iPhone</brief>
+      <detailed>iPhone Whatsapp Received</detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Miramos Whatsapp</documentation>
+        <effect>
+          <activate flag="iPhoneWhatsappReceived" guid="67cdfc2a-c0fa-4d83-bf10-664702748ca1" />
+          <condition />
+          <trigger-scene idTarget="WhatsAppConversation" x="250" y="532" transitionTime="0" transitionType="0" guid="d9a52d5f-9894-4dc7-8242-4c0661ac8aad" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
   <graph-conversation id="BuildingEvacuation">
-    <dialogue-node nodeindex="0">
+    <dialogue-node nodeindex="0" editor-x="289" editor-y="25">
       <speak-char idTarget="Balta">
         <resources name="No name" />
         <text>Hey Pablo, what's that noise?</text>
@@ -607,7 +792,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" x="-1" y="-1">
+    <option-node nodeindex="1" preListening="yes" editor-x="978" editor-y="33" x="978" y="33">
       <speak-player>
         <text>That doesn't matter at all!</text>
         <resources name="No name" />
@@ -627,7 +812,7 @@
       <condition />
       <child nodeindex="4" />
     </option-node>
-    <dialogue-node nodeindex="2">
+    <dialogue-node nodeindex="2" editor-x="0" editor-y="0">
       <speak-char idTarget="Balta">
         <resources name="No name" />
         <text>You're not helping me, I can't know where to go</text>
@@ -635,7 +820,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <dialogue-node nodeindex="3">
+    <dialogue-node nodeindex="3" editor-x="0" editor-y="0">
       <speak-char idTarget="Balta">
         <resources name="No name" />
         <text>Wow, it's everyone OK?</text>
@@ -643,7 +828,7 @@
       <condition />
       <child nodeindex="5" />
     </dialogue-node>
-    <dialogue-node nodeindex="4">
+    <dialogue-node nodeindex="4" editor-x="0" editor-y="0">
       <speak-char idTarget="Balta">
         <resources name="No name" />
         <text>Help! Run!</text>
@@ -660,7 +845,7 @@
         </effect>
       </end-conversation>
     </dialogue-node>
-    <option-node nodeindex="5" x="-1" y="-1">
+    <option-node nodeindex="5" preListening="yes" editor-x="506" editor-y="388" x="506" y="388">
       <speak-player>
         <text>The office was empty. I guess everyone fled when the fire started.</text>
         <resources name="No name" />
@@ -674,7 +859,7 @@
       <condition />
       <child nodeindex="7" />
     </option-node>
-    <dialogue-node nodeindex="6">
+    <dialogue-node nodeindex="6" editor-x="0" editor-y="0">
       <speak-char idTarget="Balta">
         <resources name="No name" />
         <text>Ok, fine, let me finish this backups and I'll be downstairs in a minute...</text>
@@ -682,7 +867,7 @@
       <condition />
       <child nodeindex="8" />
     </dialogue-node>
-    <dialogue-node nodeindex="7">
+    <dialogue-node nodeindex="7" editor-x="0" editor-y="0">
       <end-conversation>
         <effect>
           <activate flag="GameOver" guid="8b395728-9bcb-4bff-82fc-727906d9895c" />
@@ -694,7 +879,7 @@
         </effect>
       </end-conversation>
     </dialogue-node>
-    <option-node nodeindex="8" x="-1" y="-1">
+    <option-node nodeindex="8" preListening="yes" editor-x="944" editor-y="351" x="944" y="351">
       <speak-player>
         <text>No way! It's a serious fire, we must keep calm but evacuate fast.</text>
         <resources name="No name" />
@@ -708,13 +893,13 @@
       <condition />
       <child nodeindex="10" />
     </option-node>
-    <dialogue-node nodeindex="9">
+    <dialogue-node nodeindex="9" editor-x="0" editor-y="0">
       <child nodeindex="11" />
     </dialogue-node>
-    <dialogue-node nodeindex="10">
+    <dialogue-node nodeindex="10" editor-x="0" editor-y="0">
       <child nodeindex="11" />
     </dialogue-node>
-    <dialogue-node nodeindex="11">
+    <dialogue-node nodeindex="11" editor-x="0" editor-y="0">
       <speak-char idTarget="Balta">
         <resources name="No name" />
         <text>Ok, fine, take it easy, I didn't think  it was so urgent...</text>
@@ -732,7 +917,7 @@
       <condition />
       <child nodeindex="12" />
     </dialogue-node>
-    <option-node nodeindex="12" x="-1" y="-1">
+    <option-node nodeindex="12" preListening="yes" editor-x="59" editor-y="330" x="59" y="330">
       <speak-player>
         <text>Ok, but hurry up</text>
         <resources name="No name" />
@@ -746,7 +931,7 @@
       <condition />
       <child nodeindex="14" />
     </option-node>
-    <dialogue-node nodeindex="13">
+    <dialogue-node nodeindex="13" editor-x="0" editor-y="0">
       <end-conversation>
         <effect>
           <activate flag="DejaQueBaltaSeEntretenga" guid="9220be4a-f8ae-4d56-8bce-df58425b4078" />
@@ -760,7 +945,7 @@
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="14">
+    <dialogue-node nodeindex="14" editor-x="0" editor-y="0">
       <end-conversation>
         <effect>
           <trigger-scene idTarget="TeacherOffices" x="403" y="502" transitionTime="0" transitionType="0" guid="cca11a4f-ca66-43d5-8120-43980ab609f3" />
@@ -768,6 +953,118 @@
           <activate flag="CheckedOffice414" guid="e3dea4f7-a5a5-4984-91d6-2c7a3e4ede1d" />
           <condition />
           <activate flag="FinishConversation" guid="e40e2c1f-7fd5-421b-a6e3-0e6756cae2fb" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ConverWhats">
+    <dialogue-node nodeindex="0" editor-x="64" editor-y="100">
+      <speak-char idTarget="Balta">
+        <resources name="No name" />
+        <text>Hey toma 1 whats</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Balta">
+        <resources name="No name" />
+        <text>O 2 asi a lo loco</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" question="Saluda" preListening="yes" editor-x="519" editor-y="85" x="519" y="85">
+      <speak-player correct="true">
+        <text>HOLA</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>BUENAS</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="974" editor-y="20">
+      <speak-char idTarget="Balta">
+        <resources name="No name" />
+        <text>Pa ti mi cola</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="975" editor-y="222">
+      <speak-char idTarget="Balta">
+        <resources name="No name" />
+        <text>pa ti mi cola rellena</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="GermanEscena2">
+    <dialogue-node nodeindex="0" editor-x="66" editor-y="13">
+      <speak-char idTarget="Balta">
+        <resources name="No name" />
+        <text>Hola buenas ti@, cuanto tiempo!</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Ya te digo, que tal?</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Balta">
+        <resources name="No name" />
+        <text>Pues con depresion pero tienes que averiguarlo tu</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" question="A1" random="yes" keepShowing="yes" preListening="yes" editor-x="416" editor-y="96" x="416" y="96">
+      <speak-player>
+        <text>No estés triste</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player correct="true">
+        <text>Vaya, te mandare al psicologo</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="839" editor-y="7">
+      <speak-player>
+        <resources name="No name" />
+        <text>No jodas, si digo eso parecera un meme</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="843" editor-y="254">
+      <speak-char idTarget="Balta">
+        <resources name="No name" />
+        <text>Genial, habeis bordado el trabajo</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Balta">
+        <resources name="No name">
+          <asset type="audio" uri="" />
+        </resources>
+        <text>Teneis un 10</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Balta">
+        <resources name="No name" />
+        <text>Iros a la cafeteria que yo invito</text>
+      </speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="FinishEscene2" guid="eba2bd46-c910-46e8-8900-eebb150ae3f2" />
           <condition />
         </effect>
       </end-conversation>

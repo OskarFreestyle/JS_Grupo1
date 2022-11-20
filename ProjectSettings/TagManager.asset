@@ -13,7 +13,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - UINotTargetable
   - 
   - 
   - 
@@ -40,4 +40,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Buttons
+    uniqueID: 115252387
     locked: 0

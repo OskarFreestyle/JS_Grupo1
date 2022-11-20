@@ -2,7 +2,7 @@
 <game-descriptor versionNumber="37">
   <title>Evacuation Protocol for the Computer Science Building</title>
   <description>The game purpose is to learn the steps of the evacuation protocol in case of fire. The game allows you to navigate scenarios made with actual School photographs.</description>
-  <application-identifier>es.e-ucm.kiddo</application-identifier>
+  <application-identifier>com.DefaultCompany.test</application-identifier>
   <configuration keepShowing="no" keyboard-navigation="disabled" defaultClickAction="showDetails" perspective="regular" dragBehaviour="considerNonTargets" show-save-load="yes" show-reset="yes" autosave="no" save-on-suspend="no" restore-after-open="no">
     <gui type="contextual" inventoryPosition="icon" inventoryImage="assets/special/DefaultInventory.png" inventoryX="675" inventoryY="550" inventoryScale="0.2">
       <cursors>
