@@ -18,7 +18,7 @@
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
     </resources>
     <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
-      <frontcolor color="#FFFFFF" />
+      <frontcolor color="#3BE500" />
       <bordercolor color="#000000" />
     </textcolor>
     <description>
@@ -69,10 +69,10 @@
   </character>
   <character id="German" behaviour="normal">
     <resources name="German">
-      <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/special/EmptyAnimation" />
-      <asset type="standright" uri="assets/special/EmptyAnimation" />
-      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="standup" uri="assets/animation/StandingLookingUpGerman.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/StandingLookingDownGerman.eaa.xml" />
+      <asset type="standright" uri="assets/animation/StandingLookingRightGerman.eaa.xml" />
+      <asset type="standleft" uri="assets/animation/StandingLookingLeftGerman.eaa.xml" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
       <asset type="speakdown" uri="assets/special/EmptyAnimation" />
       <asset type="speakright" uri="assets/special/EmptyAnimation" />
@@ -97,6 +97,14 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="CoffeeShopConversation" guid="3216e7fa-27b4-4a20-8d1a-7969820174f2" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <character id="iPhoneCharacter" behaviour="normal">
     <resources name="No name">
@@ -162,7 +170,7 @@
     <actions>
       <custom name="Think" needsGoTo="no" keepDistance="0" not-effects="no">
         <resources name="No name">
-          <asset type="buttonNormal" uri="gui/buttons/iPhone.png" />
+          <asset type="buttonNormal" uri="gui/buttons/BookIcon.png" />
           <asset type="buttonOver" uri="gui/buttons/BookIcon.png" />
           <asset type="buttonPressed" uri="assets/special/EmptyAnimation" />
         </resources>
@@ -679,6 +687,9 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="German" x="487" y="590" scale="0.6877617" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
+    </characters>
   </scene>
   <slidescene id="ElevatorEnding" start="no" idTarget="FireVideo" destinyX="-1" destinyY="-1" transitionTime="0" transitionType="0" next="new-scene" class="" type="">
     <documentation>
@@ -747,6 +758,15 @@
     <name>
     </name>
   </videoscene>
+  <slidescene id="Prologo" start="no" next="go-back" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="slides" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
   <slidescene id="TercerActo" start="yes" idTarget="Bedroom" destinyX="-2147483648" destinyY="2147483647" transitionTime="500" transitionType="2" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
@@ -765,9 +785,22 @@
     <name>
     </name>
   </slidescene>
+  <slidescene id="Epilogo" start="no" next="end-chapter" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="slides" uri="assets/animation/EpilogoAnim.eaa.xml" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
   <book id="EvacuationProtocol" xNextPage="707" yNextPage="507" xPreviousPage="20" yPreviousPage="507">
     <resources name="">
       <asset type="background" uri="assets/background/book.jpg" />
+      <asset type="arrowLeftNormal" uri="assets/special/DefaultLeftNormalArrow.png" />
+      <asset type="arrowRightNormal" uri="assets/special/DefaultLeftNormalArrow.png" />
+      <asset type="arrowLeftOver" uri="assets/special/DefaultLeftOverArrow.png" />
+      <asset type="arrowRightOver" uri="assets/special/DefaultLeftOverArrow.png" />
     </resources>
     <text>
       <title>Evacuation Protocol Computer Science Building</title>This is the protocol to be followed by staff after receiving an alarm of fire.<bullet>Check if the delivered fire notice is real.</bullet><bullet>If possible, put out the fire with extinguishers.</bullet><bullet>Otherwise activate the nearest fire alarm.</bullet><bullet>Warn personnel located in the control area of the emergency evacuation.</bullet><bullet>Leave the building using the stairs (never the elevator).</bullet></text>
@@ -1280,6 +1313,169 @@
       <end-conversation>
         <effect>
           <trigger-cutscene idTarget="CuartoActo" guid="0878014d-5c4d-4a38-9e4a-f8850215b347" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="CoffeeShopConversation">
+    <dialogue-node nodeindex="0" editor-x="97" editor-y="151">
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>Hola jugador cuyo nombre no ha podido personalizar</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" preListening="yes" editor-x="398" editor-y="122" x="398" y="122">
+      <speak-player>
+        <text>Hola</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Buenas</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Hey que pasa chavales, ¿todo bien, todo correcto? Y yo que me alegro</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1445" editor-y="166">
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>Para que querías verme</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="940" editor-y="413">
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>JAJAJAJA que cachondo</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="2" />
+    </dialogue-node>
+    <option-node nodeindex="4" preListening="yes" editor-x="1874" editor-y="140" x="1874" y="140">
+      <speak-player>
+        <text>Frase mala 1</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="5" />
+      <speak-player>
+        <text>Frase buena que nos dirá la un profesional</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="6" />
+      <speak-player>
+        <text>Frase mala 2</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="7" />
+    </option-node>
+    <dialogue-node nodeindex="5" editor-x="2394" editor-y="0">
+      <speak-player>
+        <resources name="No name" />
+        <text>No puedo decir eso + explicacion de por que no</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="6" editor-x="2810" editor-y="186">
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>Sobre que?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Estás deprimido</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>Qué? No lo estoy</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Sí, si lo estás</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>No, no lo estoy</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Sí, si lo estás</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>Está bien, tienes razón</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Ve al psicólogo</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>Jamás, eso es de locos</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>No, no lo es</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>Si, si lo es</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>No, no lo es</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>De acuerdo no lo es. Iré al psicologo</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="8" />
+    </dialogue-node>
+    <dialogue-node nodeindex="7" editor-x="2410" editor-y="484">
+      <speak-player>
+        <resources name="No name" />
+        <text>Mejor me relajo</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="8" editor-x="3357" editor-y="243">
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>Ahora saldrá un cuadrado negro de Fin explicando lo bien que me ha ido en unos meses</text>
+      </speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <trigger-cutscene idTarget="Epilogo" guid="71d09225-85cf-449c-87a3-e56e43968f58" />
           <condition />
         </effect>
       </end-conversation>
