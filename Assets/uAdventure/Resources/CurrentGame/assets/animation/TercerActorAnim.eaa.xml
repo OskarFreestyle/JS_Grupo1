@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<animation id="TercerActorAnim.eaa.xml" usetransitions="yes" slides="no">
+  <documentation>TercerActo</documentation>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/CutScenes3.png" type="image" time="2000" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>Salta al acabar el segundo acto y da comienzo al tercero</documentation>
+  </frame>
+  <transition type="0" time="0" />
+</animation>

@@ -129,6 +129,50 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
+  <character id="PlayerC" behaviour="normal">
+    <resources name="Me">
+      <asset type="standup" uri="assets/animation/StandingLookingUpMe.eaa.xml" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#EE0000" />
+      <bordercolor color="#005C9F" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <custom name="Think" needsGoTo="no" keepDistance="0" not-effects="no">
+        <resources name="No name">
+          <asset type="buttonNormal" uri="gui/buttons/iPhone.png" />
+          <asset type="buttonOver" uri="gui/buttons/BookIcon.png" />
+          <asset type="buttonPressed" uri="assets/special/EmptyAnimation" />
+        </resources>
+        <effect>
+          <trigger-conversation idTarget="Conciencia" guid="eca1b5f3-d346-46ee-a886-5a309a0a5dcd" />
+          <condition />
+        </effect>
+      </custom>
+    </actions>
+  </character>
   <scene id="PlayerOffice" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -605,10 +649,36 @@
           <active flag="FinishEscene2" />
         </condition>
       </exit>
+      <exit rectangular="yes" x="1" y="1" width="100" height="100" hasInfluenceArea="no" idTarget="TercerActo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
     </exits>
     <characters>
       <character-ref idTarget="Balta" x="137" y="172" scale="0.1952381" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
+  </scene>
+  <scene id="Bedroom" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="Bedroom">
+      <asset type="background" uri="assets/background/Bedroom.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="PlayerC" x="221" y="240" scale="0.2317826" orientation="0" glow="yes" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="CoffeeShop" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/CoffeeShop.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
   </scene>
   <slidescene id="ElevatorEnding" start="no" idTarget="FireVideo" destinyX="-1" destinyY="-1" transitionTime="0" transitionType="0" next="new-scene" class="" type="">
     <documentation>
@@ -618,7 +688,7 @@
     </resources>
     <name>Final Ascensor</name>
   </slidescene>
-  <slidescene id="Introduction" start="yes" idTarget="Breakfast" destinyX="-1" destinyY="-1" transitionTime="100" transitionType="1" next="new-scene" class="accesible" type="screen">
+  <slidescene id="Introduction" start="no" idTarget="Breakfast" destinyX="-1" destinyY="-1" transitionTime="100" transitionType="1" next="new-scene" class="accesible" type="screen">
     <documentation>
     </documentation>
     <effect>
@@ -677,6 +747,24 @@
     <name>
     </name>
   </videoscene>
+  <slidescene id="TercerActo" start="yes" idTarget="Bedroom" destinyX="-2147483648" destinyY="2147483647" transitionTime="500" transitionType="2" next="new-scene" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="TercerActo">
+      <asset type="slides" uri="assets/animation/TercerActorAnim.eaa.xml" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
+  <slidescene id="CuartoActo" start="no" idTarget="CoffeeShop" destinyX="-2147483648" destinyY="2147483647" transitionTime="0" transitionType="0" next="new-scene" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="CuartoActo">
+      <asset type="slides" uri="assets/animation/CuartoActoAnim.eaa.xml" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
   <book id="EvacuationProtocol" xNextPage="707" yNextPage="507" xPreviousPage="20" yPreviousPage="507">
     <resources name="">
       <asset type="background" uri="assets/background/book.jpg" />
@@ -1065,6 +1153,133 @@
       <end-conversation>
         <effect>
           <activate flag="FinishEscene2" guid="eba2bd46-c910-46e8-8900-eebb150ae3f2" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Conciencia">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="172">
+      <speak-player>
+        <resources name="No name" />
+        <text>Estoy hablando conmigo mismo</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>...</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>JAJAJAJAJAJAJA</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Acabo de recordar un chiste buenísimo</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Pero estoy solo así que no tiene sentido contarlo</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>El caso, llevaba mucho tiempo sin ver a Germán, pero estaba raro...</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" random="yes" keepShowing="yes" preListening="yes" editor-x="741" editor-y="168" x="741" y="168">
+      <speak-player>
+        <text>Ya se le pasará</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player correct="true">
+        <text>Debería ayudarlo</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Debería decirle que no esté triste</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1157" editor-y="20">
+      <speak-player>
+        <resources name="No name" />
+        <text>No creo que sea algo que se solucione solo</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1394" editor-y="202">
+      <speak-player>
+        <resources name="No name" />
+        <text>Si, será lo mejor</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Mañana le diré que quedemos en algún sitio en el que podamos hablar tranquilos</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="5" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1166" editor-y="421">
+      <speak-player>
+        <resources name="No name" />
+        <text>Eso nunca ha ayudado en nada</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="5" random="yes" preListening="yes" editor-x="1944" editor-y="190" x="1944" y="190">
+      <speak-player>
+        <text>Le diré que vayamos al PaintBall</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="6" />
+      <speak-player>
+        <text>Le diré que vayamos a alguna cafetería</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="7" />
+    </option-node>
+    <dialogue-node nodeindex="6" editor-x="2512" editor-y="23">
+      <speak-player>
+        <resources name="No name" />
+        <text>Ah no, me prohibieron volver cuando utilcé el cuchillo</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="5" />
+    </dialogue-node>
+    <dialogue-node nodeindex="7" editor-x="2516" editor-y="244">
+      <speak-player>
+        <resources name="No name" />
+        <text>Si, será lo mejor</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="8" />
+    </dialogue-node>
+    <dialogue-node nodeindex="8" editor-x="2751" editor-y="244">
+      <speak-player>
+        <resources name="No name" />
+        <text>Y con esto cambiamos al acto 4</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <trigger-cutscene idTarget="CuartoActo" guid="0878014d-5c4d-4a38-9e4a-f8850215b347" />
           <condition />
         </effect>
       </end-conversation>
