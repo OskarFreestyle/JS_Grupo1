@@ -730,27 +730,34 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="199" y="40" width="25" height="93" hasInfluenceArea="no" idTarget="PanicEnding" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="273" y="3" width="6" height="7" hasInfluenceArea="no" idTarget="PanicEnding" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
-          <active flag="FinishEscene2" />
+          <either>
+            <active flag="FinishEscene2" />
+            <active flag="GameOver" />
+          </either>
         </condition>
       </exit>
       <exit rectangular="yes" x="1" y="1" width="100" height="100" hasInfluenceArea="no" idTarget="TercerActo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="acto2Finalizado" />
+        </condition>
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="GermanCasa1" x="141" y="133" scale="0.2682339" orientation="2" glow="no" layer="1" hasInfluenceArea="no">
+      <character-ref idTarget="GermanCasa1" x="211" y="170" scale="0.1784995" orientation="2" glow="no" layer="2" hasInfluenceArea="no">
         <condition>
           <inactive flag="Acto2Fase2" />
         </condition>
       </character-ref>
-      <character-ref idTarget="GermanCasa2" x="141" y="133" scale="0.2682339" orientation="2" glow="no" layer="0" hasInfluenceArea="no">
+      <character-ref idTarget="GermanCasa2" x="211" y="168" scale="0.1750612" orientation="2" glow="no" layer="1" hasInfluenceArea="no">
         <condition>
           <active flag="Acto2Fase2" />
         </condition>
       </character-ref>
+      <character-ref idTarget="Balta" x="123" y="168" scale="0.214898" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Bedroom" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -776,7 +783,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="German" x="487" y="590" scale="0.6877617" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="German" x="487" y="631" scale="0.7373584" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Cocina" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -792,16 +799,14 @@
       <exit rectangular="yes" x="8" y="361" width="615" height="841" hasInfluenceArea="no" idTarget="GermanHouse" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
-          <either>
-            <active flag="latasExaminadas" />
-            <active flag="comidaExaminada" />
-          </either>
+          <active flag="comidaExaminada" />
+          <active flag="latasExaminadas" />
         </condition>
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="Latas" x="1000" y="1000" scale="0.3" glow="no" layer="0" hasInfluenceArea="no" />
-      <object-ref idTarget="Comida" x="600" y="600" scale="0.25" glow="no" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="Latas" x="1890" y="1372" scale="0.2798715" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="Comida" x="1156" y="1041" scale="0.3218233" glow="no" layer="1" hasInfluenceArea="no" />
     </objects>
   </scene>
   <slidescene id="ElevatorEnding" start="no" idTarget="FireVideo" destinyX="-1" destinyY="-1" transitionTime="0" transitionType="0" next="new-scene" class="" type="">
@@ -1039,15 +1044,14 @@
     </actions>
   </object>
   <object id="Comida" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <documentation>Buf, hay restos de comida... Es extraño, Germán antes no se dejaba nada</documentation>
     <resources name="Pizza">
       <asset type="image" uri="assets/image/pizza 2.jpg" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
+      <name>Comida</name>
+      <brief>Buf, hay restos de comida... Es extraño, Germán antes no se dejaba nada</brief>
       <detailed>
       </detailed>
     </description>
@@ -1650,10 +1654,10 @@
   </graph-conversation>
   <graph-conversation id="Acto2Conv1">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-player>
+      <speak-char idTarget="GermanCasa1">
         <resources name="No name" />
         <text>Hombre &lt;insertar nombre generico&gt;, Qué tal? Menos mal, no pensé que fueras a venir jajaj</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
@@ -1686,10 +1690,10 @@
       <child nodeindex="1" />
     </dialogue-node>
     <dialogue-node nodeindex="3" editor-x="839" editor-y="310">
-      <speak-player>
+      <speak-char idTarget="GermanCasa1">
         <resources name="No name" />
         <text>Bueno, es que no pensé que quisieras venir, pero bueno, siéntate y cuéntame cómo te ha ido</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="5" />
     </dialogue-node>
@@ -1710,10 +1714,10 @@
       <child nodeindex="6" />
     </dialogue-node>
     <dialogue-node nodeindex="6" editor-x="1309" editor-y="310">
-      <speak-player>
+      <speak-char idTarget="GermanCasa1">
         <resources name="No name" />
         <text>Pos me han echado jajaja y no me quiere nadie, pero no me quejo osea es que soy un inútil jajajaj</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="7" />
     </dialogue-node>
@@ -1726,10 +1730,10 @@
       <child nodeindex="8" />
     </option-node>
     <dialogue-node nodeindex="8" editor-x="1764" editor-y="310">
-      <speak-player>
+      <speak-char idTarget="GermanCasa1">
         <resources name="No name" />
         <text>Pues si la verdad xD</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <end-conversation>
         <effect>
@@ -1737,16 +1741,20 @@
           <condition />
           <activate flag="Acto2Fase2" guid="3e07e897-42d1-4db7-94a0-495a3364b943" />
           <condition />
+          <deactivate flag="latasExaminadas" guid="d42de45e-7bdd-47b3-a056-6431c6f97344" />
+          <condition />
+          <deactivate flag="comidaExaminada" guid="bab4ce74-9f42-4a29-a572-ac8ab5946289" />
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="Acto2Conv2">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-player>
+      <speak-char idTarget="GermanCasa2">
         <resources name="No name" />
         <text>*snif, snif* *llorando :C*</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
@@ -1759,10 +1767,10 @@
       <child nodeindex="2" />
     </dialogue-node>
     <dialogue-node nodeindex="2" editor-x="520" editor-y="50">
-      <speak-player>
+      <speak-char idTarget="GermanCasa2">
         <resources name="No name" />
         <text>Nada, nada, es que me estaba acordando de una película muy triste</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="3" />
     </dialogue-node>
@@ -1775,10 +1783,10 @@
       <child nodeindex="4" />
     </dialogue-node>
     <dialogue-node nodeindex="4" editor-x="990" editor-y="50">
-      <speak-player>
+      <speak-char idTarget="GermanCasa2">
         <resources name="No name" />
         <text>Me cago en tu puta madre</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="5" />
     </dialogue-node>
@@ -1791,12 +1799,78 @@
       <child nodeindex="6" />
     </dialogue-node>
     <dialogue-node nodeindex="6" editor-x="1460" editor-y="50">
-      <speak-player>
+      <speak-char idTarget="GermanCasa2">
         <resources name="No name" />
         <text>Que cabron</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="7" />
+    </dialogue-node>
+    <dialogue-node nodeindex="7" editor-x="1695" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>Get rekt</text>
       </speak-player>
       <condition />
-      <end-conversation />
+      <child nodeindex="8" />
+    </dialogue-node>
+    <dialogue-node nodeindex="8" editor-x="1930" editor-y="50">
+      <speak-char idTarget="GermanCasa2">
+        <resources name="No name" />
+        <text>Que cabrón</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="9" />
+    </dialogue-node>
+    <dialogue-node nodeindex="9" editor-x="2165" editor-y="50">
+      <speak-char idTarget="GermanCasa2">
+        <resources name="No name" />
+        <text>xD</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="10" />
+    </dialogue-node>
+    <dialogue-node nodeindex="10" editor-x="2392" editor-y="52">
+      <speak-char idTarget="GermanCasa2">
+        <resources name="No name" />
+        <text>xD</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="11" />
+    </dialogue-node>
+    <dialogue-node nodeindex="11" editor-x="2627" editor-y="52">
+      <speak-char idTarget="GermanCasa2">
+        <resources name="No name" />
+        <text>xD</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GermanCasa2">
+        <resources name="No name" />
+        <text>LOL</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="12" />
+    </dialogue-node>
+    <dialogue-node nodeindex="12" editor-x="2862" editor-y="52">
+      <speak-char idTarget="GermanCasa2">
+        <resources name="No name" />
+        <text>WAZONGA</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="13" />
+    </dialogue-node>
+    <dialogue-node nodeindex="13" editor-x="3097" editor-y="52">
+      <speak-char idTarget="Balta">
+        <resources name="No name" />
+        <text>Padreada BOOOM XD </text>
+      </speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="acto2Finalizado" guid="7218d294-6508-40a6-8c3b-18a8541b85e5" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <timer time="240" usesEndCondition="yes" multipleStarts="yes" runsInLoop="yes" showTime="no" displayName="timer" countDown="yes" showWhenStopped="no">
