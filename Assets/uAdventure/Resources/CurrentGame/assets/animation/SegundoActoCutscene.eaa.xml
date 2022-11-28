@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<animation id="SegundoActoCutscene.eaa.xml" usetransitions="yes" slides="no">
+  <documentation />
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/CutScenes2.png" type="image" time="2000" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>Acaba el primer acto y pasamos al segundo</documentation>
+  </frame>
+  <transition type="0" time="0" />
+</animation>

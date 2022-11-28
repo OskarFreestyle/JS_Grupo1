@@ -181,6 +181,85 @@
       </custom>
     </actions>
   </character>
+  <character id="GermanCasa1" behaviour="normal">
+    <resources name="German">
+      <asset type="standup" uri="assets/animation/StandingLookingUpGerman.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/StandingLookingDownGerman.eaa.xml" />
+      <asset type="standright" uri="assets/animation/StandingLookingRightGerman.eaa.xml" />
+      <asset type="standleft" uri="assets/animation/StandingLookingLeftGerman.eaa.xml" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: Acto2Conv1</documentation>
+        <effect>
+          <trigger-conversation idTarget="Acto2Conv1" guid="a2608551-77e2-4e5c-b10f-c1168a2603b4" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="GermanCasa2" behaviour="normal">
+    <resources name="German">
+      <asset type="standup" uri="assets/animation/StandingLookingUpGerman.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/StandingLookingDownGerman.eaa.xml" />
+      <asset type="standright" uri="assets/animation/StandingLookingRightGerman.eaa.xml" />
+      <asset type="standleft" uri="assets/animation/StandingLookingLeftGerman.eaa.xml" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="Acto2Conv2" guid="3216e7fa-27b4-4a20-8d1a-7969820174f2" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
   <scene id="PlayerOffice" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -211,7 +290,7 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="Phone" x="400" y="598" scale="1" glow="yes" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="Phone" x="-2147483648" y="-2147483648" scale="1" glow="yes" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="DepartmentArea" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -584,7 +663,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="iPhone" x="1300" y="1100" scale="0.2926049" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="iPhone" x="-2147483648" y="-2147483648" scale="1" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="WhatsAppConversation" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -662,7 +741,16 @@
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Balta" x="137" y="172" scale="0.1952381" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="GermanCasa1" x="141" y="133" scale="0.2682339" orientation="2" glow="no" layer="1" hasInfluenceArea="no">
+        <condition>
+          <inactive flag="Acto2Fase2" />
+        </condition>
+      </character-ref>
+      <character-ref idTarget="GermanCasa2" x="141" y="133" scale="0.2682339" orientation="2" glow="no" layer="0" hasInfluenceArea="no">
+        <condition>
+          <active flag="Acto2Fase2" />
+        </condition>
+      </character-ref>
     </characters>
   </scene>
   <scene id="Bedroom" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -690,6 +778,31 @@
     <characters>
       <character-ref idTarget="German" x="487" y="590" scale="0.6877617" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
+  </scene>
+  <scene id="Cocina" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="Cocina">
+      <asset type="background" uri="assets/background/SalonDesayuno.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="8" y="361" width="615" height="841" hasInfluenceArea="no" idTarget="GermanHouse" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <either>
+            <active flag="latasExaminadas" />
+            <active flag="comidaExaminada" />
+          </either>
+        </condition>
+      </exit>
+    </exits>
+    <objects>
+      <object-ref idTarget="Latas" x="1000" y="1000" scale="0.3" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="Comida" x="600" y="600" scale="0.25" glow="no" layer="1" hasInfluenceArea="no" />
+    </objects>
   </scene>
   <slidescene id="ElevatorEnding" start="no" idTarget="FireVideo" destinyX="-1" destinyY="-1" transitionTime="0" transitionType="0" next="new-scene" class="" type="">
     <documentation>
@@ -767,7 +880,16 @@
     <name>
     </name>
   </slidescene>
-  <slidescene id="TercerActo" start="yes" idTarget="Bedroom" destinyX="-2147483648" destinyY="2147483647" transitionTime="500" transitionType="2" next="new-scene" class="accesible" type="cutscene">
+  <slidescene id="SegundoActo" start="yes" idTarget="GermanHouse" destinyX="-2147483648" destinyY="2147483647" transitionTime="500" transitionType="2" next="new-scene" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="SegundoActo">
+      <asset type="slides" uri="assets/animation/SegundoActoCutscene.eaa.xml" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
+  <slidescene id="TercerActo" start="no" idTarget="Bedroom" destinyX="-2147483648" destinyY="2147483647" transitionTime="500" transitionType="2" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
     <resources name="TercerActo">
@@ -892,6 +1014,51 @@
           <condition />
         </effect>
       </use>
+    </actions>
+  </object>
+  <object id="Latas" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <documentation>Parece que no hayan limpiado esto en mucho tiempo... Hay decenas de latas vacías tiradas por el suelo</documentation>
+    <resources name="Latas">
+      <asset type="image" uri="assets/image/latas.jpg" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>Latas</name>
+      <brief>Parece que no hayan limpiado esto en mucho tiempo... Hay decenas de latas vacías tiradas por el suelo</brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <documentation>Parece que no hayan limpiado esto en mucho tiempo... Hay decenas de latas vacías tiradas por el suelo</documentation>
+        <effect>
+          <activate flag="latasExaminadas" guid="4ab0219d-0c81-428e-a992-25130f13de79" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="Comida" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="Pizza">
+      <asset type="image" uri="assets/image/pizza 2.jpg" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <documentation>Buf, hay restos de comida... Es extraño, Germán antes no se dejaba nada</documentation>
+        <effect>
+          <activate flag="comidaExaminada" guid="50c616f5-5bdd-4f3a-9eec-d2190fd075f9" />
+          <condition />
+        </effect>
+      </examine>
     </actions>
   </object>
   <graph-conversation id="BuildingEvacuation">
@@ -1479,6 +1646,157 @@
           <condition />
         </effect>
       </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Acto2Conv1">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>Hombre &lt;insertar nombre generico&gt;, Qué tal? Menos mal, no pensé que fueras a venir jajaj</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="384" editor-y="39" x="384" y="39">
+      <speak-player>
+        <text>A punto he estado de no venir pesado</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>¿Cómo no iba a venir hombre, si habíamos quedado jajajaja</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Yo ya me iba...</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="797" editor-y="92">
+      <speak-player>
+        <resources name="No name" />
+        <text>Como le diga esto me lo cargo, mejor no</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="839" editor-y="310">
+      <speak-player>
+        <resources name="No name" />
+        <text>Bueno, es que no pensé que quisieras venir, pero bueno, siéntate y cuéntame cómo te ha ido</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="5" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="749" editor-y="551">
+      <speak-player>
+        <resources name="No name" />
+        <text>No hombre, no puedo ser tan malo</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="1074" editor-y="310">
+      <speak-player>
+        <resources name="No name" />
+        <text>No me puedo quejar, hace una semana me ascendieron en el trabajo, ¿y tú qué tal?</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="6" />
+    </dialogue-node>
+    <dialogue-node nodeindex="6" editor-x="1309" editor-y="310">
+      <speak-player>
+        <resources name="No name" />
+        <text>Pos me han echado jajaja y no me quiere nadie, pero no me quejo osea es que soy un inútil jajajaj</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="7" />
+    </dialogue-node>
+    <option-node nodeindex="7" preListening="yes" editor-x="1544" editor-y="310" x="1544" y="310">
+      <speak-player>
+        <text>a, en fin estás muy pesado Germán me voy a robarte digo a mear, bueno que cojones, te voy a robar, estás muy triste como para hacer algo al respecto</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="8" />
+    </option-node>
+    <dialogue-node nodeindex="8" editor-x="1764" editor-y="310">
+      <speak-player>
+        <resources name="No name" />
+        <text>Pues si la verdad xD</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="Cocina" x="1024" y="1026" transitionTime="0" transitionType="0" guid="339e29e8-df54-4c33-bf07-8a703d3ed240" />
+          <condition />
+          <activate flag="Acto2Fase2" guid="3e07e897-42d1-4db7-94a0-495a3364b943" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Acto2Conv2">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>*snif, snif* *llorando :C*</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="1" editor-x="285" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>Ostras Germán qué te pasa</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+    </dialogue-node>
+    <dialogue-node nodeindex="2" editor-x="520" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>Nada, nada, es que me estaba acordando de una película muy triste</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="755" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>Pero si te han echado del curro chaval, no tienes pasta para ir al cine. A quién quieres engañar?? XD</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="990" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>Me cago en tu puta madre</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="5" />
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="1225" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>sit down</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="6" />
+    </dialogue-node>
+    <dialogue-node nodeindex="6" editor-x="1460" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>Que cabron</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <timer time="240" usesEndCondition="yes" multipleStarts="yes" runsInLoop="yes" showTime="no" displayName="timer" countDown="yes" showWhenStopped="no">
