@@ -4,8 +4,8 @@
 <entry key="Chapter0.OccupiedOffice.Visible">true</entry>
 <entry key="Chapter0.OfficeInFire.Y">66</entry>
 <entry key="Chapter0.OfficeInFire.X">149</entry>
-<entry key="Chapter0.PlayerOffice.Y">313</entry>
-<entry key="Chapter0.PlayerOffice.X">870</entry>
+<entry key="Chapter0.PlayerOffice.Y">316</entry>
+<entry key="Chapter0.PlayerOffice.X">913</entry>
 <entry key="Chapter0.HallEnd.Visible">true</entry>
 <entry key="Chapter0.TeacherOffices.Visible">true</entry>
 <entry key="Chapter0.OccupiedOffice.Y">78</entry>
@@ -32,11 +32,17 @@
 <entry key="Chapter0.StairsAndElevator.X">914</entry>
 <entry key="Chapter0.HallEnd.X">428</entry>
 <entry key="Chapter0.HallMiddle.Visible">true</entry>
-<entry key="Chapter0.Breakfast.X">-354</entry>
-<entry key="Chapter0.Breakfast.Y">84</entry>
+<entry key="Chapter0.Breakfast.X">-442</entry>
+<entry key="Chapter0.Breakfast.Y">101</entry>
 <entry key="Chapter0.WhatsAppConversation.X">-575</entry>
 <entry key="Chapter0.WhatsAppConversation.Y">366</entry>
 <entry key="Chapter0.GermanHouse.X">-525</entry>
 <entry key="Chapter0.GermanHouse.Y">67</entry>
+<entry key="Chapter0.Cocina.X">-488</entry>
+<entry key="Chapter0.Cocina.Y">-238</entry>
+<entry key="Chapter0.Bedroom.X">-166</entry>
+<entry key="Chapter0.Bedroom.Y">-45</entry>
+<entry key="Chapter0.CoffeeShop.X">8</entry>
+<entry key="Chapter0.CoffeeShop.Y">-59</entry>
 </properties>
 

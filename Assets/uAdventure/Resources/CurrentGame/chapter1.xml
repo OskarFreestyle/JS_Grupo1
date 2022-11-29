@@ -669,28 +669,46 @@
   <scene id="WhatsAppConversation" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
-    <resources name="PrimerMSG">
+    <resources name="PrimerMSGGerman">
       <condition>
         <inactive flag="NextWhats" />
       </condition>
-      <asset type="background" uri="assets/background/Whatsapp.png" />
+      <asset type="background" uri="assets/background/WhatsappInicial.png" />
     </resources>
-    <resources name="SegundoMSG">
+    <resources name="PrimerMSGGermanResp1">
       <condition>
-        <active flag="NextWhats" />
+        <equals var="Respuesta1" value="1" />
       </condition>
-      <asset type="background" uri="assets/background/Whatsapp2.png" />
+      <asset type="background" uri="assets/background/WhatsappResp1.png" />
+    </resources>
+    <resources name="PrimerMSGGermanResp2">
+      <condition>
+        <equals var="Respuesta1" value="2" />
+      </condition>
+      <asset type="background" uri="assets/background/WhatsappResp2.png" />
+    </resources>
+    <resources name="SegundoMSGGerman1">
+      <condition>
+        <equals var="Respuesta1" value="1" />
+      </condition>
+      <asset type="background" uri="assets/background/Whatsapp1German.png" />
+    </resources>
+    <resources name="SegundoMSGGerman2">
+      <condition>
+        <equals var="Respuesta1" value="2" />
+      </condition>
+      <asset type="background" uri="assets/background/Whatsapp2German.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="452" y="319" width="98" height="252" hasInfluenceArea="no" idTarget="GermanHouse" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="67084" y="4278" width="6468" height="3646" hasInfluenceArea="no" idTarget="GermanHouse" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
     <active-areas>
-      <active-area id="ActiveAreaId" rectangular="yes" x="163" y="447" width="244" height="103" hasInfluenceArea="no" behaviour="normal">
+      <active-area id="ActiveAreaId" rectangular="yes" x="11524" y="4278" width="5234" height="644" hasInfluenceArea="no" behaviour="normal">
         <description>
           <name>
           </name>
@@ -809,6 +827,19 @@
       <object-ref idTarget="Comida" x="1156" y="1041" scale="0.3218233" glow="no" layer="1" hasInfluenceArea="no" />
     </objects>
   </scene>
+  <scene id="PlayerRoom" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/SalonDesayuno.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="iPhone" x="1362" y="1088" scale="0.209572" glow="no" layer="0" hasInfluenceArea="no" />
+    </objects>
+  </scene>
   <slidescene id="ElevatorEnding" start="no" idTarget="FireVideo" destinyX="-1" destinyY="-1" transitionTime="0" transitionType="0" next="new-scene" class="" type="">
     <documentation>
     </documentation>
@@ -885,7 +916,25 @@
     <name>
     </name>
   </slidescene>
-  <slidescene id="SegundoActo" start="yes" idTarget="GermanHouse" destinyX="-2147483648" destinyY="2147483647" transitionTime="500" transitionType="2" next="new-scene" class="accesible" type="cutscene">
+  <slidescene id="WhatsappCutscene" start="no" idTarget="SegundoActo" destinyX="-2147483648" destinyY="-2147483648" transitionTime="2000" transitionType="2" next="new-scene" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="WhatsappCutscene">
+      <asset type="slides" uri="assets/animation/CutsceneWhatsapp.eaa.xml" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
+  <slidescene id="PrimerActo" start="yes" idTarget="WhatsappCutscene" destinyX="-2147483648" destinyY="2147483647" transitionTime="500" transitionType="2" next="new-scene" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="PrimerActo">
+      <asset type="slides" uri="assets/animation/PrimerActoAnim.eaa.xml" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
+  <slidescene id="SegundoActo" start="no" idTarget="GermanHouse" destinyX="-2147483648" destinyY="2147483647" transitionTime="500" transitionType="2" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
     <resources name="SegundoActo">
