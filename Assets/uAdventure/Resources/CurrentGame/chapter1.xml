@@ -827,7 +827,7 @@
       <object-ref idTarget="Comida" x="1156" y="1041" scale="0.3218233" glow="no" layer="1" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="PlayerRoom" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="PlayerRoom" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -925,7 +925,7 @@
     <name>
     </name>
   </slidescene>
-  <slidescene id="PrimerActo" start="yes" idTarget="WhatsappCutscene" destinyX="-2147483648" destinyY="2147483647" transitionTime="500" transitionType="2" next="new-scene" class="accesible" type="cutscene">
+  <slidescene id="PrimerActo" start="yes" idTarget="PlayerRoom" destinyX="-2147483648" destinyY="2147483647" transitionTime="500" transitionType="2" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
     <resources name="PrimerActo">
@@ -1061,10 +1061,11 @@
     <actions>
       <use needsGoTo="yes" keepDistance="35" not-effects="no">
         <documentation>Miramos Whatsapp</documentation>
+        <condition>
+          <active flag="iPhoneWhatsappReceived" />
+        </condition>
         <effect>
-          <activate flag="iPhoneWhatsappReceived" guid="67cdfc2a-c0fa-4d83-bf10-664702748ca1" />
-          <condition />
-          <trigger-scene idTarget="WhatsAppConversation" x="250" y="532" transitionTime="0" transitionType="0" guid="d9a52d5f-9894-4dc7-8242-4c0661ac8aad" />
+          <trigger-cutscene idTarget="WhatsappCutscene" guid="38ea85d8-0d10-4c3a-afa7-feaef489a318" />
           <condition />
         </effect>
       </use>
@@ -1935,6 +1936,15 @@
       <activate flag="GameOver" guid="6e87dbbc-34c1-4d03-8bef-4ec85f14014f" />
       <condition />
       <trigger-cutscene idTarget="MaximumTime" guid="a82d15f7-1588-4200-ab59-7f4137d65926" />
+      <condition />
+    </effect>
+  </timer>
+  <timer time="10" usesEndCondition="no" multipleStarts="no" runsInLoop="no" showTime="no" displayName="WhatsappTimer" countDown="yes" showWhenStopped="no">
+    <init-condition>
+      <inactive flag="iPhoneWhatsappReceived" />
+    </init-condition>
+    <effect>
+      <activate flag="iPhoneWhatsappReceived" guid="e9bbf946-7ffb-4afb-895e-6ed1f741588c" />
       <condition />
     </effect>
   </timer>
