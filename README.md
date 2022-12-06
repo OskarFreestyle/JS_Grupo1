@@ -56,7 +56,7 @@ Aparece un cuadrito en el que introduces tu nombre y un desplegable en el que el
 **Escenario:** El salón de tu casa y el chat de mensajes.
 
 <p align="center">
-  <img src="https://https://github.com/OskarFreestyle/JS_Grupo1/blob/main/Assets/Apodyopsis/Cutscenes/Escena1.png">
+  <img src="https://github.com/OskarFreestyle/JS_Grupo1/blob/main/Assets/Apodyopsis/GDD%20images/Dialogo1.png">
 </p>
 
 **2do acto:** Llegas a su casa. Se aprecian detalles subliminales sobre su depresión como platos de comida sin acabar, la casa sucia, Germán más delgado y con ojeras…
