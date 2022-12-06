@@ -61,7 +61,7 @@ Aparece un cuadrito en el que introduces tu nombre y un desplegable en el que el
 
 **Escenario:** El salón de tu casa y el chat de mensajes.
 
-<p align="center">
+<p align="center" width="400">
   <img src="https://github.com/OskarFreestyle/JS_Grupo1/blob/main/Assets/Apodyopsis/GDD%20images/DialogoActo1.png">
 </p>
 
@@ -74,7 +74,7 @@ Termináis diciendo que os volveréis a ver dentro de poco.
 
 **Escenario:** Casa de German.
 
-<p align="center">
+<p align="center" width="400">
   <img src="https://github.com/OskarFreestyle/JS_Grupo1/blob/main/Assets/Apodyopsis/GDD%20images/DialogoActo2.png">
 </p>
 
@@ -92,7 +92,7 @@ Además esto prepara al jugador de cara a responder de la mejor forma posible a 
 
 **Escenario:** Da igual de momento reusar casa German.
 
-<p align="center">
+<p align="center" width="400">
   <img src="https://github.com/OskarFreestyle/JS_Grupo1/blob/main/Assets/Apodyopsis/GDD%20images/DialogoActo4.png">
 </p>
 
