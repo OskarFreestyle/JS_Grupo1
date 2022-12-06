@@ -84,7 +84,7 @@ Además esto prepara al jugador de cara a responder de la mejor forma posible a 
 
 **Escenario:** Tu cuarto, donde estás metido en la cama.
 
-<p align="center">
+<p align="center" width="400">
   <img src="https://github.com/OskarFreestyle/JS_Grupo1/blob/main/Assets/Apodyopsis/GDD%20images/DialogoActo3.png">
 </p>
 
