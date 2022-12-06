@@ -107,19 +107,16 @@ sentirse solas. Dejan de sentirse motivadas por lo que siempre les ha gustado. E
 su cabeza, no creen que nunca vayan a sentirse mejor, han perdido la esperanza de
 sentirse mejor en un futuro.
 
-Suelen rechazar la idea de ir al psicólogo porque creen que no están lo
-suficientemente mal para ir, creen que tienes que tener un problema mucho más
+Suelen rechazar la idea de ir al psicólogo porque creen que no están lo suficientemente mal para ir, creen que tienes que tener un problema mucho más
 grave para ir a un psicólogo.
+
 Para tratar con alguien con depresión:
 
-● Intentar escuchar a la persona sin necesidad de buscar una solución a su
-problema, muchas veces no tiene solución (por ejemplo, una muerte de un
-familiar) o no eres quién para decirle cómo solucionarlo y lo único que
-necesita es alguien con quien hablar.
+  ● Intentar escuchar a la persona sin necesidad de buscar una solución a su problema, muchas veces no tiene solución (por ejemplo, una muerte de un familiar) o no eres quién para decirle cómo solucionarlo y lo único que necesita es alguien con quien hablar.
 
-● Nunca decir:
+  ● Nunca decir:
 
-○ No estés triste / anímate
+    ○ No estés triste / anímate
 
 ○ No te preocupes
 
@@ -127,15 +124,15 @@ necesita es alguien con quien hablar.
 
 ○ No llores
 
-● En vez de eso, mejor decir:
+  ● En vez de eso, mejor decir:
 
-○ Te entiendo
+    ○ Te entiendo
 
-○ Es normal que te sientas así, y no pasa nada porque estés mal
+    ○ Es normal que te sientas así, y no pasa nada porque estés mal
 
-○ No pasa nada por estar mal durante un tiempo (todos tenemos derecho a estar mal cuando tengamos que estar mal)
+    ○ No pasa nada por estar mal durante un tiempo (todos tenemos derecho a estar mal cuando tengamos que estar mal)
 
-○ Llora siempre que lo necesites
+    ○ Llora siempre que lo necesites
 
 ## INTERFAZ
 Estilo la entrevista creado con uAdventure.
