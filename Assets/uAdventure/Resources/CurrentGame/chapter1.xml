@@ -1413,127 +1413,195 @@
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="Conciencia">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="172">
+    <dialogue-node nodeindex="0" editor-x="47" editor-y="172">
       <speak-player>
         <resources name="No name" />
-        <text>Estoy hablando conmigo mismo</text>
+        <text>Ha estado bien volver a ver a Germán</text>
       </speak-player>
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>...</text>
+        <text>Sin embargo, hay algo que no me cuadra; me he dado cuenta de cosas que me preocupan un poco</text>
       </speak-player>
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>JAJAJAJAJAJAJA</text>
-      </speak-player>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>Acabo de recordar un chiste buenísimo</text>
-      </speak-player>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>Pero estoy solo así que no tiene sentido contarlo</text>
-      </speak-player>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>El caso, llevaba mucho tiempo sin ver a Germán, pero estaba raro...</text>
+        <text>Por ejemplo, es una pena que le echaran del trabajo. ¿Le habrá afectado mucho?</text>
       </speak-player>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" random="yes" keepShowing="yes" preListening="yes" editor-x="741" editor-y="168" x="741" y="168">
-      <speak-player>
-        <text>Ya se le pasará</text>
+    <option-node nodeindex="1" random="yes" keepShowing="yes" preListening="yes" editor-x="344" editor-y="164" x="344" y="164">
+      <speak-player correct="true">
+        <text>Dijo que no le volvería a contratar nadie. Quizás fuese su primer trabajo o a lo mejor le costó conseguirlo, pero parece que le ha sentado muy mal. Quizás debería preguntarle por su despido e intentar motivarlo a seguir intentándolo.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="2" />
-      <speak-player correct="true">
-        <text>Debería ayudarlo</text>
+      <speak-player>
+        <text>No creo, en estos tiempos es normal que te echen del curro y luego te vuelvan a contratar en otro y así todo el rato, le diré que lo mejor es no darle tanta importancia.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="3" />
+      <child nodeindex="2" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="600" editor-y="177">
       <speak-player>
-        <text>Debería decirle que no esté triste</text>
+        <resources name="No name" />
+        <text>Quizás no sea tan grave, pero en cualquier caso debería comprobar al menos cómo está él</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>En cuanto a la idea de vivir solo… </text>
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </dialogue-node>
+    <option-node nodeindex="3" random="yes" keepShowing="yes" preListening="yes" editor-x="920" editor-y="167" x="920" y="167">
+      <speak-player>
+        <text>Germán no parecía muy conforme con ello, pero se apañará bien, todo es cuestión de acostumbrarse</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="4" />
-    </option-node>
-    <dialogue-node nodeindex="2" editor-x="1157" editor-y="20">
       <speak-player>
+        <text>Se le estaba haciendo más duro de lo que se esperaba </text>
         <resources name="No name" />
-        <text>No creo que sea algo que se solucione solo</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="1" />
-    </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="1394" editor-y="202">
-      <speak-player>
-        <resources name="No name" />
-        <text>Si, será lo mejor</text>
-      </speak-player>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>Mañana le diré que quedemos en algún sitio en el que podamos hablar tranquilos</text>
       </speak-player>
       <condition />
       <child nodeindex="5" />
-    </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="1166" editor-y="421">
+    </option-node>
+    <dialogue-node nodeindex="4" editor-x="1234" editor-y="19">
       <speak-player>
         <resources name="No name" />
-        <text>Eso nunca ha ayudado en nada</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="1" />
-    </dialogue-node>
-    <option-node nodeindex="5" random="yes" preListening="yes" editor-x="1944" editor-y="190" x="1944" y="190">
-      <speak-player>
-        <text>Le diré que vayamos al PaintBall</text>
-        <resources name="No name" />
+        <text>Sin embargo estaba demasiado desanimado, igual debería intentar apoyarlo con el cambio </text>
       </speak-player>
       <condition />
       <child nodeindex="6" />
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="1231" editor-y="292">
       <speak-player>
-        <text>Le diré que vayamos a alguna cafetería</text>
         <resources name="No name" />
+        <text>Por lo que me ha contado está bastante decepcionado con vivir él solo, además mencionó que las tareas le estaban agotando…</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="6" />
+    </dialogue-node>
+    <dialogue-node nodeindex="6" editor-x="1538" editor-y="188">
+      <speak-player>
+        <resources name="No name" />
+        <text>De hecho, me ha dicho que ya no tiene ganas de jugar a la play ni de coger la bici, y eso que antes le encantaba hacer esas cosas</text>
       </speak-player>
       <condition />
       <child nodeindex="7" />
-    </option-node>
-    <dialogue-node nodeindex="6" editor-x="2512" editor-y="23">
-      <speak-player>
-        <resources name="No name" />
-        <text>Ah no, me prohibieron volver cuando utilcé el cuchillo</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="5" />
     </dialogue-node>
-    <dialogue-node nodeindex="7" editor-x="2516" editor-y="244">
+    <option-node nodeindex="7" random="yes" keepShowing="yes" preListening="yes" editor-x="1812" editor-y="181" x="1812" y="181">
       <speak-player>
+        <text>Igual es que se ha cansado de hacer esas cosas y ya</text>
         <resources name="No name" />
-        <text>Si, será lo mejor</text>
       </speak-player>
       <condition />
       <child nodeindex="8" />
-    </dialogue-node>
-    <dialogue-node nodeindex="8" editor-x="2751" editor-y="244">
+      <speak-player>
+        <text>Es muy extraño que hayan dejado de gustarle en tan solo unos meses</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="9" />
+    </option-node>
+    <dialogue-node nodeindex="8" editor-x="2120" editor-y="146">
       <speak-player>
         <resources name="No name" />
-        <text>Y con esto cambiamos al acto 4</text>
+        <text>Pero no lo creo… de hecho hace unos meses había ganado un campeonato de ciclismo y estaba muy entusiasmado con seguir adelante. Además, aunque se hubiera cansado, habría buscado nuevos hobbies </text>
+      </speak-player>
+      <condition />
+      <child nodeindex="10" />
+    </dialogue-node>
+    <dialogue-node nodeindex="9" editor-x="2060" editor-y="374">
+      <speak-player>
+        <resources name="No name" />
+        <text>No puede ser algo normal, parecía totalmente apagado ante la idea de volver con esos hobbies, pero también de hacer todo tipo de cosas en general</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="10" />
+    </dialogue-node>
+    <dialogue-node nodeindex="10" editor-x="2364" editor-y="263">
+      <speak-player>
+        <resources name="No name" />
+        <text>A parte de sus hábitos, también ha cambiado físicamente</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="11" />
+    </dialogue-node>
+    <option-node nodeindex="11" preListening="yes" editor-x="2604" editor-y="267" x="2604" y="267">
+      <speak-player>
+        <text>Está muy delgado, y eso que ya no hace deporte, ¡ojalá saber cómo lo hace!</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="12" />
+      <speak-player>
+        <text>Ha perdido mucho peso, es como si tampoco quisiera comer</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="13" />
+      <speak-player>
+        <text>Es como si apenas comiera nada. Con la de hambre que hay en el mundo, menudo desagradecido…</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="14" />
+    </option-node>
+    <dialogue-node nodeindex="12" editor-x="2819" editor-y="263">
+      <speak-player>
+        <resources name="No name" />
+        <text>Puede ser una dieta, aunque por otra parte puede ser que esté comiendo poco. ¿Estará sin dinero para pagar la comida, o quizás es que simplemente tiene pocas ganas de comer? Debería preguntarle al respecto</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="15" />
+    </dialogue-node>
+    <dialogue-node nodeindex="13" editor-x="2817" editor-y="454">
+      <speak-player>
+        <resources name="No name" />
+        <text>Si continúa así se encontrará cada vez más cansado y tendrá aún menos ganas de hacer cosas, aunque obligarlo a comer y ya está no creo que vaya a servir de nada, así que, ¿qué puedo hacer yo al respecto?</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="15" />
+    </dialogue-node>
+    <dialogue-node nodeindex="14" editor-x="2833" editor-y="646">
+      <speak-player>
+        <resources name="No name" />
+        <text>Aunque pensándolo bien, quizás no es culpa suya. Al fin y al cabo si lo está pasando mal no debería culparlo por ello</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="15" />
+    </dialogue-node>
+    <dialogue-node nodeindex="15" editor-x="3150" editor-y="403">
+      <speak-player>
+        <resources name="No name" />
+        <text>Creo que debería volver a hablar con él. </text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Me aseguraré de saber cómo se siente, pero en cualquiera de los casos le diré que vaya al psicólogo.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Es mejor prevenir que curar.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Además, aunque quiero ayudarlo no sé muy bien cómo hacerlo, e igual empeoro la situación sin quererlo </text>
       </speak-player>
       <condition />
       <end-conversation>
         <effect>
-          <trigger-cutscene idTarget="CuartoActo" guid="0878014d-5c4d-4a38-9e4a-f8850215b347" />
+          <trigger-cutscene idTarget="CuartoActo" guid="76d18168-f96a-4569-ae38-c21cc2d8c9ac" />
           <condition />
         </effect>
       </end-conversation>
@@ -1834,7 +1902,7 @@
       <condition />
       <child nodeindex="21" />
     </dialogue-node>
-    <option-node nodeindex="25" preListening="yes" editor-x="6453" editor-y="184" x="6453" y="184">
+    <option-node nodeindex="25" random="yes" keepShowing="yes" preListening="yes" editor-x="6453" editor-y="184" x="6453" y="184">
       <speak-player>
         <text>¿Y qué te dijeron?</text>
         <resources name="No name" />
@@ -2084,10 +2152,10 @@
         <text>Si, tienes razón, iré.</text>
       </speak-char>
       <condition />
-      <speak-player>
+      <speak-char idTarget="German">
         <resources name="No name" />
         <text>Muchas gracias por escucharme y por tus consejos.</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
