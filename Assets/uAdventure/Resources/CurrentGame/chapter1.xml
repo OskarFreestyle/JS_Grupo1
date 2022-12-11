@@ -66,36 +66,21 @@
         <documentation>
         </documentation>
         <effect>
-          <trigger-conversation idTarget="A2_DialogoPrimero" guid="0c7d0973-3127-4e67-9237-631c6d23a19c" />
-          <condition />
-        </effect>
-      </talk-to>
-      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: A2_DialogoIndependencia</documentation>
-        <effect>
-          <trigger-conversation idTarget="A2_DialogoIndependencia" guid="08285ba4-72ed-4efe-a4b2-ce078e2c9a36" />
-          <condition />
-        </effect>
-      </talk-to>
-      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: A2_DialogoIrBano</documentation>
-        <effect>
-          <trigger-conversation idTarget="A2_DialogoIrBano" guid="cf9eede6-c67c-45a2-9d55-6a41582b853c" />
-          <condition />
-        </effect>
-      </talk-to>
-      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: A2_DialogoEcharte</documentation>
-        <effect>
-          <trigger-conversation idTarget="A2_DialogoEcharte" guid="f2904af5-2389-4a8b-845f-6edaf9f60e99" />
-          <condition />
-        </effect>
-      </talk-to>
-      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: A2_DialogoTrabajo</documentation>
-        <effect>
-          <trigger-conversation idTarget="A2_DialogoTrabajo" guid="a9fca98f-9b8b-4273-aa23-830b88f3d29c" />
-          <condition />
+          <trigger-conversation idTarget="A2_DialogoVueltaBano" guid="75e01351-3352-401a-b068-bca4161126de" />
+          <condition>
+            <active flag="A2_IrAlBaño" />
+            <active flag="A2_VolverBano" />
+          </condition>
+          <trigger-conversation idTarget="A2_DialogoIndicarBano" guid="94b8ca04-148c-4bb8-ab42-a8375f2eff98" />
+          <condition>
+            <active flag="A2_IrAlBaño" />
+            <inactive flag="A2_VolverBano" />
+          </condition>
+          <trigger-conversation idTarget="A2_DialogoPrimero" guid="9654a192-a9e4-4365-8d03-b32a384569cc" />
+          <condition>
+            <inactive flag="A2_IrAlBaño" />
+            <inactive flag="A2_VolverBano" />
+          </condition>
         </effect>
       </talk-to>
     </actions>
@@ -235,7 +220,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="67084" y="4278" width="6468" height="3646" hasInfluenceArea="no" idTarget="GermanHouse" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="67084" y="4278" width="6468" height="3646" hasInfluenceArea="no" idTarget="SalonGerman" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
@@ -270,27 +255,6 @@
       </active-area>
     </active-areas>
   </scene>
-  <scene id="GermanHouse" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="Salon">
-      <asset type="background" uri="assets/background/SalonGerman.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <exits>
-      <exit rectangular="yes" x="7" y="5" width="202" height="168" hasInfluenceArea="no" idTarget="TercerActo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-        <condition>
-          <active flag="acto2Finalizado" />
-        </condition>
-      </exit>
-    </exits>
-    <characters>
-      <character-ref idTarget="German" x="502" y="844" scale="1" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
-    </characters>
-  </scene>
   <scene id="Bedroom" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -317,29 +281,6 @@
       <character-ref idTarget="German" x="487" y="631" scale="0.7373584" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="Cocina" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="Cocina">
-      <asset type="background" uri="assets/background/SalonDesayuno.png" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <exits>
-      <exit rectangular="yes" x="8" y="361" width="615" height="841" hasInfluenceArea="no" idTarget="GermanHouse" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-        <condition>
-          <active flag="comidaExaminada" />
-          <active flag="latasExaminadas" />
-        </condition>
-      </exit>
-    </exits>
-    <objects>
-      <object-ref idTarget="Latas" x="1890" y="1372" scale="0.2798715" glow="no" layer="0" hasInfluenceArea="no" />
-      <object-ref idTarget="Comida" x="1156" y="1041" scale="0.3218233" glow="no" layer="1" hasInfluenceArea="no" />
-    </objects>
-  </scene>
   <scene id="PlayerRoom" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -351,6 +292,85 @@
     <default-initial-position x="400" y="450" />
     <objects>
       <object-ref idTarget="iPhone" x="1362" y="1088" scale="0.209572" glow="no" layer="0" hasInfluenceArea="no" />
+    </objects>
+  </scene>
+  <scene id="SalonGerman" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="Vista1">
+      <asset type="background" uri="assets/background/SalonGerman.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="1771" y="220" width="216" height="596" hasInfluenceArea="no" idTarget="PasilloGerman" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="A2_IrAlBaño" />
+        </condition>
+      </exit>
+    </exits>
+    <characters>
+      <character-ref idTarget="German" x="502" y="844" scale="1" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="PasilloGerman" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="Vista1">
+      <asset type="background" uri="assets/background/PasilloGerman.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="17" y="140" width="108" height="246" hasInfluenceArea="no" idTarget="SalonGerman" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+      <exit rectangular="yes" x="176" y="105" width="104" height="166" hasInfluenceArea="no" idTarget="CocinaGerman" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+      <exit rectangular="yes" x="334" y="130" width="96" height="269" hasInfluenceArea="no" idTarget="BanoGerman" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+  </scene>
+  <scene id="CocinaGerman" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="Vista1">
+      <asset type="background" uri="assets/background/CocinaGerman.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="-2" y="42" width="124" height="448" hasInfluenceArea="no" idTarget="PasilloGerman" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+    <objects>
+      <object-ref idTarget="Latas" x="306" y="504" scale="0.111206" glow="no" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="Comida" x="352" y="311" scale="0.1163598" glow="no" layer="0" hasInfluenceArea="no" />
+    </objects>
+  </scene>
+  <scene id="BanoGerman" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="Vista1">
+      <asset type="background" uri="assets/background/BanoGerman.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="-5" y="63" width="80" height="357" hasInfluenceArea="no" idTarget="PasilloGerman" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+    <objects>
+      <object-ref idTarget="Letrina" x="762" y="394" scale="3.340665" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <slidescene id="Introduction" start="no" idTarget="Breakfast" destinyX="-1" destinyY="-1" transitionTime="100" transitionType="1" next="new-scene" class="accesible" type="screen">
@@ -405,7 +425,7 @@
     <name>
     </name>
   </slidescene>
-  <slidescene id="SegundoActo" start="yes" idTarget="GermanHouse" destinyX="-2147483648" destinyY="2147483647" transitionTime="500" transitionType="2" next="new-scene" class="accesible" type="cutscene">
+  <slidescene id="SegundoActo" start="yes" idTarget="SalonGerman" destinyX="-2147483648" destinyY="2147483647" transitionTime="500" transitionType="2" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
     <resources name="SegundoActo">
@@ -582,6 +602,28 @@
           <condition />
         </effect>
       </examine>
+    </actions>
+  </object>
+  <object id="Letrina" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <activate flag="A2_VolverBano" guid="e84e2a7c-d2b2-4625-aa86-a4b4a4e140b5" />
+          <condition />
+        </effect>
+      </use>
     </actions>
   </object>
   <graph-conversation id="ConverWhats">
@@ -1617,46 +1659,325 @@
     <dialogue-node nodeindex="16" editor-x="3699" editor-y="382">
       <end-conversation>
         <effect>
-          <trigger-conversation idTarget="A2_DialogoIrBano" guid="cb20f337-b438-434a-9fc1-a1134d0bd5ce" />
-          <condition>
-            <inactive flag="A2_IrAlBaño" />
-          </condition>
           <trigger-conversation idTarget="A2_DialogoEcharte" guid="d66f8e67-13a2-4604-b725-ea70701d46e1" />
           <condition>
             <active flag="A2_IrAlBaño" />
+          </condition>
+          <trigger-conversation idTarget="A2_DialogoIrBano" guid="e98bd0c0-719c-4e0e-88e9-e859a7e058c1" />
+          <condition>
+            <inactive flag="A2_IrAlBaño" />
           </condition>
         </effect>
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="A2_DialogoIrBano">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-char idTarget="German">
+    <dialogue-node nodeindex="0" editor-x="29" editor-y="86">
+      <speak-player>
         <resources name="No name" />
-        <text>El baño está al fondo derecha</text>
-      </speak-char>
+        <text>Menudas ganas de mear me estan entrando</text>
+      </speak-player>
       <condition />
-      <end-conversation />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" random="yes" keepShowing="yes" preListening="yes" editor-x="303" editor-y="60" x="303" y="60">
+      <speak-player correct="true">
+        <text>Tengo que ir al baño.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player correct="true">
+        <text>Me estoy meando.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="709" editor-y="100">
+      <end-conversation>
+        <effect>
+          <trigger-conversation idTarget="A2_DialogoIndicarBano" guid="cbf39a29-68c8-4913-a23b-a41f7f7d2cf2" />
+          <condition />
+          <activate flag="A2_IrAlBaño" guid="bc5d8c87-6f64-4dca-97fd-ede80b240041" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="A2_DialogoEcharte">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+    <dialogue-node nodeindex="0" editor-x="62" editor-y="96">
       <speak-char idTarget="German">
         <resources name="No name" />
-        <text>Fuera de aqui</text>
+        <text>Bueno me está empezando a doler un poco la cabeza… Te importaría irte. </text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" preListening="yes" editor-x="278" editor-y="22" x="278" y="22">
+      <speak-player correct="true">
+        <text>Esta bien no pasa nada. Ya nos veremos otro día. </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player correct="true">
+        <text>Uy, ¿pero mucho? ¿Necesitas que te acompañe al médico o te ayude con algo?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1432" editor-y="179">
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>Adios Andy, cuidate tio.</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="682" editor-y="319">
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>No, no te preocupes. Yo creo que es cansancio, esta noche he dormido poco. Mañana se me habrá pasado. </text>
+      </speak-char>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <option-node nodeindex="4" preListening="yes" editor-x="1101" editor-y="319" x="1101" y="319">
+      <speak-player correct="true">
+        <text>Está bien, pues nos vemos otro día.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player correct="true">
+        <text>Vale pues ya quedaremos otro día.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+    </option-node>
+  </graph-conversation>
+  <graph-conversation id="A2_DialogoTrabajo">
+    <dialogue-node nodeindex="0" editor-x="150" editor-y="107">
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>Pues la cosa está complicada…</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" preListening="yes" editor-x="385" editor-y="107" x="385" y="107">
+      <speak-player correct="true">
+        <text>¿Y eso?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player correct="true">
+        <text>Ya imagino…  ¿Pero cuánto hace que no curras? </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="707" editor-y="133">
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>Pues ya llevo 3 meses en el paro. Al menos voy a poder seguir cobrándolo un tiempo porque veo dificil lo de encontrar curro.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="3" />
+    </dialogue-node>
+    <option-node nodeindex="3" random="yes" keepShowing="yes" preListening="yes" editor-x="958" editor-y="121" x="958" y="121">
+      <speak-player correct="true">
+        <text>Pues vaya mierda</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+      <speak-player correct="true">
+        <text>Tampoco seas tan negativo, algo te saldrá.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="5" />
+      <speak-player correct="true">
+        <text>Bueno ya sabes cómo es eso, cuando menos te lo esperes te saldrá algo.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="6" />
+    </option-node>
+    <dialogue-node nodeindex="4" editor-x="1222" editor-y="0">
+      <speak-player>
+        <resources name="No name" />
+        <text>Pues vaya mierda</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="1509" editor-y="226">
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>Si he estado en el mismo puesto de la fábrica desde los 16 años.  Acuérdate que dejé el instituto en cuanto que pude. Mi currículum está vacío. Nadie me quiere contratar. </text>
+      </speak-char>
+      <condition />
+      <child nodeindex="7" />
+    </dialogue-node>
+    <dialogue-node nodeindex="6" editor-x="1230" editor-y="397">
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>¿Saber el qué?</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="5" />
+    </dialogue-node>
+    <option-node nodeindex="7" random="yes" keepShowing="yes" preListening="yes" editor-x="1747" editor-y="312" x="1747" y="312">
+      <speak-player correct="true">
+        <text>Bueno siempre estás a tiempo de volver a estudiar.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="8" />
+      <speak-player correct="true">
+        <text>Igualmente, siempre hay trabajos en los que te pueden querer a pesar de no tener estudios.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="9" />
+    </option-node>
+    <dialogue-node nodeindex="8" editor-x="1993" editor-y="122">
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>¿Qué dices? Eso es imposible, si no me acuerdo ni de las tablas de multiplicar.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="10" />
+    </dialogue-node>
+    <dialogue-node nodeindex="9" editor-x="2706" editor-y="243">
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>Ya, eso es verdad… Algo encontraré… </text>
+      </speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <trigger-conversation idTarget="A2_DialogoEcharte" guid="4d08f8b6-e8c4-4562-acbb-44d346d362d3" />
+          <condition>
+            <active flag="A2_IrAlBaño" />
+          </condition>
+          <trigger-conversation idTarget="A2_DialogoIrBano" guid="f08b3ccb-1d1f-4465-962e-a91f98f156fa" />
+          <condition>
+            <inactive flag="A2_IrAlBaño" />
+          </condition>
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <option-node nodeindex="10" preListening="yes" editor-x="2228" editor-y="65" x="2228" y="65">
+      <speak-player correct="true">
+        <text>Entonces no te quejes. Sabías lo que hacías al dejar el instituto.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="11" />
+      <speak-player correct="true">
+        <text>Pues te tocará seguir buscando, en algún sitio te cogerán aunque no tengas estudios.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="9" />
+    </option-node>
+    <dialogue-node nodeindex="11" editor-x="2467" editor-y="12">
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>Es verdad que en su día le dije que se arrepentiría.  Pero no es momento para un “Te lo dije”. </text>
+      </speak-char>
+      <condition />
+      <child nodeindex="10" />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="A2_DialogoIndicarBano">
+    <dialogue-node nodeindex="0" editor-x="273" editor-y="101">
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>El baño está en la puerta de la derecha.</text>
       </speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="A2_DialogoTrabajo">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+  <graph-conversation id="A2_DialogoVueltaBano">
+    <dialogue-node nodeindex="0" editor-x="141" editor-y="279">
       <speak-char idTarget="German">
         <resources name="No name" />
-        <text>El curro mal </text>
+        <text>Si que has tardado.</text>
       </speak-char>
       <condition />
-      <end-conversation />
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>¿De qué estábamos hablando?</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" random="yes" preListening="yes" editor-x="637" editor-y="263" x="637" y="263">
+      <speak-player>
+        <text>De tu trabajo</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition>
+        <active flag="A2_HablarTrabajo" />
+      </condition>
+      <child nodeindex="2" />
+      <speak-player>
+        <text>De tu independencia</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition>
+        <active flag="A2_HablarIndependencia" />
+      </condition>
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Habias mencionado que la fabrica ha cerrado, ¿ahora que haces?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition>
+        <active flag="A2_HablarIndependencia" />
+      </condition>
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Habias mencionado que se te hace duro vivir solo...</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition>
+        <active flag="A2_HablarTrabajo" />
+      </condition>
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1375" editor-y="55">
+      <speak-player>
+        <resources name="No name" />
+        <text>Mejor cambio de tema, no parece estar muy contento en ese aspecto...</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1437" editor-y="311">
+      <end-conversation>
+        <effect>
+          <trigger-conversation idTarget="A2_DialogoTrabajo" guid="9d78be76-efd6-4dff-b4a0-49c71f3bccd6" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1442" editor-y="514">
+      <end-conversation>
+        <effect>
+          <trigger-conversation idTarget="A2_DialogoIndependencia" guid="e5b9d01a-5169-489a-9814-eb2f94b9ee86" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <timer time="240" usesEndCondition="yes" multipleStarts="yes" runsInLoop="yes" showTime="no" displayName="timer" countDown="yes" showWhenStopped="no">
