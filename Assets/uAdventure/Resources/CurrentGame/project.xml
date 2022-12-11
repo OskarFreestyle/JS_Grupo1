@@ -32,17 +32,19 @@
 <entry key="Chapter0.StairsAndElevator.X">914</entry>
 <entry key="Chapter0.HallEnd.X">428</entry>
 <entry key="Chapter0.HallMiddle.Visible">true</entry>
-<entry key="Chapter0.Breakfast.X">-442</entry>
-<entry key="Chapter0.Breakfast.Y">101</entry>
+<entry key="Chapter0.Breakfast.X">-275</entry>
+<entry key="Chapter0.Breakfast.Y">199</entry>
 <entry key="Chapter0.WhatsAppConversation.X">-575</entry>
 <entry key="Chapter0.WhatsAppConversation.Y">366</entry>
 <entry key="Chapter0.GermanHouse.X">-525</entry>
 <entry key="Chapter0.GermanHouse.Y">67</entry>
-<entry key="Chapter0.Cocina.X">-488</entry>
-<entry key="Chapter0.Cocina.Y">-238</entry>
-<entry key="Chapter0.Bedroom.X">-166</entry>
-<entry key="Chapter0.Bedroom.Y">-45</entry>
-<entry key="Chapter0.CoffeeShop.X">8</entry>
-<entry key="Chapter0.CoffeeShop.Y">-59</entry>
+<entry key="Chapter0.Cocina.X">-315</entry>
+<entry key="Chapter0.Cocina.Y">-106</entry>
+<entry key="Chapter0.Bedroom.X">633</entry>
+<entry key="Chapter0.Bedroom.Y">31</entry>
+<entry key="Chapter0.CoffeeShop.X">165</entry>
+<entry key="Chapter0.CoffeeShop.Y">19</entry>
+<entry key="Chapter0.PlayerRoom.X">220</entry>
+<entry key="Chapter0.PlayerRoom.Y">212</entry>
 </properties>
 

@@ -31,42 +31,6 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </player>
-  <character id="Balta" behaviour="normal">
-    <resources name="">
-      <asset type="standup" uri="assets/animation/Balta" />
-      <asset type="standright" uri="assets/animation/Balta" />
-      <asset type="walkdown" uri="assets/animation/Balta" />
-      <asset type="speakup" uri="assets/animation/Balta" />
-      <asset type="walkright" uri="assets/animation/Balta" />
-      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
-      <asset type="walkup" uri="assets/animation/Balta" />
-      <asset type="speakdown" uri="assets/animation/Balta" />
-      <asset type="speakright" uri="assets/animation/Balta" />
-      <asset type="standdown" uri="assets/animation/Balta" />
-      <asset type="useright" uri="assets/animation/Balta" />
-      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
-      <asset type="useleft" uri="assets/special/EmptyAnimation" />
-      <asset type="standleft" uri="assets/special/EmptyAnimation" />
-    </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
-      <frontcolor color="#FF0000" />
-      <bordercolor color="#FFFF00" />
-    </textcolor>
-    <description>
-      <name>Balta</name>
-      <brief>Baltasar Fernandez</brief>
-      <detailed>This is Baltasar Fernandez</detailed>
-    </description>
-    <voice name="" synthesizeAlways="no" />
-    <actions>
-      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <effect>
-          <trigger-conversation idTarget="GermanEscena2" guid="a5fe91b9-872c-4014-8020-f7f10ddb973a" />
-          <condition />
-        </effect>
-      </talk-to>
-    </actions>
-  </character>
   <character id="German" behaviour="normal">
     <resources name="German">
       <asset type="standup" uri="assets/animation/StandingLookingUpGerman.eaa.xml" />
@@ -99,8 +63,38 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>
+        </documentation>
         <effect>
-          <trigger-conversation idTarget="CoffeeShopConversation" guid="3216e7fa-27b4-4a20-8d1a-7969820174f2" />
+          <trigger-conversation idTarget="A2_DialogoPrimero" guid="0c7d0973-3127-4e67-9237-631c6d23a19c" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: A2_DialogoIndependencia</documentation>
+        <effect>
+          <trigger-conversation idTarget="A2_DialogoIndependencia" guid="08285ba4-72ed-4efe-a4b2-ce078e2c9a36" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: A2_DialogoIrBano</documentation>
+        <effect>
+          <trigger-conversation idTarget="A2_DialogoIrBano" guid="cf9eede6-c67c-45a2-9d55-6a41582b853c" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: A2_DialogoEcharte</documentation>
+        <effect>
+          <trigger-conversation idTarget="A2_DialogoEcharte" guid="f2904af5-2389-4a8b-845f-6edaf9f60e99" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: A2_DialogoTrabajo</documentation>
+        <effect>
+          <trigger-conversation idTarget="A2_DialogoTrabajo" guid="a9fca98f-9b8b-4273-aa23-830b88f3d29c" />
           <condition />
         </effect>
       </talk-to>
@@ -181,468 +175,6 @@
       </custom>
     </actions>
   </character>
-  <character id="GermanCasa1" behaviour="normal">
-    <resources name="German">
-      <asset type="standup" uri="assets/animation/StandingLookingUpGerman.eaa.xml" />
-      <asset type="standdown" uri="assets/animation/StandingLookingDownGerman.eaa.xml" />
-      <asset type="standright" uri="assets/animation/StandingLookingRightGerman.eaa.xml" />
-      <asset type="standleft" uri="assets/animation/StandingLookingLeftGerman.eaa.xml" />
-      <asset type="speakup" uri="assets/special/EmptyAnimation" />
-      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
-      <asset type="speakright" uri="assets/special/EmptyAnimation" />
-      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
-      <asset type="useright" uri="assets/special/EmptyAnimation" />
-      <asset type="useleft" uri="assets/special/EmptyAnimation" />
-      <asset type="walkup" uri="assets/special/EmptyAnimation" />
-      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
-      <asset type="walkright" uri="assets/special/EmptyAnimation" />
-      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
-    </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
-      <frontcolor color="#FFFFFF" />
-      <bordercolor color="#000000" />
-    </textcolor>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-    <voice name="" synthesizeAlways="no" />
-    <actions>
-      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: Acto2Conv1</documentation>
-        <effect>
-          <trigger-conversation idTarget="Acto2Conv1" guid="a2608551-77e2-4e5c-b10f-c1168a2603b4" />
-          <condition />
-        </effect>
-      </talk-to>
-    </actions>
-  </character>
-  <character id="GermanCasa2" behaviour="normal">
-    <resources name="German">
-      <asset type="standup" uri="assets/animation/StandingLookingUpGerman.eaa.xml" />
-      <asset type="standdown" uri="assets/animation/StandingLookingDownGerman.eaa.xml" />
-      <asset type="standright" uri="assets/animation/StandingLookingRightGerman.eaa.xml" />
-      <asset type="standleft" uri="assets/animation/StandingLookingLeftGerman.eaa.xml" />
-      <asset type="speakup" uri="assets/special/EmptyAnimation" />
-      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
-      <asset type="speakright" uri="assets/special/EmptyAnimation" />
-      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
-      <asset type="useright" uri="assets/special/EmptyAnimation" />
-      <asset type="useleft" uri="assets/special/EmptyAnimation" />
-      <asset type="walkup" uri="assets/special/EmptyAnimation" />
-      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
-      <asset type="walkright" uri="assets/special/EmptyAnimation" />
-      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
-    </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
-      <frontcolor color="#FFFFFF" />
-      <bordercolor color="#000000" />
-    </textcolor>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-    <voice name="" synthesizeAlways="no" />
-    <actions>
-      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <effect>
-          <trigger-conversation idTarget="Acto2Conv2" guid="3216e7fa-27b4-4a20-8d1a-7969820174f2" />
-          <condition />
-        </effect>
-      </talk-to>
-    </actions>
-  </character>
-  <scene id="PlayerOffice" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="">
-      <condition>
-        <inactive flag="PhoneAnswered" />
-      </condition>
-      <asset type="bgmusic" uri="assets/audio/telephone.mp3" />
-      <asset type="standup" uri="assets/special/EmptyImage" />
-      <asset type="background" uri="assets/background/PlayerOffice.jpg" />
-    </resources>
-    <resources name="">
-      <condition>
-        <active flag="PhoneAnswered" />
-      </condition>
-      <asset type="background" uri="assets/background/PlayerOffice.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="300" />
-    <exits>
-      <exit rectangular="yes" x="509" y="55" width="157" height="350" hasInfluenceArea="no" idTarget="Breakfast" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="Leave the office" cursor-path="" sound-path="" />
-        <effect>
-          <speak-player guid="149114c8-fc77-4e5d-a18b-ed228e4c0f54">The phone is ringing!</speak-player>
-          <condition />
-        </effect>
-      </exit>
-    </exits>
-    <objects>
-      <object-ref idTarget="Phone" x="-2147483648" y="-2147483648" scale="1" glow="yes" layer="0" hasInfluenceArea="no" />
-    </objects>
-  </scene>
-  <scene id="DepartmentArea" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="">
-      <asset type="standup" uri="assets/special/EmptyImage" />
-      <asset type="background" uri="assets/background/DepartmentArea.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="300" />
-    <exits>
-      <exit rectangular="yes" x="548" y="76" width="174" height="461" hasInfluenceArea="no" idTarget="HallStart" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="Exit the hallway" cursor-path="" sound-path="" />
-      </exit>
-    </exits>
-  </scene>
-  <scene id="HallStart" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="">
-      <asset type="standup" uri="assets/special/EmptyImage" />
-      <asset type="background" uri="assets/background/HallStart.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="300" />
-    <exits>
-      <exit rectangular="yes" x="111" y="175" width="121" height="362" hasInfluenceArea="no" idTarget="OfficeOnFire" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="Check office" cursor-path="" sound-path="" />
-        <effect>
-          <activate flag="CheckedOfficeOnFire" guid="a6e176de-4140-4737-97d6-3e78d8559844" />
-          <condition />
-        </effect>
-        <post-effect>
-          <speak-player guid="64f43a7c-07af-4426-8d63-96fcb3eba6f1">Oh, my god!</speak-player>
-          <condition />
-          <speak-player guid="2db62193-24e9-48d1-b33a-e4b95b8ab2c1">I can not control this fire on my own ...</speak-player>
-          <condition />
-          <speak-player guid="89c7432d-3ebe-4720-a01f-2bb7f7c7f434">We must raise the alarm and start evacuating the building immediately</speak-player>
-          <condition />
-        </post-effect>
-      </exit>
-      <exit rectangular="yes" x="310" y="156" width="266" height="223" hasInfluenceArea="no" idTarget="HallMiddle" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="Move ahead" cursor-path="" sound-path="" />
-        <condition>
-          <active flag="CheckedOfficeOnFire" />
-        </condition>
-      </exit>
-      <exit rectangular="yes" x="310" y="156" width="266" height="223" hasInfluenceArea="no" idTarget="HallStart" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="Move ahead" cursor-path="" sound-path="" />
-        <condition>
-          <inactive flag="CheckedOfficeOnFire" />
-        </condition>
-        <effect>
-          <speak-player guid="976b5c6c-ccc5-4f98-abc6-6b77cf3a3b73">I must check office 411 first!</speak-player>
-          <condition />
-          <activate flag="TriesToWalkByOfficeOnFire" guid="e76e63f2-15ef-4350-aebc-b94b1dbba276" />
-          <condition />
-        </effect>
-      </exit>
-    </exits>
-    <active-areas>
-      <active-area id="ExtinguisherArea" rectangular="yes" x="22" y="149" width="72" height="184" hasInfluenceArea="no" behaviour="normal">
-        <description>
-          <name>Extinguisher</name>
-          <brief>It is a fire extinguisher</brief>
-          <detailed>It is a fire extinguisher</detailed>
-        </description>
-        <actions>
-          <use needsGoTo="yes" keepDistance="10" not-effects="no">
-            <condition>
-              <inactive flag="CheckedOfficeOnFire" />
-            </condition>
-            <effect>
-              <speak-player guid="a3273e81-7ef1-44dd-96d3-31d2ccec38a6">I should check the fire first</speak-player>
-              <condition />
-            </effect>
-          </use>
-          <use needsGoTo="yes" keepDistance="10" not-effects="no">
-            <condition>
-              <active flag="CheckedOfficeOnFire" />
-            </condition>
-            <effect>
-              <speak-player guid="1c70e2fe-0076-438d-b970-958443ed64d8">I am not going to be able to extinguish the fire with this, it's better to focus on the alarm ...</speak-player>
-              <condition />
-            </effect>
-          </use>
-        </actions>
-      </active-area>
-    </active-areas>
-  </scene>
-  <scene id="OfficeOnFire" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="">
-      <asset type="bgmusic" uri="assets/audio/fire_small.mp3" />
-      <asset type="standup" uri="assets/special/EmptyImage" />
-      <asset type="background" uri="assets/background/OfficeOnFire.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="300" />
-    <exits>
-      <exit rectangular="yes" x="0" y="463" width="799" height="134" hasInfluenceArea="no" idTarget="HallStart" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="Leave the office" cursor-path="" sound-path="" />
-      </exit>
-    </exits>
-  </scene>
-  <scene id="HallMiddle" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="">
-      <asset type="standup" uri="assets/special/EmptyImage" />
-      <asset type="background" uri="assets/background/HallMiddle.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="300" />
-    <exits>
-      <exit rectangular="yes" x="168" y="154" width="74" height="355" hasInfluenceArea="no" idTarget="TeacherOffices" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="Check teachers offices" cursor-path="" sound-path="" />
-        <condition>
-          <active flag="AlarmActivated" />
-        </condition>
-      </exit>
-      <exit rectangular="yes" x="168" y="154" width="74" height="355" hasInfluenceArea="no" idTarget="HallMiddle" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="Check teachers offices" cursor-path="" sound-path="" />
-        <condition>
-          <inactive flag="AlarmActivated" />
-        </condition>
-        <effect>
-          <speak-player guid="193ea03e-1b61-4ac9-96c5-18ceafee1ed3">First, I have to activate the fire alarm</speak-player>
-          <condition />
-          <activate flag="TriesToMoveOnWithoutActivatingAlarm" guid="14394513-f456-4c1e-91c3-eb102037c742" />
-          <condition />
-        </effect>
-      </exit>
-      <exit rectangular="yes" x="307" y="202" width="210" height="205" hasInfluenceArea="no" idTarget="HallEnd" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="Move ahead" cursor-path="" sound-path="" />
-        <condition>
-          <active flag="CheckedOffice412" />
-          <active flag="CheckedOffice413" />
-          <active flag="CheckedOffice414" />
-          <active flag="CheckedOffice415" />
-        </condition>
-      </exit>
-      <exit rectangular="yes" x="307" y="202" width="210" height="205" hasInfluenceArea="no" idTarget="HallMiddle" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="Move ahead" cursor-path="" sound-path="" />
-        <condition>
-          <either>
-            <inactive flag="CheckedOffice412" />
-            <inactive flag="CheckedOffice413" />
-            <inactive flag="CheckedOffice414" />
-            <inactive flag="CheckedOffice415" />
-          </either>
-        </condition>
-        <effect>
-          <speak-player guid="aff1c87f-43fb-4c75-89d2-57ce9275979f">I should alert the teachers of the wing that falls to me before leaving the building</speak-player>
-          <condition />
-        </effect>
-      </exit>
-    </exits>
-    <active-areas>
-      <active-area id="AlarmArea" rectangular="yes" x="49" y="233" width="60" height="57" hasInfluenceArea="no" behaviour="normal">
-        <description>
-          <name>Fire Alarm</name>
-          <brief>Fire Alarm</brief>
-          <detailed>I activate it to start the building evacuation notice</detailed>
-        </description>
-        <actions>
-          <use needsGoTo="yes" keepDistance="10" not-effects="no">
-            <effect>
-              <activate flag="AlarmActivated" guid="257b6bf1-01c4-40b6-a195-e2153be59423" />
-              <condition />
-              <speak-player guid="b64da1c8-e481-4566-a8d3-8bcdb3face7f">OK, I activated the alarm</speak-player>
-              <condition />
-            </effect>
-          </use>
-        </actions>
-      </active-area>
-    </active-areas>
-  </scene>
-  <scene id="TeacherOffices" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="">
-      <asset type="standup" uri="assets/special/EmptyImage" />
-      <asset type="background" uri="assets/background/TeacherOffices.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="300" />
-    <exits>
-      <exit rectangular="yes" x="2" y="492" width="797" height="107" hasInfluenceArea="no" idTarget="HallMiddle" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="Go back" cursor-path="" sound-path="" />
-      </exit>
-    </exits>
-    <active-areas>
-      <active-area id="Office412Area" rectangular="yes" x="67" y="107" width="109" height="494" hasInfluenceArea="no" behaviour="normal">
-        <description>
-          <name>Office 412</name>
-          <brief>It's the office 412</brief>
-          <detailed>It's the office 412, one of the offices I must check in case of evacuation</detailed>
-        </description>
-        <actions>
-          <use needsGoTo="yes" keepDistance="10" not-effects="no">
-            <effect>
-              <activate flag="CheckedOffice412" guid="a191a066-7aa4-4cdc-bdc4-8290eb0f775e" />
-              <condition />
-              <speak-player guid="d6f7804f-c4d7-4297-9931-be9e160234dd">There's no one in here</speak-player>
-              <condition />
-            </effect>
-          </use>
-        </actions>
-      </active-area>
-      <active-area id="Office413Area" rectangular="yes" x="234" y="186" width="46" height="390" hasInfluenceArea="no" behaviour="normal">
-        <description>
-          <name>Office 413</name>
-          <brief>It's office 413</brief>
-          <detailed>It's the office 413, one of the offices I must check in case of evacuation</detailed>
-        </description>
-        <actions>
-          <use needsGoTo="yes" keepDistance="10" not-effects="no">
-            <effect>
-              <activate flag="CheckedOffice413" guid="c509d46f-1297-4c56-9d57-ea293d7c23a7" />
-              <condition />
-              <speak-player guid="1dd9d34c-f12e-43e7-bbb0-290b66e13ace">There's no one in here</speak-player>
-              <condition />
-            </effect>
-          </use>
-        </actions>
-      </active-area>
-      <active-area id="Office414Area" rectangular="yes" x="514" y="206" width="43" height="357" hasInfluenceArea="no" behaviour="normal">
-        <description>
-          <name>Office 414</name>
-          <brief>It's office 414</brief>
-          <detailed>It's the office 414, one of the offices I must check in case of evacuation</detailed>
-        </description>
-        <actions>
-          <use needsGoTo="yes" keepDistance="10" not-effects="no">
-            <effect>
-              <trigger-scene idTarget="OccupiedOffice" x="729" y="462" transitionTime="0" transitionType="0" guid="aaae69bf-c8d3-4f3d-8768-0ba125f2eb0d" />
-              <condition />
-              <activate flag="StartConversation" guid="a6b5bde3-b136-40a3-b170-f930e8f810ec" />
-              <condition />
-              <trigger-conversation idTarget="BuildingEvacuation" guid="159b5aa9-ca2e-4399-8c7d-c62fb816b80a" />
-              <condition>
-                <inactive flag="FinishConversation" />
-              </condition>
-            </effect>
-          </use>
-        </actions>
-      </active-area>
-      <active-area id="Office415Area" rectangular="yes" x="623" y="157" width="120" height="436" hasInfluenceArea="no" behaviour="normal">
-        <description>
-          <name>Office 415</name>
-          <brief>It's office 415</brief>
-          <detailed>It's the office 415, one of the offices I must check in case of evacuation</detailed>
-        </description>
-        <actions>
-          <use needsGoTo="yes" keepDistance="10" not-effects="no">
-            <effect>
-              <activate flag="CheckedOffice415" guid="21ea9242-ecb6-4d06-8db7-90765f228e7c" />
-              <condition />
-              <speak-player guid="0526c3f4-6a73-46d1-8e28-04e09e981b02">There's no one in here</speak-player>
-              <condition />
-            </effect>
-          </use>
-        </actions>
-      </active-area>
-    </active-areas>
-  </scene>
-  <scene id="OccupiedOffice" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="">
-      <asset type="standup" uri="assets/special/EmptyImage" />
-      <asset type="background" uri="assets/background/OccupiedOffice.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="300" />
-    <exits>
-      <exit rectangular="yes" x="1" y="489" width="797" height="69" hasInfluenceArea="no" idTarget="TeacherOffices" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="Leave the office" cursor-path="" sound-path="" />
-      </exit>
-    </exits>
-    <characters>
-      <character-ref idTarget="Balta" x="400" y="600" scale="1" orientation="2" glow="yes" layer="0" hasInfluenceArea="no">
-        <condition>
-          <inactive flag="FinishConversation" />
-        </condition>
-      </character-ref>
-    </characters>
-  </scene>
-  <scene id="HallEnd" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="">
-      <asset type="standup" uri="assets/special/EmptyImage" />
-      <asset type="background" uri="assets/background/HallEnd.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="300" />
-    <exits>
-      <exit rectangular="yes" x="516" y="200" width="125" height="309" hasInfluenceArea="no" idTarget="StairsAndElevator" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="Move ahead" cursor-path="" sound-path="" />
-      </exit>
-    </exits>
-  </scene>
-  <scene id="StairsAndElevator" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="">
-      <asset type="standup" uri="assets/special/EmptyImage" />
-      <asset type="background" uri="assets/background/Elevators.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="300" />
-    <exits>
-      <exit rectangular="yes" x="237" y="210" width="204" height="227" hasInfluenceArea="no" idTarget="StairsEnding" destinyY="-1" destinyX="-1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="Leave the building" cursor-path="" sound-path="" />
-        <effect>
-          <activate flag="GameOver" guid="ca10ca75-9cdf-4ece-aa8f-f8f6f9ac6b32" />
-          <condition />
-        </effect>
-      </exit>
-    </exits>
-    <active-areas>
-      <active-area id="ElevatorArea" rectangular="yes" x="560" y="49" width="150" height="466" hasInfluenceArea="no" behaviour="normal">
-        <description>
-          <name>Elevator</name>
-          <brief>It is the elevator to exit</brief>
-          <detailed>It's the elevator, it must not be used in fire case</detailed>
-        </description>
-        <actions>
-          <use needsGoTo="yes" keepDistance="10" not-effects="no">
-            <effect>
-              <activate flag="UsesTheElevator" guid="cdca74f5-1f04-47af-8999-4d0c83d15f58" />
-              <condition />
-              <trigger-cutscene idTarget="ElevatorEnding" guid="911d4bb0-82e2-4593-9914-3971b0488758" />
-              <condition />
-            </effect>
-          </use>
-        </actions>
-      </active-area>
-    </active-areas>
-  </scene>
   <scene id="Breakfast" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -742,22 +274,13 @@
     <documentation>
     </documentation>
     <resources name="Salon">
-      <asset type="background" uri="assets/background/CasaGerman.jpg" />
+      <asset type="background" uri="assets/background/SalonGerman.jpg" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="273" y="3" width="6" height="7" hasInfluenceArea="no" idTarget="PanicEnding" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-        <condition>
-          <either>
-            <active flag="FinishEscene2" />
-            <active flag="GameOver" />
-          </either>
-        </condition>
-      </exit>
-      <exit rectangular="yes" x="1" y="1" width="100" height="100" hasInfluenceArea="no" idTarget="TercerActo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="7" y="5" width="202" height="168" hasInfluenceArea="no" idTarget="TercerActo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
           <active flag="acto2Finalizado" />
@@ -765,17 +288,7 @@
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="GermanCasa1" x="211" y="170" scale="0.1784995" orientation="2" glow="no" layer="2" hasInfluenceArea="no">
-        <condition>
-          <inactive flag="Acto2Fase2" />
-        </condition>
-      </character-ref>
-      <character-ref idTarget="GermanCasa2" x="211" y="168" scale="0.1750612" orientation="2" glow="no" layer="1" hasInfluenceArea="no">
-        <condition>
-          <active flag="Acto2Fase2" />
-        </condition>
-      </character-ref>
-      <character-ref idTarget="Balta" x="123" y="168" scale="0.214898" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="German" x="502" y="844" scale="1" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Bedroom" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -840,14 +353,6 @@
       <object-ref idTarget="iPhone" x="1362" y="1088" scale="0.209572" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <slidescene id="ElevatorEnding" start="no" idTarget="FireVideo" destinyX="-1" destinyY="-1" transitionTime="0" transitionType="0" next="new-scene" class="" type="">
-    <documentation>
-    </documentation>
-    <resources name="">
-      <asset type="slides" uri="assets/animation/Elevator" />
-    </resources>
-    <name>Final Ascensor</name>
-  </slidescene>
   <slidescene id="Introduction" start="no" idTarget="Breakfast" destinyX="-1" destinyY="-1" transitionTime="100" transitionType="1" next="new-scene" class="accesible" type="screen">
     <documentation>
     </documentation>
@@ -862,40 +367,6 @@
     </resources>
     <name>
     </name>
-  </slidescene>
-  <slidescene id="PhoneConversation" start="no" idTarget="PlayerOffice" destinyX="-1" destinyY="-1" transitionTime="0" transitionType="0" next="new-scene" class="" type="">
-    <documentation>
-    </documentation>
-    <resources name="">
-      <asset type="slides" uri="assets/animation/Phone" />
-    </resources>
-    <name>
-    </name>
-  </slidescene>
-  <slidescene id="StairsEnding" start="no" next="end-chapter" class="" type="">
-    <documentation>
-    </documentation>
-    <resources name="">
-      <asset type="slides" uri="assets/animation/End" />
-    </resources>
-    <name>
-    </name>
-  </slidescene>
-  <slidescene id="MaximumTime" start="no" idTarget="FireVideo" destinyX="-1" destinyY="-1" transitionTime="0" transitionType="0" next="new-scene" class="" type="">
-    <documentation>
-    </documentation>
-    <resources name="">
-      <asset type="slides" uri="assets/animation/LimitTime" />
-    </resources>
-    <name>Tiempo Maximo</name>
-  </slidescene>
-  <slidescene id="PanicEnding" start="no" idTarget="FireVideo" destinyX="-1" destinyY="-1" transitionTime="0" transitionType="0" next="new-scene" class="" type="">
-    <documentation>
-    </documentation>
-    <resources name="">
-      <asset type="slides" uri="assets/animation/PanicEnd" />
-    </resources>
-    <name>Final Panico</name>
   </slidescene>
   <videoscene canSkip="yes" id="FireVideo" start="no" next="end-chapter" class="" type="">
     <documentation>
@@ -925,7 +396,7 @@
     <name>
     </name>
   </slidescene>
-  <slidescene id="PrimerActo" start="yes" idTarget="PlayerRoom" destinyX="-2147483648" destinyY="2147483647" transitionTime="500" transitionType="2" next="new-scene" class="accesible" type="cutscene">
+  <slidescene id="PrimerActo" start="no" idTarget="PlayerRoom" destinyX="-2147483648" destinyY="2147483647" transitionTime="500" transitionType="2" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
     <resources name="PrimerActo">
@@ -934,7 +405,7 @@
     <name>
     </name>
   </slidescene>
-  <slidescene id="SegundoActo" start="no" idTarget="GermanHouse" destinyX="-2147483648" destinyY="2147483647" transitionTime="500" transitionType="2" next="new-scene" class="accesible" type="cutscene">
+  <slidescene id="SegundoActo" start="yes" idTarget="GermanHouse" destinyX="-2147483648" destinyY="2147483647" transitionTime="500" transitionType="2" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
     <resources name="SegundoActo">
@@ -1005,8 +476,6 @@
       <use needsGoTo="yes" keepDistance="10" not-effects="no">
         <effect>
           <activate flag="PhoneAnswered" guid="194f660e-53bb-4419-afba-cd60a0313131" />
-          <condition />
-          <trigger-cutscene idTarget="PhoneConversation" guid="856ed04d-ceda-47b4-ada1-b420997aac47" />
           <condition />
         </effect>
       </use>
@@ -1115,202 +584,17 @@
       </examine>
     </actions>
   </object>
-  <graph-conversation id="BuildingEvacuation">
-    <dialogue-node nodeindex="0" editor-x="289" editor-y="25">
-      <speak-char idTarget="Balta">
-        <resources name="No name" />
-        <text>Hey Pablo, what's that noise?</text>
-      </speak-char>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>There's a fire in the buliding, we must evacuate all staff immediately</text>
-      </speak-player>
-      <condition />
-      <speak-char idTarget="Balta">
-        <resources name="No name" />
-        <text>And where is the fire?</text>
-      </speak-char>
-      <condition />
-      <child nodeindex="1" />
-    </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="978" editor-y="33" x="978" y="33">
-      <speak-player>
-        <text>That doesn't matter at all!</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="2" />
-      <speak-player>
-        <text>In office 411</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="3" />
-      <speak-player>
-        <text>In office 411, it's a huge fire. Every man for himself!</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
-    </option-node>
-    <dialogue-node nodeindex="2" editor-x="0" editor-y="0">
-      <speak-char idTarget="Balta">
-        <resources name="No name" />
-        <text>You're not helping me, I can't know where to go</text>
-      </speak-char>
-      <condition />
-      <child nodeindex="1" />
-    </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="0" editor-y="0">
-      <speak-char idTarget="Balta">
-        <resources name="No name" />
-        <text>Wow, it's everyone OK?</text>
-      </speak-char>
-      <condition />
-      <child nodeindex="5" />
-    </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="0" editor-y="0">
-      <speak-char idTarget="Balta">
-        <resources name="No name" />
-        <text>Help! Run!</text>
-      </speak-char>
-      <condition />
-      <end-conversation>
-        <effect>
-          <activate flag="PanicSituationFlag" guid="ef28d839-acd5-4859-a28c-bbb9abfd4039" />
-          <condition />
-          <activate flag="GameOver" guid="4f7e7704-75d4-48c6-9374-fc4171c96ac5" />
-          <condition />
-          <trigger-cutscene idTarget="PanicEnding" guid="7cdd548e-219b-4b33-9f89-4348aa7d0cc5" />
-          <condition />
-        </effect>
-      </end-conversation>
-    </dialogue-node>
-    <option-node nodeindex="5" preListening="yes" editor-x="506" editor-y="388" x="506" y="388">
-      <speak-player>
-        <text>The office was empty. I guess everyone fled when the fire started.</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="6" />
-      <speak-player>
-        <text>I think we lost all the helpers, every man for himself!</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="7" />
-    </option-node>
-    <dialogue-node nodeindex="6" editor-x="0" editor-y="0">
-      <speak-char idTarget="Balta">
-        <resources name="No name" />
-        <text>Ok, fine, let me finish this backups and I'll be downstairs in a minute...</text>
-      </speak-char>
-      <condition />
-      <child nodeindex="8" />
-    </dialogue-node>
-    <dialogue-node nodeindex="7" editor-x="0" editor-y="0">
-      <end-conversation>
-        <effect>
-          <activate flag="GameOver" guid="8b395728-9bcb-4bff-82fc-727906d9895c" />
-          <condition />
-          <activate flag="PanicSituationFlag" guid="4ac790fd-0649-4225-b6d7-fb7e865d2791" />
-          <condition />
-          <trigger-cutscene idTarget="PanicEnding" guid="fde8ea99-c841-45c3-b885-c733ccfc2f06" />
-          <condition />
-        </effect>
-      </end-conversation>
-    </dialogue-node>
-    <option-node nodeindex="8" preListening="yes" editor-x="944" editor-y="351" x="944" y="351">
-      <speak-player>
-        <text>No way! It's a serious fire, we must keep calm but evacuate fast.</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="9" />
-      <speak-player>
-        <text>Don't be silly, we have to evacuate the building NOW!</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="10" />
-    </option-node>
-    <dialogue-node nodeindex="9" editor-x="0" editor-y="0">
-      <child nodeindex="11" />
-    </dialogue-node>
-    <dialogue-node nodeindex="10" editor-x="0" editor-y="0">
-      <child nodeindex="11" />
-    </dialogue-node>
-    <dialogue-node nodeindex="11" editor-x="0" editor-y="0">
-      <speak-char idTarget="Balta">
-        <resources name="No name" />
-        <text>Ok, fine, take it easy, I didn't think  it was so urgent...</text>
-      </speak-char>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>Well, it is, we have to move fast, but calmly.</text>
-      </speak-player>
-      <condition />
-      <speak-char idTarget="Balta">
-        <resources name="No name" />
-        <text>OK, let me get my things and we go</text>
-      </speak-char>
-      <condition />
-      <child nodeindex="12" />
-    </dialogue-node>
-    <option-node nodeindex="12" preListening="yes" editor-x="59" editor-y="330" x="59" y="330">
-      <speak-player>
-        <text>Ok, but hurry up</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="13" />
-      <speak-player>
-        <text>I said no, you can't check anything. We leave now.</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="14" />
-    </option-node>
-    <dialogue-node nodeindex="13" editor-x="0" editor-y="0">
-      <end-conversation>
-        <effect>
-          <activate flag="DejaQueBaltaSeEntretenga" guid="9220be4a-f8ae-4d56-8bce-df58425b4078" />
-          <condition />
-          <activate flag="CheckedOffice414" guid="fcd2abf1-3f76-47ca-b508-b707a8a21f7b" />
-          <condition />
-          <activate flag="FinishConversation" guid="489558da-e889-4fd2-8ea5-02b4e1cc98dd" />
-          <condition />
-          <trigger-scene idTarget="TeacherOffices" x="405" y="504" transitionTime="0" transitionType="0" guid="7e17f34b-6dff-495e-b016-f8433746271f" />
-          <condition />
-        </effect>
-      </end-conversation>
-    </dialogue-node>
-    <dialogue-node nodeindex="14" editor-x="0" editor-y="0">
-      <end-conversation>
-        <effect>
-          <trigger-scene idTarget="TeacherOffices" x="403" y="502" transitionTime="0" transitionType="0" guid="cca11a4f-ca66-43d5-8120-43980ab609f3" />
-          <condition />
-          <activate flag="CheckedOffice414" guid="e3dea4f7-a5a5-4984-91d6-2c7a3e4ede1d" />
-          <condition />
-          <activate flag="FinishConversation" guid="e40e2c1f-7fd5-421b-a6e3-0e6756cae2fb" />
-          <condition />
-        </effect>
-      </end-conversation>
-    </dialogue-node>
-  </graph-conversation>
   <graph-conversation id="ConverWhats">
     <dialogue-node nodeindex="0" editor-x="64" editor-y="100">
-      <speak-char idTarget="Balta">
+      <speak-player>
         <resources name="No name" />
         <text>Hey toma 1 whats</text>
-      </speak-char>
+      </speak-player>
       <condition />
-      <speak-char idTarget="Balta">
+      <speak-player>
         <resources name="No name" />
         <text>O 2 asi a lo loco</text>
-      </speak-char>
+      </speak-player>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
@@ -1329,87 +613,20 @@
       <child nodeindex="3" />
     </option-node>
     <dialogue-node nodeindex="2" editor-x="974" editor-y="20">
-      <speak-char idTarget="Balta">
+      <speak-player>
         <resources name="No name" />
         <text>Pa ti mi cola</text>
-      </speak-char>
+      </speak-player>
       <condition />
       <end-conversation />
     </dialogue-node>
     <dialogue-node nodeindex="3" editor-x="975" editor-y="222">
-      <speak-char idTarget="Balta">
+      <speak-player>
         <resources name="No name" />
         <text>pa ti mi cola rellena</text>
-      </speak-char>
+      </speak-player>
       <condition />
       <end-conversation />
-    </dialogue-node>
-  </graph-conversation>
-  <graph-conversation id="GermanEscena2">
-    <dialogue-node nodeindex="0" editor-x="66" editor-y="13">
-      <speak-char idTarget="Balta">
-        <resources name="No name" />
-        <text>Hola buenas ti@, cuanto tiempo!</text>
-      </speak-char>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>Ya te digo, que tal?</text>
-      </speak-player>
-      <condition />
-      <speak-char idTarget="Balta">
-        <resources name="No name" />
-        <text>Pues con depresion pero tienes que averiguarlo tu</text>
-      </speak-char>
-      <condition />
-      <child nodeindex="1" />
-    </dialogue-node>
-    <option-node nodeindex="1" question="A1" random="yes" keepShowing="yes" preListening="yes" editor-x="416" editor-y="96" x="416" y="96">
-      <speak-player>
-        <text>No estés triste</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="2" />
-      <speak-player correct="true">
-        <text>Vaya, te mandare al psicologo</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="3" />
-    </option-node>
-    <dialogue-node nodeindex="2" editor-x="839" editor-y="7">
-      <speak-player>
-        <resources name="No name" />
-        <text>No jodas, si digo eso parecera un meme</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="1" />
-    </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="843" editor-y="254">
-      <speak-char idTarget="Balta">
-        <resources name="No name" />
-        <text>Genial, habeis bordado el trabajo</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="Balta">
-        <resources name="No name">
-          <asset type="audio" uri="" />
-        </resources>
-        <text>Teneis un 10</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="Balta">
-        <resources name="No name" />
-        <text>Iros a la cafeteria que yo invito</text>
-      </speak-char>
-      <condition />
-      <end-conversation>
-        <effect>
-          <activate flag="FinishEscene2" guid="eba2bd46-c910-46e8-8900-eebb150ae3f2" />
-          <condition />
-        </effect>
-      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="Conciencia">
@@ -2160,225 +1377,286 @@
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Acto2Conv1">
+  <graph-conversation id="A2_DialogoPrimero">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-char idTarget="GermanCasa1">
+      <speak-char idTarget="German">
         <resources name="No name" />
-        <text>Hombre &lt;insertar nombre generico&gt;, Qué tal? Menos mal, no pensé que fueras a venir jajaj</text>
+        <text>Hola Andy, hacía mucho que no nos veíamos. Te veo bien.</text>
       </speak-char>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="384" editor-y="39" x="384" y="39">
+    <option-node nodeindex="1" random="yes" keepShowing="yes" preListening="yes" editor-x="356" editor-y="36" x="356" y="36">
       <speak-player>
-        <text>A punto he estado de no venir pesado</text>
+        <text>Gracias, no puedo quejarme. ¿Tú cómo estas?</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="2" />
       <speak-player>
-        <text>¿Cómo no iba a venir hombre, si habíamos quedado jajajaja</text>
+        <text>Si macho, desde que te viniste a vivir aquí no te has dejado ver el pelo. ¿Qué tal todo? </text>
         <resources name="No name" />
       </speak-player>
       <condition />
+      <child nodeindex="2" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="600" editor-y="70">
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>Bien tío, ando algo aburrido desde que cerró la empresa, pero cómo tengo que encargarme de todo en casa al final estoy ocupado…</text>
+      </speak-char>
+      <condition />
       <child nodeindex="3" />
-      <speak-player>
-        <text>Yo ya me iba...</text>
+    </dialogue-node>
+    <option-node nodeindex="3" preListening="yes" editor-x="854" editor-y="41" x="854" y="41">
+      <speak-player correct="true">
+        <text>Ya imagino, al final estando solo en casa tendrás muchas cosas que hacer.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="4" />
-    </option-node>
-    <dialogue-node nodeindex="2" editor-x="797" editor-y="92">
-      <speak-player>
+      <speak-player correct="true">
+        <text>Ostia no sabía que la empresa había cerrado. ¿Y ahora con qué andas?</text>
         <resources name="No name" />
-        <text>Como le diga esto me lo cargo, mejor no</text>
       </speak-player>
-      <condition />
-      <child nodeindex="1" />
-    </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="839" editor-y="310">
-      <speak-char idTarget="GermanCasa1">
-        <resources name="No name" />
-        <text>Bueno, es que no pensé que quisieras venir, pero bueno, siéntate y cuéntame cómo te ha ido</text>
-      </speak-char>
       <condition />
       <child nodeindex="5" />
-    </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="749" editor-y="551">
-      <speak-player>
-        <resources name="No name" />
-        <text>No hombre, no puedo ser tan malo</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="1" />
-    </dialogue-node>
-    <dialogue-node nodeindex="5" editor-x="1074" editor-y="310">
-      <speak-player>
-        <resources name="No name" />
-        <text>No me puedo quejar, hace una semana me ascendieron en el trabajo, ¿y tú qué tal?</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="6" />
-    </dialogue-node>
-    <dialogue-node nodeindex="6" editor-x="1309" editor-y="310">
-      <speak-char idTarget="GermanCasa1">
-        <resources name="No name" />
-        <text>Pos me han echado jajaja y no me quiere nadie, pero no me quejo osea es que soy un inútil jajajaj</text>
-      </speak-char>
-      <condition />
-      <child nodeindex="7" />
-    </dialogue-node>
-    <option-node nodeindex="7" preListening="yes" editor-x="1544" editor-y="310" x="1544" y="310">
-      <speak-player>
-        <text>a, en fin estás muy pesado Germán me voy a robarte digo a mear, bueno que cojones, te voy a robar, estás muy triste como para hacer algo al respecto</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="8" />
     </option-node>
-    <dialogue-node nodeindex="8" editor-x="1764" editor-y="310">
-      <speak-char idTarget="GermanCasa1">
-        <resources name="No name" />
-        <text>Pues si la verdad xD</text>
-      </speak-char>
-      <condition />
+    <dialogue-node nodeindex="4" editor-x="1114" editor-y="0">
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="Cocina" x="1024" y="1026" transitionTime="0" transitionType="0" guid="339e29e8-df54-4c33-bf07-8a703d3ed240" />
+          <activate flag="A2_HablarIndependencia" guid="d1f228e9-e92e-405f-be77-fabb0dbfdac9" />
           <condition />
-          <activate flag="Acto2Fase2" guid="3e07e897-42d1-4db7-94a0-495a3364b943" />
+          <trigger-conversation idTarget="A2_DialogoIndependencia" guid="d52e2eb2-e46e-49ce-a780-382898ebdd27" />
           <condition />
-          <deactivate flag="latasExaminadas" guid="d42de45e-7bdd-47b3-a056-6431c6f97344" />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="1118" editor-y="240">
+      <end-conversation>
+        <effect>
+          <activate flag="A2_HablarTrabajo" guid="57738655-0310-4441-8c82-2625efddcd0a" />
           <condition />
-          <deactivate flag="comidaExaminada" guid="bab4ce74-9f42-4a29-a572-ac8ab5946289" />
+          <trigger-conversation idTarget="A2_DialogoTrabajo" guid="a944ad73-9bed-461b-af43-0db3df758b9e" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Acto2Conv2">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-char idTarget="GermanCasa2">
+  <graph-conversation id="A2_DialogoIndependencia">
+    <dialogue-node nodeindex="0" editor-x="110" editor-y="229">
+      <speak-char idTarget="German">
         <resources name="No name" />
-        <text>*snif, snif* *llorando :C*</text>
+        <text>Sí, al principio era complicado pero ahora ya me he acostumbrado.</text>
       </speak-char>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="285" editor-y="50">
-      <speak-player>
+    <option-node nodeindex="1" random="yes" keepShowing="yes" preListening="yes" editor-x="365" editor-y="214" x="365" y="214">
+      <speak-player correct="true">
+        <text>Que suerte, ya me gustaría a mí vivir solo. Harás lo que te de la gana.</text>
         <resources name="No name" />
-        <text>Ostras Germán qué te pasa</text>
       </speak-player>
       <condition />
       <child nodeindex="2" />
-    </dialogue-node>
-    <dialogue-node nodeindex="2" editor-x="520" editor-y="50">
-      <speak-char idTarget="GermanCasa2">
+      <speak-player correct="true">
+        <text>Que cabrón tío.</text>
         <resources name="No name" />
-        <text>Nada, nada, es que me estaba acordando de una película muy triste</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="635" editor-y="163">
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>Eso es verdad, hago lo que quiero cuando quiero.</text>
       </speak-char>
       <condition />
       <child nodeindex="3" />
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="755" editor-y="50">
-      <speak-player>
+    <dialogue-node nodeindex="3" editor-x="895" editor-y="322">
+      <speak-char idTarget="German">
         <resources name="No name" />
-        <text>Pero si te han echado del curro chaval, no tienes pasta para ir al cine. A quién quieres engañar?? XD</text>
-      </speak-player>
+        <text>Aunque no es tan bonito como parece. Hay que encargarse de un montonazo de tareas. Hacer la compra, lavar la ropa, hacer la comida, etc. </text>
+      </speak-char>
       <condition />
       <child nodeindex="4" />
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="990" editor-y="50">
-      <speak-char idTarget="GermanCasa2">
+    <option-node nodeindex="4" random="yes" keepShowing="yes" preListening="yes" editor-x="1227" editor-y="252" x="1227" y="252">
+      <speak-player correct="true">
+        <text>Ya me imagino. De todas formas es lo que querías desde hace tiempo.</text>
         <resources name="No name" />
-        <text>Me cago en tu puta madre</text>
-      </speak-char>
+      </speak-player>
       <condition />
       <child nodeindex="5" />
-    </dialogue-node>
-    <dialogue-node nodeindex="5" editor-x="1225" editor-y="50">
-      <speak-player>
+      <speak-player correct="true">
+        <text>Anda pero llevabas mucho tiempo diciendo que querías irte a vivir solo.</text>
         <resources name="No name" />
-        <text>sit down</text>
       </speak-player>
+      <condition />
+      <child nodeindex="5" />
+    </option-node>
+    <dialogue-node nodeindex="5" editor-x="1495" editor-y="278">
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>Cierto, aunque no es tan bueno como me había imaginado.</text>
+      </speak-char>
       <condition />
       <child nodeindex="6" />
     </dialogue-node>
-    <dialogue-node nodeindex="6" editor-x="1460" editor-y="50">
-      <speak-char idTarget="GermanCasa2">
+    <option-node nodeindex="6" random="yes" keepShowing="yes" preListening="yes" editor-x="1812" editor-y="167" x="1812" y="167">
+      <speak-player correct="true">
+        <text>Al menos ahora que tienes más tiempo libre puedes jugar a la Play.</text>
         <resources name="No name" />
-        <text>Que cabron</text>
-      </speak-char>
+      </speak-player>
       <condition />
       <child nodeindex="7" />
-    </dialogue-node>
-    <dialogue-node nodeindex="7" editor-x="1695" editor-y="50">
-      <speak-player>
+      <speak-player correct="true">
+        <text>Y con todo el tiempo libre que tienes seguro que sales más a montar en bici, con lo que te gustaba.</text>
         <resources name="No name" />
-        <text>Get rekt</text>
       </speak-player>
       <condition />
       <child nodeindex="8" />
-    </dialogue-node>
-    <dialogue-node nodeindex="8" editor-x="1930" editor-y="50">
-      <speak-char idTarget="GermanCasa2">
+      <speak-player>
+        <text>La cuestión es quejarse.</text>
         <resources name="No name" />
-        <text>Que cabrón</text>
-      </speak-char>
+      </speak-player>
       <condition />
       <child nodeindex="9" />
-    </dialogue-node>
-    <dialogue-node nodeindex="9" editor-x="2165" editor-y="50">
-      <speak-char idTarget="GermanCasa2">
+    </option-node>
+    <dialogue-node nodeindex="7" editor-x="2098" editor-y="75">
+      <speak-char idTarget="German">
         <resources name="No name" />
-        <text>xD</text>
+        <text>No te creas, ya te digo que estoy muy ocupado y cuando acabo las obligaciones no tengo muchas ganas de tocar la consola.</text>
       </speak-char>
       <condition />
       <child nodeindex="10" />
     </dialogue-node>
-    <dialogue-node nodeindex="10" editor-x="2392" editor-y="52">
-      <speak-char idTarget="GermanCasa2">
+    <dialogue-node nodeindex="8" editor-x="2086" editor-y="331">
+      <speak-char idTarget="German">
         <resources name="No name" />
-        <text>xD</text>
+        <text>No te creas, ya te digo que estoy muy ocupado y cuando acabo las obligaciones no tengo muchas ganas de coger la bici.</text>
       </speak-char>
       <condition />
       <child nodeindex="11" />
     </dialogue-node>
-    <dialogue-node nodeindex="11" editor-x="2627" editor-y="52">
-      <speak-char idTarget="GermanCasa2">
+    <dialogue-node nodeindex="9" editor-x="2061" editor-y="609">
+      <speak-player>
         <resources name="No name" />
-        <text>xD</text>
-      </speak-char>
+        <text>No se le ve de buen humor, mejor me ahorro el comentario.</text>
+      </speak-player>
       <condition />
-      <speak-char idTarget="GermanCasa2">
+      <child nodeindex="6" />
+    </dialogue-node>
+    <option-node nodeindex="10" random="yes" keepShowing="yes" preListening="yes" editor-x="2494" editor-y="34" x="2494" y="34">
+      <speak-player correct="true">
+        <text>¿Y la bici ya no la coges?</text>
         <resources name="No name" />
-        <text>LOL</text>
-      </speak-char>
+      </speak-player>
       <condition />
       <child nodeindex="12" />
-    </dialogue-node>
-    <dialogue-node nodeindex="12" editor-x="2862" editor-y="52">
-      <speak-char idTarget="GermanCasa2">
+      <speak-player correct="true">
+        <text>Bueno pero montarás más en bici</text>
         <resources name="No name" />
-        <text>WAZONGA</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="12" />
+    </option-node>
+    <option-node nodeindex="11" random="yes" keepShowing="yes" preListening="yes" editor-x="2481" editor-y="330" x="2481" y="330">
+      <speak-player correct="true">
+        <text>¿Y la Play ya no la usas?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="12" />
+      <speak-player correct="true">
+        <text>Bueno pero jugarás más a la Play.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="12" />
+    </option-node>
+    <dialogue-node nodeindex="12" editor-x="2785" editor-y="265">
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>Pues más de lo mismo, me da pereza.</text>
       </speak-char>
       <condition />
       <child nodeindex="13" />
     </dialogue-node>
-    <dialogue-node nodeindex="13" editor-x="3097" editor-y="52">
-      <speak-char idTarget="Balta">
+    <option-node nodeindex="13" random="yes" keepShowing="yes" preListening="yes" editor-x="3112" editor-y="229" x="3112" y="229">
+      <speak-player>
+        <text>Tú lo que eres es un gandul.</text>
         <resources name="No name" />
-        <text>Padreada BOOOM XD </text>
+      </speak-player>
+      <condition />
+      <child nodeindex="14" />
+      <speak-player correct="true">
+        <text>Bueno es normal, algunas veces no apetece hacer nada.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="15" />
+    </option-node>
+    <dialogue-node nodeindex="14" editor-x="3428" editor-y="89">
+      <speak-player>
+        <resources name="No name" />
+        <text>No creo que sea eso, en verdad se le nota desganado.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="13" />
+    </dialogue-node>
+    <dialogue-node nodeindex="15" editor-x="3426" editor-y="382">
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>Exacto</text>
       </speak-char>
       <condition />
+      <child nodeindex="16" />
+    </dialogue-node>
+    <dialogue-node nodeindex="16" editor-x="3699" editor-y="382">
       <end-conversation>
         <effect>
-          <activate flag="acto2Finalizado" guid="7218d294-6508-40a6-8c3b-18a8541b85e5" />
-          <condition />
+          <trigger-conversation idTarget="A2_DialogoIrBano" guid="cb20f337-b438-434a-9fc1-a1134d0bd5ce" />
+          <condition>
+            <inactive flag="A2_IrAlBaño" />
+          </condition>
+          <trigger-conversation idTarget="A2_DialogoEcharte" guid="d66f8e67-13a2-4604-b725-ea70701d46e1" />
+          <condition>
+            <active flag="A2_IrAlBaño" />
+          </condition>
         </effect>
       </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="A2_DialogoIrBano">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>El baño está al fondo derecha</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="A2_DialogoEcharte">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>Fuera de aqui</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="A2_DialogoTrabajo">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>El curro mal </text>
+      </speak-char>
+      <condition />
+      <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <timer time="240" usesEndCondition="yes" multipleStarts="yes" runsInLoop="yes" showTime="no" displayName="timer" countDown="yes" showWhenStopped="no">
@@ -2392,8 +1670,6 @@
       <activate flag="TimeLimitExpired" guid="2ae99798-86ae-4053-8310-43236785411a" />
       <condition />
       <activate flag="GameOver" guid="6e87dbbc-34c1-4d03-8bef-4ec85f14014f" />
-      <condition />
-      <trigger-cutscene idTarget="MaximumTime" guid="a82d15f7-1588-4200-ab59-7f4137d65926" />
       <condition />
     </effect>
   </timer>
