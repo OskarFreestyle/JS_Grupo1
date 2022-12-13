@@ -2,7 +2,7 @@
 <animation id="StandingLookingUpMe.eaa.xml" usetransitions="yes" slides="no">
   <documentation />
   <transition type="0" time="0" />
-  <frame uri="assets/animation/Spidey.png" type="image" time="400" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/conciencia.png" type="image" time="400" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>

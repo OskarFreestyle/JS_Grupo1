@@ -18,7 +18,7 @@
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
     </resources>
     <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
-      <frontcolor color="#3BE500" />
+      <frontcolor color="#00C3E5" />
       <bordercolor color="#000000" />
     </textcolor>
     <description>
@@ -49,7 +49,7 @@
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
     <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
-      <frontcolor color="#FFFFFF" />
+      <frontcolor color="#5C8E00" />
       <bordercolor color="#000000" />
     </textcolor>
     <description>
@@ -70,16 +70,23 @@
           <condition>
             <active flag="A2_IrAlBaño" />
             <active flag="A2_VolverBano" />
+            <active flag="A2_Active" />
           </condition>
           <trigger-conversation idTarget="A2_DialogoIndicarBano" guid="94b8ca04-148c-4bb8-ab42-a8375f2eff98" />
           <condition>
             <active flag="A2_IrAlBaño" />
             <inactive flag="A2_VolverBano" />
+            <active flag="A2_Active" />
           </condition>
           <trigger-conversation idTarget="A2_DialogoPrimero" guid="9654a192-a9e4-4365-8d03-b32a384569cc" />
           <condition>
             <inactive flag="A2_IrAlBaño" />
             <inactive flag="A2_VolverBano" />
+            <active flag="A2_Active" />
+          </condition>
+          <trigger-conversation idTarget="CoffeeShopConversation" guid="aae247f3-9421-4686-8d83-3142e0fd7118" />
+          <condition>
+            <active flag="A4_Active" />
           </condition>
         </effect>
       </talk-to>
@@ -116,7 +123,7 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <character id="PlayerC" behaviour="normal">
+  <character id="Conciencia1" behaviour="normal">
     <resources name="Me">
       <asset type="standup" uri="assets/animation/StandingLookingUpMe.eaa.xml" />
       <asset type="standdown" uri="assets/special/EmptyAnimation" />
@@ -134,8 +141,8 @@
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
     <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
-      <frontcolor color="#EE0000" />
-      <bordercolor color="#005C9F" />
+      <frontcolor color="#EEA000" />
+      <bordercolor color="#000000" />
     </textcolor>
     <description>
       <name>
@@ -146,43 +153,7 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
-    <actions>
-      <custom name="Think" needsGoTo="no" keepDistance="0" not-effects="no">
-        <resources name="No name">
-          <asset type="buttonNormal" uri="gui/buttons/BookIcon.png" />
-          <asset type="buttonOver" uri="gui/buttons/BookIcon.png" />
-          <asset type="buttonPressed" uri="assets/special/EmptyAnimation" />
-        </resources>
-        <effect>
-          <trigger-conversation idTarget="Conciencia" guid="eca1b5f3-d346-46ee-a886-5a309a0a5dcd" />
-          <condition />
-        </effect>
-      </custom>
-    </actions>
   </character>
-  <scene id="Breakfast" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="Yes Whats">
-      <condition>
-        <active flag="iPhoneWhatsappReceived" />
-      </condition>
-      <asset type="background" uri="assets/background/SalonDesayuno.png" />
-      <asset type="bgmusic" uri="assets/audio/telephone.mp3" />
-    </resources>
-    <resources name="No Whats">
-      <condition>
-        <inactive flag="iPhoneWhatsappReceived" />
-      </condition>
-      <asset type="background" uri="assets/background/SalonDesayuno.png" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <objects>
-      <object-ref idTarget="iPhone" x="-2147483648" y="-2147483648" scale="1" glow="no" layer="0" hasInfluenceArea="no" />
-    </objects>
-  </scene>
   <scene id="WhatsAppConversation" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -255,20 +226,20 @@
       </active-area>
     </active-areas>
   </scene>
-  <scene id="Bedroom" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="DormitorioAndy" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="Bedroom">
-      <asset type="background" uri="assets/background/Bedroom.jpg" />
+      <asset type="background" uri="assets/background/dormitorioAndy.jpg" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="PlayerC" x="221" y="240" scale="0.2317826" orientation="0" glow="yes" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Conciencia1" x="140" y="110" scale="0.3465136" orientation="0" glow="yes" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="CoffeeShop" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Cafetería" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -281,7 +252,7 @@
       <character-ref idTarget="German" x="487" y="631" scale="0.7373584" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="PlayerRoom" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="SalonAndy" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -373,40 +344,6 @@
       <object-ref idTarget="Letrina" x="762" y="394" scale="3.340665" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <slidescene id="Introduction" start="no" idTarget="Breakfast" destinyX="-1" destinyY="-1" transitionTime="100" transitionType="1" next="new-scene" class="accesible" type="screen">
-    <documentation>
-    </documentation>
-    <effect>
-      <generate-object idTarget="ProtocolBook" guid="e07f6d81-d092-4558-a3ad-0e799add02e9" />
-      <condition />
-      <activate flag="iPhoneWhatsappReceived" guid="e8f3f236-5b1f-4a76-a7db-ed1bd5577e59" />
-      <condition />
-    </effect>
-    <resources name="">
-      <asset type="slides" uri="assets/animation/Intro.eaa.xml" />
-    </resources>
-    <name>
-    </name>
-  </slidescene>
-  <videoscene canSkip="yes" id="FireVideo" start="no" next="end-chapter" class="" type="">
-    <documentation>
-    </documentation>
-    <resources name="">
-      <asset type="slides" uri="assets/special/EmptyAnimation" />
-      <asset type="video" uri="assets/video/flame.mpg" />
-    </resources>
-    <name>
-    </name>
-  </videoscene>
-  <slidescene id="Prologo" start="no" next="go-back" class="accesible" type="cutscene">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="slides" uri="assets/special/EmptyAnimation" />
-    </resources>
-    <name>
-    </name>
-  </slidescene>
   <slidescene id="WhatsappCutscene" start="no" idTarget="SegundoActo" destinyX="-2147483648" destinyY="-2147483648" transitionTime="2000" transitionType="2" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
@@ -416,36 +353,58 @@
     <name>
     </name>
   </slidescene>
-  <slidescene id="PrimerActo" start="no" idTarget="PlayerRoom" destinyX="-2147483648" destinyY="2147483647" transitionTime="500" transitionType="2" next="new-scene" class="accesible" type="cutscene">
+  <slidescene id="PrimerActo" start="yes" idTarget="SalonAndy" destinyX="-2147483648" destinyY="2147483647" transitionTime="500" transitionType="2" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
+    <effect>
+      <activate flag="A1_Active" guid="247be145-3d6e-4cb9-bf01-f917cf835031" />
+      <condition />
+    </effect>
     <resources name="PrimerActo">
       <asset type="slides" uri="assets/animation/PrimerActoAnim.eaa.xml" />
     </resources>
     <name>
     </name>
   </slidescene>
-  <slidescene id="SegundoActo" start="yes" idTarget="SalonGerman" destinyX="-2147483648" destinyY="2147483647" transitionTime="500" transitionType="2" next="new-scene" class="accesible" type="cutscene">
+  <slidescene id="SegundoActo" start="no" idTarget="SalonGerman" destinyX="-2147483648" destinyY="2147483647" transitionTime="500" transitionType="2" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
+    <effect>
+      <activate flag="A2_Active" guid="91ec2779-d271-4bee-8815-f10d544530fc" />
+      <condition />
+      <deactivate flag="A1_Active" guid="01aca892-3f3b-4fd0-9fb5-1752ed6b8aff" />
+      <condition />
+    </effect>
     <resources name="SegundoActo">
       <asset type="slides" uri="assets/animation/SegundoActoCutscene.eaa.xml" />
     </resources>
     <name>
     </name>
   </slidescene>
-  <slidescene id="TercerActo" start="no" idTarget="Bedroom" destinyX="-2147483648" destinyY="2147483647" transitionTime="500" transitionType="2" next="new-scene" class="accesible" type="cutscene">
+  <slidescene id="TercerActo" start="no" idTarget="DormitorioAndy" destinyX="-2147483648" destinyY="2147483647" transitionTime="500" transitionType="2" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
+    <effect>
+      <activate flag="A3_Active" guid="c70a5a90-2cfe-42c2-86fd-53a2d0d35d4e" />
+      <condition />
+      <deactivate flag="A2_Active" guid="2e3623be-035a-47bf-bb82-8b5e796b3bc1" />
+      <condition />
+    </effect>
     <resources name="TercerActo">
       <asset type="slides" uri="assets/animation/TercerActorAnim.eaa.xml" />
     </resources>
     <name>
     </name>
   </slidescene>
-  <slidescene id="CuartoActo" start="no" idTarget="CoffeeShop" destinyX="-2147483648" destinyY="2147483647" transitionTime="0" transitionType="0" next="new-scene" class="accesible" type="cutscene">
+  <slidescene id="CuartoActo" start="no" idTarget="Cafetería" destinyX="-2147483648" destinyY="2147483647" transitionTime="0" transitionType="0" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
+    <effect>
+      <activate flag="A4_Active" guid="6000a9cc-f493-44e8-ace3-e42644e0bd99" />
+      <condition />
+      <deactivate flag="A3_Active" guid="f5537cc8-c5ae-44c7-b853-51230e9891cd" />
+      <condition />
+    </effect>
     <resources name="CuartoActo">
       <asset type="slides" uri="assets/animation/CuartoActoAnim.eaa.xml" />
     </resources>
@@ -472,61 +431,6 @@
     <text>
       <title>Evacuation Protocol Computer Science Building</title>This is the protocol to be followed by staff after receiving an alarm of fire.<bullet>Check if the delivered fire notice is real.</bullet><bullet>If possible, put out the fire with extinguishers.</bullet><bullet>Otherwise activate the nearest fire alarm.</bullet><bullet>Warn personnel located in the control area of the emergency evacuation.</bullet><bullet>Leave the building using the stairs (never the elevator).</bullet></text>
   </book>
-  <object id="Phone" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
-    <resources name="vibra">
-      <condition>
-        <inactive flag="PhoneAnswered" />
-      </condition>
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-      <asset type="image" uri="assets/image/PhoneRinging.png" />
-    </resources>
-    <resources name="no vibra">
-      <condition>
-        <active flag="PhoneAnswered" />
-      </condition>
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-      <asset type="image" uri="assets/image/Phone.png" />
-    </resources>
-    <description>
-      <name>Phone</name>
-      <brief>Phone</brief>
-      <detailed>That's my phone</detailed>
-    </description>
-    <actions>
-      <use needsGoTo="yes" keepDistance="10" not-effects="no">
-        <effect>
-          <activate flag="PhoneAnswered" guid="194f660e-53bb-4419-afba-cd60a0313131" />
-          <condition />
-        </effect>
-      </use>
-    </actions>
-  </object>
-  <object id="ProtocolBook" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
-    <resources name="">
-      <asset type="icon" uri="assets/icon/BookIcon.png" />
-      <asset type="image" uri="assets/image/BookIcon.png" />
-    </resources>
-    <description>
-      <name>Evacuation protocol</name>
-      <brief>It's the book with the building evacuation protocol</brief>
-      <detailed>
-      </detailed>
-    </description>
-    <actions>
-      <examine needsGoTo="yes" keepDistance="10" not-effects="no">
-        <effect>
-          <trigger-book idTarget="EvacuationProtocol" guid="420be63f-19f8-432c-89dc-fea47869180c" />
-          <condition />
-        </effect>
-      </examine>
-      <use needsGoTo="yes" keepDistance="10" not-effects="no">
-        <effect>
-          <trigger-book idTarget="EvacuationProtocol" guid="f51f9b02-2036-45ac-8a77-36bf4553d867" />
-          <condition />
-        </effect>
-      </use>
-    </actions>
-  </object>
   <object id="iPhone" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="Quieto">
       <condition>
@@ -671,26 +575,26 @@
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Conciencia">
+  <graph-conversation id="A3_DialogoConciencia">
     <dialogue-node nodeindex="0" editor-x="47" editor-y="172">
-      <speak-player>
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Ha estado bien volver a ver a Germán</text>
-      </speak-player>
+      </speak-char>
       <condition />
-      <speak-player>
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Sin embargo, hay algo que no me cuadra; me he dado cuenta de cosas que me preocupan un poco</text>
-      </speak-player>
+      </speak-char>
       <condition />
-      <speak-player>
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Por ejemplo, es una pena que le echaran del trabajo. ¿Le habrá afectado mucho?</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" random="yes" keepShowing="yes" preListening="yes" editor-x="344" editor-y="164" x="344" y="164">
+    <option-node nodeindex="1" random="yes" keepShowing="yes" preListening="yes" editor-x="322" editor-y="155" x="322" y="155">
       <speak-player correct="true">
         <text>Dijo que no le volvería a contratar nadie. Quizás fuese su primer trabajo o a lo mejor le costó conseguirlo, pero parece que le ha sentado muy mal. Quizás debería preguntarle por su despido e intentar motivarlo a seguir intentándolo.</text>
         <resources name="No name" />
@@ -705,19 +609,19 @@
       <child nodeindex="2" />
     </option-node>
     <dialogue-node nodeindex="2" editor-x="600" editor-y="177">
-      <speak-player>
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Quizás no sea tan grave, pero en cualquier caso debería comprobar al menos cómo está él</text>
-      </speak-player>
+      </speak-char>
       <condition />
-      <speak-player>
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>En cuanto a la idea de vivir solo… </text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="3" />
     </dialogue-node>
-    <option-node nodeindex="3" random="yes" keepShowing="yes" preListening="yes" editor-x="920" editor-y="167" x="920" y="167">
+    <option-node nodeindex="3" random="yes" keepShowing="yes" preListening="yes" editor-x="856" editor-y="143" x="856" y="143">
       <speak-player>
         <text>Germán no parecía muy conforme con ello, pero se apañará bien, todo es cuestión de acostumbrarse</text>
         <resources name="No name" />
@@ -732,26 +636,26 @@
       <child nodeindex="5" />
     </option-node>
     <dialogue-node nodeindex="4" editor-x="1234" editor-y="19">
-      <speak-player>
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Sin embargo estaba demasiado desanimado, igual debería intentar apoyarlo con el cambio </text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="6" />
     </dialogue-node>
     <dialogue-node nodeindex="5" editor-x="1231" editor-y="292">
-      <speak-player>
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Por lo que me ha contado está bastante decepcionado con vivir él solo, además mencionó que las tareas le estaban agotando…</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="6" />
     </dialogue-node>
     <dialogue-node nodeindex="6" editor-x="1538" editor-y="188">
-      <speak-player>
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>De hecho, me ha dicho que ya no tiene ganas de jugar a la play ni de coger la bici, y eso que antes le encantaba hacer esas cosas</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="7" />
     </dialogue-node>
@@ -770,26 +674,26 @@
       <child nodeindex="9" />
     </option-node>
     <dialogue-node nodeindex="8" editor-x="2120" editor-y="146">
-      <speak-player>
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Pero no lo creo… de hecho hace unos meses había ganado un campeonato de ciclismo y estaba muy entusiasmado con seguir adelante. Además, aunque se hubiera cansado, habría buscado nuevos hobbies </text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="10" />
     </dialogue-node>
     <dialogue-node nodeindex="9" editor-x="2060" editor-y="374">
-      <speak-player>
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>No puede ser algo normal, parecía totalmente apagado ante la idea de volver con esos hobbies, pero también de hacer todo tipo de cosas en general</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="10" />
     </dialogue-node>
     <dialogue-node nodeindex="10" editor-x="2364" editor-y="263">
-      <speak-player>
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>A parte de sus hábitos, también ha cambiado físicamente</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="11" />
     </dialogue-node>
@@ -814,49 +718,49 @@
       <child nodeindex="14" />
     </option-node>
     <dialogue-node nodeindex="12" editor-x="2819" editor-y="263">
-      <speak-player>
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Puede ser una dieta, aunque por otra parte puede ser que esté comiendo poco. ¿Estará sin dinero para pagar la comida, o quizás es que simplemente tiene pocas ganas de comer? Debería preguntarle al respecto</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="15" />
     </dialogue-node>
     <dialogue-node nodeindex="13" editor-x="2817" editor-y="454">
-      <speak-player>
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Si continúa así se encontrará cada vez más cansado y tendrá aún menos ganas de hacer cosas, aunque obligarlo a comer y ya está no creo que vaya a servir de nada, así que, ¿qué puedo hacer yo al respecto?</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="15" />
     </dialogue-node>
     <dialogue-node nodeindex="14" editor-x="2833" editor-y="646">
-      <speak-player>
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Aunque pensándolo bien, quizás no es culpa suya. Al fin y al cabo si lo está pasando mal no debería culparlo por ello</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="15" />
     </dialogue-node>
     <dialogue-node nodeindex="15" editor-x="3150" editor-y="403">
-      <speak-player>
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Creo que debería volver a hablar con él. </text>
-      </speak-player>
+      </speak-char>
       <condition />
-      <speak-player>
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Me aseguraré de saber cómo se siente, pero en cualquiera de los casos le diré que vaya al psicólogo.</text>
-      </speak-player>
+      </speak-char>
       <condition />
-      <speak-player>
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Es mejor prevenir que curar.</text>
-      </speak-player>
+      </speak-char>
       <condition />
-      <speak-player>
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Además, aunque quiero ayudarlo no sé muy bien cómo hacerlo, e igual empeoro la situación sin quererlo </text>
-      </speak-player>
+      </speak-char>
       <condition />
       <end-conversation>
         <effect>
@@ -982,12 +886,12 @@
       <child nodeindex="10" />
     </dialogue-node>
     <dialogue-node nodeindex="9" editor-x="2987" editor-y="455">
-      <speak-char idTarget="PlayerC">
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>¿Cómo le voy a preguntar esto?</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="PlayerC">
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Seguramente no se lo tome bien.</text>
       </speak-char>
@@ -1017,7 +921,7 @@
       <child nodeindex="13" />
     </dialogue-node>
     <dialogue-node nodeindex="12" editor-x="3808" editor-y="409">
-      <speak-char idTarget="PlayerC">
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>No creo que sea buena idea decirle esto.</text>
       </speak-char>
@@ -1089,7 +993,7 @@
       <child nodeindex="20" />
     </option-node>
     <dialogue-node nodeindex="18" editor-x="5418" editor-y="0">
-      <speak-char idTarget="PlayerC">
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Demasiado directo... voy a intentar entenderle mejor.</text>
       </speak-char>
@@ -1110,7 +1014,7 @@
       <child nodeindex="21" />
     </dialogue-node>
     <dialogue-node nodeindex="20" editor-x="5422" editor-y="543">
-      <speak-char idTarget="PlayerC">
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>#! Seguro que ya lo ha pensado. Esto no ayuda en nada.</text>
       </speak-char>
@@ -1154,7 +1058,7 @@
       <child nodeindex="25" />
     </dialogue-node>
     <dialogue-node nodeindex="24" editor-x="6134" editor-y="575">
-      <speak-char idTarget="PlayerC">
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>No le puedo decir esto, todo el mundo tiene derecho a estar mal y poder desahogarse.</text>
       </speak-char>
@@ -1194,7 +1098,7 @@
       <child nodeindex="28" />
     </dialogue-node>
     <dialogue-node nodeindex="27" editor-x="6782" editor-y="497">
-      <speak-char idTarget="PlayerC">
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Es un tema muy personal, solo se lo tiene que contar a quien él considere de confianza.</text>
       </speak-char>
@@ -1222,7 +1126,7 @@
       <child nodeindex="31" />
     </option-node>
     <dialogue-node nodeindex="29" editor-x="7507" editor-y="0">
-      <speak-char idTarget="PlayerC">
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Decir esto no ayuda en nada.</text>
       </speak-char>
@@ -1243,7 +1147,7 @@
       <child nodeindex="32" />
     </dialogue-node>
     <dialogue-node nodeindex="31" editor-x="7545" editor-y="624">
-      <speak-char idTarget="PlayerC">
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>¿Cómo voy a responder esto? Es lo último que quiere oír.</text>
       </speak-char>
@@ -1271,7 +1175,7 @@
       <child nodeindex="35" />
     </option-node>
     <dialogue-node nodeindex="33" editor-x="8178" editor-y="0">
-      <speak-char idTarget="PlayerC">
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>No creo que le ayude decirle algo que ni siquiera sé si va a pasar.</text>
       </speak-char>
@@ -1292,7 +1196,7 @@
       <child nodeindex="36" />
     </dialogue-node>
     <dialogue-node nodeindex="35" editor-x="8223" editor-y="677">
-      <speak-char idTarget="PlayerC">
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Yo noy quién para hacer un diagnóstico así.</text>
       </speak-char>
@@ -1377,7 +1281,7 @@
       <child nodeindex="43" />
     </option-node>
     <dialogue-node nodeindex="42" editor-x="10260" editor-y="0">
-      <speak-char idTarget="PlayerC">
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Lo es, pero yo no soy quién para decirle si tiene o no depresión.</text>
       </speak-char>
@@ -1673,10 +1577,10 @@
   </graph-conversation>
   <graph-conversation id="A2_DialogoIrBano">
     <dialogue-node nodeindex="0" editor-x="29" editor-y="86">
-      <speak-player>
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Menudas ganas de mear me estan entrando</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
@@ -1733,7 +1637,12 @@
         <text>Adios Andy, cuidate tio.</text>
       </speak-char>
       <condition />
-      <end-conversation />
+      <end-conversation>
+        <effect>
+          <trigger-cutscene idTarget="TercerActo" guid="3c8bae18-c0a6-4c9c-97fc-5cb05c501644" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
     <dialogue-node nodeindex="3" editor-x="682" editor-y="319">
       <speak-char idTarget="German">
@@ -1980,27 +1889,24 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <timer time="240" usesEndCondition="yes" multipleStarts="yes" runsInLoop="yes" showTime="no" displayName="timer" countDown="yes" showWhenStopped="no">
+  <timer time="3" usesEndCondition="no" multipleStarts="no" runsInLoop="no" showTime="yes" displayName="A1_WhatsappTimer" countDown="yes" showWhenStopped="no">
     <init-condition>
-      <active flag="PhoneAnswered" />
-    </init-condition>
-    <end-condition>
-      <active flag="GameOver" />
-    </end-condition>
-    <effect>
-      <activate flag="TimeLimitExpired" guid="2ae99798-86ae-4053-8310-43236785411a" />
-      <condition />
-      <activate flag="GameOver" guid="6e87dbbc-34c1-4d03-8bef-4ec85f14014f" />
-      <condition />
-    </effect>
-  </timer>
-  <timer time="10" usesEndCondition="no" multipleStarts="no" runsInLoop="no" showTime="no" displayName="WhatsappTimer" countDown="yes" showWhenStopped="no">
-    <init-condition>
-      <inactive flag="iPhoneWhatsappReceived" />
+      <active flag="A1_Active" />
     </init-condition>
     <effect>
       <activate flag="iPhoneWhatsappReceived" guid="e9bbf946-7ffb-4afb-895e-6ed1f741588c" />
       <condition />
+    </effect>
+  </timer>
+  <timer time="5" usesEndCondition="no" multipleStarts="no" runsInLoop="no" showTime="no" displayName="A3_ConcienciaTimer" countDown="yes" showWhenStopped="no">
+    <init-condition>
+      <active flag="A3_Active" />
+    </init-condition>
+    <effect>
+      <trigger-conversation idTarget="A3_DialogoConciencia" guid="2cf4b997-3728-4808-9e4e-bd8ccc4bb549" />
+      <condition>
+        <active flag="A3_Active" />
+      </condition>
     </effect>
   </timer>
 </eAdventure>
