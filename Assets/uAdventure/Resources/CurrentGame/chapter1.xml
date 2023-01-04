@@ -255,14 +255,56 @@
   <scene id="SalonAndy" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
-    <resources name="No name">
+    <resources name="Default">
+      <condition>
+        <inactive flag="A1_ID1" />
+        <inactive flag="A1_ID2" />
+      </condition>
       <asset type="background" uri="assets/background/SalonDesayuno.png" />
+    </resources>
+    <resources name="ID1">
+      <condition>
+        <either>
+          <active flag="A1_ID1" />
+          <inactive flag="A1_R1" />
+          <inactive flag="A1_R2" />
+          <inactive flag="A1_R3" />
+        </either>
+      </condition>
+      <asset type="background" uri="assets/background/ID1.png" />
+    </resources>
+    <resources name="ID2_1">
+      <condition>
+        <either>
+          <active flag="A1_ID2" />
+          <active flag="A1_R1" />
+        </either>
+      </condition>
+      <asset type="background" uri="assets/background/ID2R1.png" />
+    </resources>
+    <resources name="ID2_2">
+      <condition>
+        <either>
+          <active flag="A1_ID2" />
+          <active flag="A1_R2" />
+        </either>
+      </condition>
+      <asset type="background" uri="assets/background/ID2R2.png" />
+    </resources>
+    <resources name="ID2_3">
+      <condition>
+        <either>
+          <active flag="A1_ID2" />
+          <active flag="A1_R3" />
+        </either>
+      </condition>
+      <asset type="background" uri="assets/background/ID2R3.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="iPhone" x="1362" y="1088" scale="0.209572" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="iPhone" x="1372" y="1043" scale="0.2" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="SalonGerman" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -458,7 +500,9 @@
           <active flag="iPhoneWhatsappReceived" />
         </condition>
         <effect>
-          <trigger-cutscene idTarget="WhatsappCutscene" guid="38ea85d8-0d10-4c3a-afa7-feaef489a318" />
+          <activate flag="A1_ID1" guid="f5711ac0-8897-4049-9ceb-dd51ce00525b" />
+          <condition />
+          <trigger-conversation idTarget="A1_ConverWhats" guid="f79cc1dc-c098-44f7-9441-bc795e28a04a" />
           <condition />
         </effect>
       </use>
@@ -530,49 +574,103 @@
       </use>
     </actions>
   </object>
-  <graph-conversation id="ConverWhats">
-    <dialogue-node nodeindex="0" editor-x="64" editor-y="100">
-      <speak-player>
+  <graph-conversation id="A1_ConverWhats">
+    <dialogue-node nodeindex="0" editor-x="63" editor-y="100">
+      <speak-char idTarget="German">
         <resources name="No name" />
-        <text>Hey toma 1 whats</text>
-      </speak-player>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>O 2 asi a lo loco</text>
-      </speak-player>
+        <text>Hey Pablo! Qué pasa tío?  Hace mazo que no sé de tí, cómo te va? </text>
+      </speak-char>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" question="Saluda" preListening="yes" editor-x="519" editor-y="85" x="519" y="85">
-      <speak-player correct="true">
-        <text>HOLA</text>
+    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="342" editor-y="97" x="342" y="97">
+      <speak-player>
+        <text>Hombreee Germán! Todo bien tío, y tú qué?</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="2" />
       <speak-player>
-        <text>BUENAS</text>
+        <text>Hey bro cómo estamos?? Yo ando bastante bien, a tí cómo te va?</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="3" />
+      <speak-player>
+        <text>Pues aquí estamos dabuti jajaja y tú bien o que?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="974" editor-y="20">
-      <speak-player>
+    <dialogue-node nodeindex="2" editor-x="612" editor-y="41">
+      <speak-char idTarget="German">
         <resources name="No name" />
-        <text>Pa ti mi cola</text>
-      </speak-player>
+        <text>aaa</text>
+      </speak-char>
       <condition />
-      <end-conversation />
+      <child nodeindex="5" />
+      <effect>
+        <activate flag="A1_R1" guid="5c600b46-11b1-4e07-858a-a8a6e731aff2" />
+        <condition />
+        <activate flag="A1_ID2" guid="80a94c27-ccf9-4aac-98ad-9e7802b58d5b" />
+        <condition />
+        <deactivate flag="A1_ID1" guid="d1645aa9-8a03-483f-abd9-8a54ef3eaf7e" />
+        <condition />
+      </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="975" editor-y="222">
+    <dialogue-node nodeindex="3" editor-x="612" editor-y="253">
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>bbb</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="5" />
+      <effect>
+        <activate flag="A1_R2" guid="e6514476-30b4-4bb0-abfe-21a80b9f567f" />
+        <condition />
+        <activate flag="A1_ID2" guid="03d2d04d-bb37-4443-bde9-d5925796a303" />
+        <condition />
+        <deactivate flag="A1_ID1" guid="31aa44a9-21f9-4b1f-bb28-8daf07cde899" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="612" editor-y="470">
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>ccc</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="5" />
+      <effect>
+        <activate flag="A1_R3" guid="aa605bb6-6028-4c9b-8a40-4b0506e90258" />
+        <condition />
+        <activate flag="A1_ID2" guid="300c18b6-94e5-41a6-8bfd-7fe396c73a44" />
+        <condition />
+        <deactivate flag="A1_ID1" guid="1ab28294-487c-4413-b226-d3b6f17c7d39" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="930" editor-y="182">
+      <speak-char idTarget="German">
+        <resources name="No name" />
+        <text>xxx</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="6" />
+    </dialogue-node>
+    <dialogue-node nodeindex="6" editor-x="1165" editor-y="182">
       <speak-player>
         <resources name="No name" />
-        <text>pa ti mi cola rellena</text>
+        <text>yyy</text>
       </speak-player>
       <condition />
-      <end-conversation />
+      <end-conversation>
+        <effect>
+          <trigger-cutscene idTarget="SegundoActo" guid="716b5df5-8628-4d82-98df-9ed4f75003be" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="A3_DialogoConciencia">
