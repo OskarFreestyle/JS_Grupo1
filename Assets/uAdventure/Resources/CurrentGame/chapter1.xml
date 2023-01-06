@@ -154,6 +154,45 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
+  <character id="Movil" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/animation/a.eaa.xml" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="A1_ConverWhats" guid="62c838f0-db84-4f3a-a8aa-f1b387fc0595" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </character>
   <scene id="WhatsAppConversation" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -260,10 +299,12 @@
         <inactive flag="A1_ID1" />
         <inactive flag="A1_ID2" />
         <inactive flag="A1_ID3" />
+        <inactive flag="A1_ID4" />
+        <inactive flag="A1_ID5" />
       </condition>
       <asset type="background" uri="assets/background/SalonDesayuno.png" />
     </resources>
-    <resources name="ID1">
+    <resources name="MSJ1">
       <condition>
         <active flag="A1_ID1" />
         <inactive flag="A1_R1" />
@@ -281,19 +322,15 @@
     </resources>
     <resources name="ID2_2">
       <condition>
-        <either>
-          <active flag="A1_ID2" />
-          <active flag="A1_R2" />
-        </either>
+        <active flag="A1_ID2" />
+        <active flag="A1_R2" />
       </condition>
       <asset type="background" uri="assets/background/ID2R2.png" />
     </resources>
     <resources name="ID2_3">
       <condition>
-        <either>
-          <active flag="A1_ID2" />
-          <active flag="A1_R3" />
-        </either>
+        <active flag="A1_ID2" />
+        <active flag="A1_R3" />
       </condition>
       <asset type="background" uri="assets/background/ID2R3.png" />
     </resources>
@@ -304,16 +341,59 @@
       </condition>
       <asset type="background" uri="assets/background/ID3R1.png" />
     </resources>
+    <resources name="ID3_2">
+      <condition>
+        <active flag="A1_ID3" />
+        <active flag="A1_R2" />
+      </condition>
+      <asset type="background" uri="assets/background/ID3R2.png" />
+    </resources>
+    <resources name="ID3_3">
+      <condition>
+        <active flag="A1_ID3" />
+        <active flag="A1_R3" />
+      </condition>
+      <asset type="background" uri="assets/background/ID3R3.png" />
+    </resources>
+    <resources name="ID4_1">
+      <condition>
+        <active flag="A1_ID4" />
+        <active flag="A1_R1" />
+      </condition>
+      <asset type="background" uri="assets/background/ID4R1.png" />
+    </resources>
+    <resources name="ID4_2">
+      <condition>
+        <active flag="A1_ID4" />
+        <active flag="A1_R2" />
+      </condition>
+      <asset type="background" uri="assets/background/ID4R2.png" />
+    </resources>
+    <resources name="ID4_3">
+      <condition>
+        <active flag="A1_ID4" />
+        <active flag="A1_R3" />
+      </condition>
+      <asset type="background" uri="assets/background/ID4R3.png" />
+    </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="35" y="645" width="473" height="573" hasInfluenceArea="no" idTarget="SegundoActo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
     <objects>
-      <object-ref idTarget="iPhone" x="1393" y="1040" scale="0.1870025" glow="no" layer="0" hasInfluenceArea="no">
+      <object-ref idTarget="iPhone" x="1356" y="1081" scale="0.1990317" glow="no" layer="1" hasInfluenceArea="no">
         <condition>
           <inactive flag="A1_ID1" />
         </condition>
       </object-ref>
     </objects>
+    <characters>
+      <character-ref idTarget="Movil" x="804" y="1030" scale="4.877466" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+    </characters>
   </scene>
   <scene id="SalonGerman" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -333,7 +413,7 @@
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="German" x="502" y="844" scale="1" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="German" x="347" y="836" scale="1" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="PasilloGerman" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -373,7 +453,7 @@
     </exits>
     <objects>
       <object-ref idTarget="Latas" x="306" y="504" scale="0.111206" glow="no" layer="1" hasInfluenceArea="no" />
-      <object-ref idTarget="Comida" x="352" y="311" scale="0.1163598" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="Comida" x="351" y="312" scale="0.1163598" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="BanoGerman" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -508,9 +588,9 @@
           <active flag="iPhoneWhatsappReceived" />
         </condition>
         <effect>
-          <activate flag="A1_ID1" guid="f5711ac0-8897-4049-9ceb-dd51ce00525b" />
+          <activate flag="A1_ID1" guid="88414340-80a0-4efa-9e3b-7a0d673659ba" />
           <condition />
-          <trigger-conversation idTarget="A1_ConverWhats" guid="f79cc1dc-c098-44f7-9441-bc795e28a04a" />
+          <trigger-conversation idTarget="A1_ConverWhats" guid="832578ee-10ae-4389-9108-ceea422ef72d" />
           <condition />
         </effect>
       </use>
@@ -525,14 +605,15 @@
     <description>
       <name>Latas</name>
       <brief>Parece que no hayan limpiado esto en mucho tiempo... Hay decenas de latas vacías tiradas por el suelo</brief>
-      <detailed>
-      </detailed>
+      <detailed>Parece que no hayan limpiado esto en mucho tiempo... Hay decenas de latas vacías tiradas por el suelo</detailed>
     </description>
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no">
         <documentation>Parece que no hayan limpiado esto en mucho tiempo... Hay decenas de latas vacías tiradas por el suelo</documentation>
         <effect>
           <activate flag="latasExaminadas" guid="4ab0219d-0c81-428e-a992-25130f13de79" />
+          <condition />
+          <show-text x="300" y="300" frontColor="#FFFFFFFF" borderColor="#000000FF" uri="" guid="78e8f92c-138e-44fa-b1a0-d139cbeacfea">Parece que no hayan limpiado esto en mucho tiempo... Hay decenas de latas vacías tiradas por el suelo</show-text>
           <condition />
         </effect>
       </examine>
@@ -547,14 +628,15 @@
     <description>
       <name>Comida</name>
       <brief>Buf, hay restos de comida... Es extraño, Germán antes no se dejaba nada</brief>
-      <detailed>
-      </detailed>
+      <detailed>Buf, hay restos de comida... Es extraño, Germán antes no se dejaba nada</detailed>
     </description>
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no">
         <documentation>Buf, hay restos de comida... Es extraño, Germán antes no se dejaba nada</documentation>
         <effect>
           <activate flag="comidaExaminada" guid="50c616f5-5bdd-4f3a-9eec-d2190fd075f9" />
+          <condition />
+          <show-text x="300" y="300" frontColor="#FFFFFFFF" borderColor="#000000FF" uri="" guid="6cea2713-55dd-430c-bbce-89912a03b4af">Buf, hay restos de comida... Es extraño, Germán antes no se dejaba nada</show-text>
           <condition />
         </effect>
       </examine>
@@ -584,16 +666,12 @@
   </object>
   <graph-conversation id="A1_ConverWhats">
     <dialogue-node nodeindex="0" editor-x="63" editor-y="100">
-      <speak-char idTarget="German">
+      <speak-player>
         <resources name="No name" />
         <text>Hey Pablo! Qué pasa tío?  Hace mazo que no sé de tí, cómo te va? </text>
-      </speak-char>
+      </speak-player>
       <condition />
       <child nodeindex="1" />
-      <effect>
-        <remove-element idTarget="iPhone" guid="810ba5b9-a644-408b-a556-a5a2f2d49832" />
-        <condition />
-      </effect>
     </dialogue-node>
     <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="342" editor-y="97" x="342" y="97">
       <speak-player>
@@ -616,10 +694,10 @@
       <child nodeindex="4" />
     </option-node>
     <dialogue-node nodeindex="2" editor-x="612" editor-y="41">
-      <speak-char idTarget="German">
+      <speak-player>
         <resources name="No name" />
-        <text>aaaaaa</text>
-      </speak-char>
+        <text>aaaajkjbc</text>
+      </speak-player>
       <condition />
       <child nodeindex="5" />
       <effect>
@@ -627,15 +705,13 @@
         <condition />
         <activate flag="A1_ID2" guid="80a94c27-ccf9-4aac-98ad-9e7802b58d5b" />
         <condition />
-        <deactivate flag="A1_ID1" guid="220d6574-230a-4438-8af6-13f2c6647f96" />
-        <condition />
       </effect>
     </dialogue-node>
     <dialogue-node nodeindex="3" editor-x="612" editor-y="253">
-      <speak-char idTarget="German">
+      <speak-player>
         <resources name="No name" />
-        <text>bbbbb</text>
-      </speak-char>
+        <text>ssssssssss</text>
+      </speak-player>
       <condition />
       <child nodeindex="5" />
       <effect>
@@ -643,15 +719,13 @@
         <condition />
         <activate flag="A1_ID2" guid="03d2d04d-bb37-4443-bde9-d5925796a303" />
         <condition />
-        <deactivate flag="A1_ID1" guid="69f6e298-6783-48bc-9000-1f85f2bec661" />
-        <condition />
       </effect>
     </dialogue-node>
     <dialogue-node nodeindex="4" editor-x="612" editor-y="470">
-      <speak-char idTarget="German">
+      <speak-player>
         <resources name="No name" />
         <text>cccc</text>
-      </speak-char>
+      </speak-player>
       <condition />
       <child nodeindex="5" />
       <effect>
@@ -659,29 +733,25 @@
         <condition />
         <activate flag="A1_ID2" guid="300c18b6-94e5-41a6-8bfd-7fe396c73a44" />
         <condition />
-        <deactivate flag="A1_ID1" guid="92a3f19e-9472-4626-b32c-45ba47aa3976" />
-        <condition />
       </effect>
     </dialogue-node>
     <dialogue-node nodeindex="5" editor-x="910" editor-y="192">
-      <speak-char idTarget="German">
+      <speak-player>
         <resources name="No name" />
         <text>Pues ahí vamos tío. He estado muy liado pero la verdad es que ahora tengo mucho tiempo libre.</text>
-      </speak-char>
+      </speak-player>
       <condition />
       <child nodeindex="6" />
       <effect>
-        <activate flag="A1_ID3" guid="c58bc40d-885f-4eed-8960-8f0dda442831" />
-        <condition />
-        <deactivate flag="A1_ID2" guid="72627570-876a-4451-93f7-c6741d859cb3" />
+        <activate flag="A1_ID3" guid="d11d5fc2-6f43-4ea6-9325-4f7b01a7349f" />
         <condition />
       </effect>
     </dialogue-node>
     <dialogue-node nodeindex="6" editor-x="1163" editor-y="205">
-      <speak-char idTarget="German">
+      <speak-player>
         <resources name="No name" />
         <text>Pues ahí vamos tío. He estado muy liado pero la verdad es que ahora tengo mucho tiempo libre.</text>
-      </speak-char>
+      </speak-player>
       <condition />
       <child nodeindex="7" />
     </dialogue-node>
@@ -704,19 +774,69 @@
       </speak-player>
       <condition />
       <child nodeindex="10" />
-      <effect>
-        <trigger-cutscene idTarget="SegundoActo" guid="47af3335-e5fd-4dfc-906b-741998f4a57c" />
-        <condition />
-      </effect>
     </option-node>
     <dialogue-node nodeindex="8" editor-x="1725" editor-y="17">
-      <end-conversation />
+      <speak-player>
+        <resources name="No name" />
+        <text>aaaa</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="11" />
+      <effect>
+        <activate flag="A1_R1" guid="0c8ccbed-c869-4ce4-a02b-54f3aa44f62e" />
+        <condition />
+        <activate flag="A1_ID4" guid="fc46af87-fe7c-4bbf-9c38-e0bf93d80680" />
+        <condition />
+      </effect>
     </dialogue-node>
     <dialogue-node nodeindex="9" editor-x="1687" editor-y="262">
-      <end-conversation />
+      <speak-player>
+        <resources name="No name" />
+        <text>x</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="11" />
+      <effect>
+        <activate flag="A1_R2" guid="cca96570-5c2e-4299-81ec-13dd4b2c5dec" />
+        <condition />
+        <activate flag="A1_ID4" guid="60caa5c5-a9ea-4297-96c5-a623836da1b3" />
+        <condition />
+      </effect>
     </dialogue-node>
     <dialogue-node nodeindex="10" editor-x="1722" editor-y="540">
-      <end-conversation />
+      <speak-player>
+        <resources name="No name" />
+        <text>cc</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="11" />
+      <effect>
+        <activate flag="A1_R3" guid="d242fa52-b6c1-4622-86e9-d605f486dcec" />
+        <condition />
+        <activate flag="A1_ID4" guid="c26f32a6-6b25-43a5-b480-a5842390d5cc" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="11" editor-x="2008" editor-y="279">
+      <speak-player>
+        <resources name="No name" />
+        <text>aasasaab</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="12" />
+    </dialogue-node>
+    <dialogue-node nodeindex="12" editor-x="2243" editor-y="279">
+      <speak-player>
+        <resources name="No name" />
+        <text>ccccccccccccc</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="A2_Active" guid="14ebf600-2f03-46c0-b3cf-05e6bda80d51" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="A3_DialogoConciencia">
