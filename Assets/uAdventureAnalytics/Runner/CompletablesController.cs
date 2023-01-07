@@ -205,7 +205,7 @@ namespace uAdventure.Analytics
 
             if (!finished)
             {
-                if(trace != null)
+                if (trace != null)
                 {
                     Debug.LogError("An interaction has been made while another element is being interacted!!");
                 }
