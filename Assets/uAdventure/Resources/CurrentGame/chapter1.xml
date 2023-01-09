@@ -304,6 +304,38 @@
       </condition>
       <asset type="background" uri="assets/background/SalonDesayuno.png" />
     </resources>
+    <resources name="ID10_3">
+      <condition>
+        <active flag="A1_ID10_R3" />
+      </condition>
+      <asset type="background" uri="assets/background/ID10R3.png" />
+    </resources>
+    <resources name="ID10_2">
+      <condition>
+        <active flag="A1_ID10_R2" />
+      </condition>
+      <asset type="background" uri="assets/background/ID10R2.png" />
+    </resources>
+    <resources name="ID10_1">
+      <condition>
+        <active flag="A1_ID10" />
+      </condition>
+      <asset type="background" uri="assets/background/ID10R1.png" />
+    </resources>
+    <resources name="ID9_2">
+      <condition>
+        <active flag="A1_ID8_R2" />
+        <active flag="A1_ID9" />
+      </condition>
+      <asset type="background" uri="assets/background/ID9R2.png" />
+    </resources>
+    <resources name="ID9_1">
+      <condition>
+        <active flag="A1_ID8_R1" />
+        <active flag="A1_ID9" />
+      </condition>
+      <asset type="background" uri="assets/background/ID9R1.png" />
+    </resources>
     <resources name="ID8_2">
       <condition>
         <active flag="A1_ID8" />
@@ -443,12 +475,12 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="92020" y="127875" width="1249159" height="113558" hasInfluenceArea="no" idTarget="SegundoActo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="220848" y="230175" width="2997981" height="204404" hasInfluenceArea="no" idTarget="SegundoActo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="iPhone" x="1407" y="1042" scale="0.1825279" glow="no" layer="0" hasInfluenceArea="no">
+      <object-ref idTarget="iPhone" x="1404" y="1040" scale="0.163104" glow="no" layer="0" hasInfluenceArea="no">
         <condition>
           <inactive flag="A1_ID1" />
         </condition>
@@ -959,25 +991,35 @@
       </speak-char>
       <condition />
       <child nodeindex="22" />
+      <effect>
+        <activate flag="A1_ID9" guid="d52ec862-2567-48ce-94c4-6664fc763dbd" />
+        <condition />
+      </effect>
     </dialogue-node>
     <dialogue-node nodeindex="22" editor-x="4375" editor-y="345">
+      <speak-char idTarget="Movil">
+        <resources name="No name" />
+        <text>
+        </text>
+      </speak-char>
+      <condition />
       <child nodeindex="23" />
     </dialogue-node>
     <option-node nodeindex="23" preListening="yes" editor-x="4637" editor-y="288" x="4637" y="288">
       <speak-player>
-        <text>pulgar</text>
+        <text>😍😍😍OK</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="24" />
       <speak-player>
-        <text>mano</text>
+        <text>Fino</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="25" />
       <speak-player>
-        <text>sonrisa</text>
+        <text>:D</text>
         <resources name="No name" />
       </speak-player>
       <condition />
@@ -985,17 +1027,38 @@
     </option-node>
     <dialogue-node nodeindex="24" editor-x="4879" editor-y="131">
       <child nodeindex="27" />
+      <effect>
+        <activate flag="A1_ID10" guid="2fbc8d14-ce30-4b4b-b96c-cdb1a17968fe" />
+        <condition />
+      </effect>
     </dialogue-node>
     <dialogue-node nodeindex="25" editor-x="4903" editor-y="358">
       <child nodeindex="27" />
+      <effect>
+        <activate flag="A1_ID10_R2" guid="0aae05cd-93bf-4912-bac5-0bb79b6670f7" />
+        <condition />
+      </effect>
     </dialogue-node>
     <dialogue-node nodeindex="26" editor-x="4923" editor-y="563">
       <child nodeindex="27" />
+      <effect>
+        <activate flag="A1_ID10_R3" guid="99b52578-8538-482c-9038-5f736446d728" />
+        <condition />
+      </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="27" editor-x="5194" editor-y="408">
+    <dialogue-node nodeindex="27" editor-x="5298" editor-y="411">
+      <speak-char idTarget="Movil">
+        <resources name="No name" />
+        <text>
+        </text>
+      </speak-char>
+      <condition />
+      <child nodeindex="28" />
+    </dialogue-node>
+    <dialogue-node nodeindex="28" editor-x="5533" editor-y="411">
       <end-conversation>
         <effect>
-          <trigger-cutscene idTarget="SegundoActo" guid="3345536b-a38c-4f54-bd4d-b5a16b31c71e" />
+          <trigger-cutscene idTarget="SegundoActo" guid="3d0ff5b8-60e8-476d-9d02-926ae8f7fdbd" />
           <condition />
         </effect>
       </end-conversation>
