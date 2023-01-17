@@ -275,7 +275,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Conciencia1" x="140" y="110" scale="0.3465136" orientation="0" glow="yes" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Conciencia1" x="837" y="467" scale="0.3465136" orientation="0" glow="yes" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Cafetería" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -288,7 +288,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="German" x="487" y="631" scale="0.7373584" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="German" x="695" y="1197" scale="0.5146888" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="SalonAndy" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -497,7 +497,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="1771" y="220" width="216" height="596" hasInfluenceArea="no" idTarget="PasilloGerman" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1288" y="21" width="100" height="682" hasInfluenceArea="no" idTarget="PasilloGerman" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
           <active flag="A2_IrAlBaño" />
@@ -505,7 +505,8 @@
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="German" x="347" y="836" scale="1" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="German" x="284" y="748" scale="0.4098179" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Conciencia1" x="952" y="523" scale="0.7003711" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="PasilloGerman" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -518,13 +519,13 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="17" y="140" width="108" height="246" hasInfluenceArea="no" idTarget="SalonGerman" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="299" y="205" width="153" height="830" hasInfluenceArea="no" idTarget="SalonGerman" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
-      <exit rectangular="yes" x="176" y="105" width="104" height="166" hasInfluenceArea="no" idTarget="CocinaGerman" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="813" y="280" width="235" height="687" hasInfluenceArea="no" idTarget="CocinaGerman" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
-      <exit rectangular="yes" x="334" y="130" width="96" height="269" hasInfluenceArea="no" idTarget="BanoGerman" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1434" y="212" width="95" height="836" hasInfluenceArea="no" idTarget="BanoGerman" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
@@ -539,13 +540,14 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="-2" y="42" width="124" height="448" hasInfluenceArea="no" idTarget="PasilloGerman" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="-2" y="164" width="107" height="843" hasInfluenceArea="no" idTarget="PasilloGerman" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="Latas" x="306" y="504" scale="0.111206" glow="no" layer="1" hasInfluenceArea="no" />
-      <object-ref idTarget="Comida" x="351" y="312" scale="0.1163598" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="Latas" x="1301" y="1024" scale="0.295932" glow="no" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="Comida" x="1180" y="641" scale="0.2703686" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="FotoGerman" x="678" y="616" scale="0.1534911" glow="no" layer="1" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="BanoGerman" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -558,12 +560,12 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="-5" y="63" width="80" height="357" hasInfluenceArea="no" idTarget="PasilloGerman" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="551" y="165" width="222" height="701" hasInfluenceArea="no" idTarget="PasilloGerman" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="Letrina" x="762" y="394" scale="3.340665" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="Letrina" x="1645" y="1070" scale="1.003399" glow="yes" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <slidescene id="WhatsappCutscene" start="no" idTarget="SegundoActo" destinyX="-2147483648" destinyY="-2147483648" transitionTime="2000" transitionType="2" next="new-scene" class="accesible" type="cutscene">
@@ -691,7 +693,7 @@
   <object id="Latas" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <documentation>Parece que no hayan limpiado esto en mucho tiempo... Hay decenas de latas vacías tiradas por el suelo</documentation>
     <resources name="Latas">
-      <asset type="image" uri="assets/image/latas.jpg" />
+      <asset type="image" uri="assets/image/LatasVacias.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -714,7 +716,7 @@
   <object id="Comida" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <documentation>Buf, hay restos de comida... Es extraño, Germán antes no se dejaba nada</documentation>
     <resources name="Pizza">
-      <asset type="image" uri="assets/image/pizza 2.jpg" />
+      <asset type="image" uri="assets/image/PizzaMalaAplastada.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -736,7 +738,7 @@
   </object>
   <object id="Letrina" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="image" uri="assets/image/VacioClickable.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -756,6 +758,23 @@
       </use>
     </actions>
   </object>
+  <object id="FotoGerman" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <documentation>Vaya no me había dado cuenta... pero Germán parece haber perdido mucho peso</documentation>
+    <resources name="Foto">
+      <asset type="image" uri="assets/image/FotoGerman.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>FotoGerman</name>
+      <brief>Vaya no me había dado cuenta... pero Germán parece haber perdido mucho peso</brief>
+      <detailed>Vaya no me había dado cuenta... pero Germán parece haber perdido mucho peso</detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <documentation>Vaya no me había dado cuenta... pero Germán parece haber perdido mucho peso</documentation>
+      </examine>
+    </actions>
+  </object>
   <graph-conversation id="A1_ConverWhats">
     <dialogue-node nodeindex="0" editor-x="63" editor-y="100">
       <speak-char idTarget="Movil">
@@ -765,7 +784,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="342" editor-y="97" x="342" y="97">
+    <option-node nodeindex="1" random="yes" keepShowing="yes" preListening="yes" editor-x="342" editor-y="97" x="342" y="97">
       <speak-player>
         <text>Hombreee Germán! Todo bien tío, y tú qué?</text>
         <resources name="No name" />
@@ -832,7 +851,7 @@
       <condition />
       <child nodeindex="7" />
     </dialogue-node>
-    <option-node nodeindex="7" keepShowing="yes" preListening="yes" editor-x="1392" editor-y="189" x="1392" y="189">
+    <option-node nodeindex="7" random="yes" keepShowing="yes" preListening="yes" editor-x="1392" editor-y="189" x="1392" y="189">
       <speak-player>
         <text>Genial tron, estaría bien quedar para ponernos al día.</text>
         <resources name="No name" />
@@ -899,7 +918,7 @@
       <condition />
       <child nodeindex="13" />
     </dialogue-node>
-    <option-node nodeindex="13" preListening="yes" editor-x="2478" editor-y="279" x="2478" y="279">
+    <option-node nodeindex="13" random="yes" keepShowing="yes" preListening="yes" editor-x="2478" editor-y="279" x="2478" y="279">
       <speak-player>
         <text>Ooh sí claro!! Tengo hasta la semana que viene libre</text>
         <resources name="No name" />
@@ -946,13 +965,12 @@
     <dialogue-node nodeindex="17" editor-x="3441" editor-y="298">
       <speak-char idTarget="Movil">
         <resources name="No name" />
-        <text>
-        </text>
+        <text>Vienes el viernes a pasar la tarde? Después de comer?</text>
       </speak-char>
       <condition />
       <child nodeindex="18" />
     </dialogue-node>
-    <option-node nodeindex="18" preListening="yes" editor-x="3676" editor-y="298" x="3676" y="298">
+    <option-node nodeindex="18" random="yes" keepShowing="yes" preListening="yes" editor-x="3676" editor-y="298" x="3676" y="298">
       <speak-player>
         <text>Genial, sobre las 5 estaré allí, mándame ubicación :)</text>
         <resources name="No name" />
@@ -996,16 +1014,15 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="22" editor-x="4375" editor-y="345">
+    <dialogue-node nodeindex="22" editor-x="4391" editor-y="366">
       <speak-char idTarget="Movil">
         <resources name="No name" />
-        <text>
-        </text>
+        <text>Ubicacion Recibida</text>
       </speak-char>
       <condition />
       <child nodeindex="23" />
     </dialogue-node>
-    <option-node nodeindex="23" preListening="yes" editor-x="4637" editor-y="288" x="4637" y="288">
+    <option-node nodeindex="23" random="yes" keepShowing="yes" preListening="yes" editor-x="4637" editor-y="288" x="4637" y="288">
       <speak-player>
         <text>😍😍😍OK</text>
         <resources name="No name" />
@@ -1186,7 +1203,7 @@
       <condition />
       <child nodeindex="11" />
     </dialogue-node>
-    <option-node nodeindex="11" preListening="yes" editor-x="2604" editor-y="267" x="2604" y="267">
+    <option-node nodeindex="11" random="yes" keepShowing="yes" preListening="yes" editor-x="2604" editor-y="267" x="2604" y="267">
       <speak-player>
         <text>Está muy delgado, y eso que ya no hace deporte, ¡ojalá saber cómo lo hace!</text>
         <resources name="No name" />
@@ -1843,7 +1860,7 @@
       <condition />
       <child nodeindex="3" />
     </dialogue-node>
-    <option-node nodeindex="3" preListening="yes" editor-x="854" editor-y="41" x="854" y="41">
+    <option-node nodeindex="3" random="yes" keepShowing="yes" preListening="yes" editor-x="854" editor-y="41" x="854" y="41">
       <speak-player correct="true">
         <text>Ya imagino, al final estando solo en casa tendrás muchas cosas que hacer.</text>
         <resources name="No name" />
@@ -1976,10 +1993,10 @@
       <child nodeindex="11" />
     </dialogue-node>
     <dialogue-node nodeindex="9" editor-x="2061" editor-y="609">
-      <speak-player>
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>No se le ve de buen humor, mejor me ahorro el comentario.</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="6" />
     </dialogue-node>
@@ -2034,10 +2051,10 @@
       <child nodeindex="15" />
     </option-node>
     <dialogue-node nodeindex="14" editor-x="3428" editor-y="89">
-      <speak-player>
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>No creo que sea eso, en verdad se le nota desganado.</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="13" />
     </dialogue-node>
@@ -2106,7 +2123,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="278" editor-y="22" x="278" y="22">
+    <option-node nodeindex="1" random="yes" keepShowing="yes" preListening="yes" editor-x="278" editor-y="22" x="278" y="22">
       <speak-player correct="true">
         <text>Esta bien no pasa nada. Ya nos veremos otro día. </text>
         <resources name="No name" />
@@ -2141,7 +2158,7 @@
       <condition />
       <child nodeindex="4" />
     </dialogue-node>
-    <option-node nodeindex="4" preListening="yes" editor-x="1101" editor-y="319" x="1101" y="319">
+    <option-node nodeindex="4" random="yes" keepShowing="yes" preListening="yes" editor-x="1101" editor-y="319" x="1101" y="319">
       <speak-player correct="true">
         <text>Está bien, pues nos vemos otro día.</text>
         <resources name="No name" />
@@ -2165,7 +2182,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="385" editor-y="107" x="385" y="107">
+    <option-node nodeindex="1" random="yes" keepShowing="yes" preListening="yes" editor-x="385" editor-y="107" x="385" y="107">
       <speak-player correct="true">
         <text>¿Y eso?</text>
         <resources name="No name" />
@@ -2208,10 +2225,10 @@
       <child nodeindex="6" />
     </option-node>
     <dialogue-node nodeindex="4" editor-x="1222" editor-y="0">
-      <speak-player>
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Pues vaya mierda</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="3" />
     </dialogue-node>
@@ -2272,7 +2289,7 @@
         </effect>
       </end-conversation>
     </dialogue-node>
-    <option-node nodeindex="10" preListening="yes" editor-x="2228" editor-y="65" x="2228" y="65">
+    <option-node nodeindex="10" random="yes" keepShowing="yes" preListening="yes" editor-x="2228" editor-y="65" x="2228" y="65">
       <speak-player correct="true">
         <text>Entonces no te quejes. Sabías lo que hacías al dejar el instituto.</text>
         <resources name="No name" />
@@ -2287,7 +2304,7 @@
       <child nodeindex="9" />
     </option-node>
     <dialogue-node nodeindex="11" editor-x="2467" editor-y="12">
-      <speak-char idTarget="German">
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Es verdad que en su día le dije que se arrepentiría.  Pero no es momento para un “Te lo dije”. </text>
       </speak-char>
@@ -2319,7 +2336,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" random="yes" preListening="yes" editor-x="637" editor-y="263" x="637" y="263">
+    <option-node nodeindex="1" random="yes" keepShowing="yes" preListening="yes" editor-x="637" editor-y="263" x="637" y="263">
       <speak-player>
         <text>De tu trabajo</text>
         <resources name="No name" />
@@ -2378,7 +2395,7 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <timer time="3" usesEndCondition="no" multipleStarts="no" runsInLoop="no" showTime="yes" displayName="A1_WhatsappTimer" countDown="yes" showWhenStopped="no">
+  <timer time="3" usesEndCondition="no" multipleStarts="no" runsInLoop="no" showTime="no" displayName="A1_WhatsappTimer" countDown="yes" showWhenStopped="no">
     <init-condition>
       <active flag="A1_Active" />
     </init-condition>
