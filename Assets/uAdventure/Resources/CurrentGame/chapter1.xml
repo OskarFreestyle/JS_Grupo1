@@ -288,7 +288,8 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="German" x="695" y="1197" scale="0.5146888" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="German" x="695" y="1197" scale="0.5146888" orientation="0" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Conciencia1" x="1346" y="706" scale="1" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="SalonAndy" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -577,7 +578,7 @@
     <name>
     </name>
   </slidescene>
-  <slidescene id="PrimerActo" start="yes" idTarget="SalonAndy" destinyX="-2147483648" destinyY="2147483647" transitionTime="500" transitionType="2" next="new-scene" class="accesible" type="cutscene">
+  <slidescene id="PrimerActo" start="no" idTarget="SalonAndy" destinyX="-2147483648" destinyY="2147483647" transitionTime="500" transitionType="2" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
     <effect>
@@ -620,7 +621,7 @@
     <name>
     </name>
   </slidescene>
-  <slidescene id="CuartoActo" start="no" idTarget="Cafetería" destinyX="-2147483648" destinyY="2147483647" transitionTime="0" transitionType="0" next="new-scene" class="accesible" type="cutscene">
+  <slidescene id="CuartoActo" start="yes" idTarget="Cafetería" destinyX="-2147483648" destinyY="2147483647" transitionTime="0" transitionType="0" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
     <effect>
@@ -671,9 +672,12 @@
       <asset type="icon" uri="assets/icon/iPhoneVibra.png" />
     </resources>
     <description>
-      <name>iPhone</name>
-      <brief>iPhone</brief>
-      <detailed>iPhone Whatsapp Received</detailed>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
     </description>
     <actions>
       <use needsGoTo="yes" keepDistance="35" not-effects="no">
@@ -707,7 +711,7 @@
         <effect>
           <activate flag="latasExaminadas" guid="4ab0219d-0c81-428e-a992-25130f13de79" />
           <condition />
-          <show-text x="300" y="300" frontColor="#FFFFFFFF" borderColor="#000000FF" uri="" guid="78e8f92c-138e-44fa-b1a0-d139cbeacfea">Parece que no hayan limpiado esto en mucho tiempo... Hay decenas de latas vacías tiradas por el suelo</show-text>
+          <show-text x="300" y="300" frontColor="#EEA000FF" borderColor="#000000FF" uri="" guid="78e8f92c-138e-44fa-b1a0-d139cbeacfea">Parece que no hayan limpiado esto en mucho tiempo... Hay decenas de latas vacías tiradas por el suelo</show-text>
           <condition />
         </effect>
       </examine>
@@ -730,7 +734,7 @@
         <effect>
           <activate flag="comidaExaminada" guid="50c616f5-5bdd-4f3a-9eec-d2190fd075f9" />
           <condition />
-          <show-text x="300" y="300" frontColor="#FFFFFFFF" borderColor="#000000FF" uri="" guid="6cea2713-55dd-430c-bbce-89912a03b4af">Buf, hay restos de comida... Es extraño, Germán antes no se dejaba nada</show-text>
+          <show-text x="300" y="300" frontColor="#EEA000FF" borderColor="#000000FF" uri="" guid="6cea2713-55dd-430c-bbce-89912a03b4af">Buf, hay restos de comida... Es extraño, Germán antes no se dejaba nada</show-text>
           <condition />
         </effect>
       </examine>
@@ -754,6 +758,8 @@
         <effect>
           <activate flag="A2_VolverBano" guid="e84e2a7c-d2b2-4625-aa86-a4b4a4e140b5" />
           <condition />
+          <show-text x="300" y="300" frontColor="#EEA000FF" borderColor="#000000FF" uri="" guid="08c55a24-cbd6-430d-95a7-5b305513200e">Joder qué gustazo</show-text>
+          <condition />
         </effect>
       </use>
     </actions>
@@ -772,6 +778,10 @@
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no">
         <documentation>Vaya no me había dado cuenta... pero Germán parece haber perdido mucho peso</documentation>
+        <effect>
+          <show-text x="300" y="300" frontColor="#EEA000FF" borderColor="#000000FF" uri="" guid="0e05f1f3-7bf0-424e-b991-a8391766f62e">Vaya no me había dado cuenta... pero Germán parece haber perdido mucho peso</show-text>
+          <condition />
+        </effect>
       </examine>
     </actions>
   </object>
@@ -786,7 +796,7 @@
     </dialogue-node>
     <option-node nodeindex="1" random="yes" keepShowing="yes" preListening="yes" editor-x="342" editor-y="97" x="342" y="97">
       <speak-player>
-        <text>Hombreee Germán! Todo bien tío, y tú qué?</text>
+        <text>Hombreeee Germán! Todo bien tío, y tú qué?</text>
         <resources name="No name" />
       </speak-player>
       <condition />
@@ -1085,30 +1095,30 @@
     <dialogue-node nodeindex="0" editor-x="47" editor-y="172">
       <speak-char idTarget="Conciencia1">
         <resources name="No name" />
-        <text>Ha estado bien volver a ver a Germán</text>
+        <text>Ha estado bien el volver a ver a Germán otra vez</text>
       </speak-char>
       <condition />
       <speak-char idTarget="Conciencia1">
         <resources name="No name" />
-        <text>Sin embargo, hay algo que no me cuadra; me he dado cuenta de cosas que me preocupan un poco</text>
+        <text>Sin embargo, hay algo que no me cuadra, me he dado cuenta de cosas que me preocupan un poco</text>
       </speak-char>
       <condition />
       <speak-char idTarget="Conciencia1">
         <resources name="No name" />
-        <text>Por ejemplo, es una pena que le echaran del trabajo. ¿Le habrá afectado mucho?</text>
+        <text>Es una pena que le echaran del trabajo, ¿le habrá afectado mucho? </text>
       </speak-char>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
     <option-node nodeindex="1" random="yes" keepShowing="yes" preListening="yes" editor-x="322" editor-y="155" x="322" y="155">
-      <speak-player correct="true">
-        <text>Dijo que no le volvería a contratar nadie. Quizás fuese su primer trabajo o a lo mejor le costó conseguirlo, pero parece que le ha sentado muy mal. Quizás debería preguntarle por su despido e intentar motivarlo a seguir intentándolo.</text>
+      <speak-player>
+        <text>No creo, en estos tiempos es normal que te echen del curro y luego te vuelvan a contratar en otro y así todo el rato, le diré que lo mejor es no darle tanta importancia.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="2" />
       <speak-player>
-        <text>No creo, en estos tiempos es normal que te echen del curro y luego te vuelvan a contratar en otro y así todo el rato, le diré que lo mejor es no darle tanta importancia.</text>
+        <text>Dijo que no le volvería a contratar nadie. Quizás fuese su primer trabajo o a lo mejor le costó conseguirlo, pero parece que le ha sentado muy mal. </text>
         <resources name="No name" />
       </speak-player>
       <condition />
@@ -1117,7 +1127,7 @@
     <dialogue-node nodeindex="2" editor-x="600" editor-y="177">
       <speak-char idTarget="Conciencia1">
         <resources name="No name" />
-        <text>Quizás no sea tan grave, pero en cualquier caso debería comprobar al menos cómo está él</text>
+        <text>Aunque yo piense que no sea tan grave, es algo que a él le ha afectado mucho. Podría comprobar al menos cómo está él y ofrecerle mi ayuda para lo que necesite.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="Conciencia1">
@@ -1129,27 +1139,27 @@
     </dialogue-node>
     <option-node nodeindex="3" random="yes" keepShowing="yes" preListening="yes" editor-x="856" editor-y="143" x="856" y="143">
       <speak-player>
-        <text>Germán no parecía muy conforme con ello, pero se apañará bien, todo es cuestión de acostumbrarse</text>
+        <text>Germán no parecía muy conforme con ello, pero se apañará bien, todo es cuestión de acostumbrarse.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="4" />
       <speak-player>
-        <text>Se le estaba haciendo más duro de lo que se esperaba </text>
+        <text>Se le estaba haciendo más duro de lo que se esperaba.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="5" />
     </option-node>
-    <dialogue-node nodeindex="4" editor-x="1234" editor-y="19">
+    <dialogue-node nodeindex="4" editor-x="959" editor-y="0">
       <speak-char idTarget="Conciencia1">
         <resources name="No name" />
-        <text>Sin embargo estaba demasiado desanimado, igual debería intentar apoyarlo con el cambio </text>
+        <text>Sin embargo estaba demasiado desanimado, igual debería intentar apoyarlo con el cambio.</text>
       </speak-char>
       <condition />
       <child nodeindex="6" />
     </dialogue-node>
-    <dialogue-node nodeindex="5" editor-x="1231" editor-y="292">
+    <dialogue-node nodeindex="5" editor-x="1180" editor-y="375">
       <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Por lo que me ha contado está bastante decepcionado con vivir él solo, además mencionó que las tareas le estaban agotando…</text>
@@ -1167,13 +1177,13 @@
     </dialogue-node>
     <option-node nodeindex="7" random="yes" keepShowing="yes" preListening="yes" editor-x="1812" editor-y="181" x="1812" y="181">
       <speak-player>
-        <text>Igual es que se ha cansado de hacer esas cosas y ya</text>
+        <text>Igual es que se ha cansado de hacer esas cosas y ya.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="8" />
       <speak-player>
-        <text>Es muy extraño que hayan dejado de gustarle en tan solo unos meses</text>
+        <text>Es muy extraño que hayan dejado de gustarle en tan solo unos meses.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
@@ -1190,7 +1200,7 @@
     <dialogue-node nodeindex="9" editor-x="2060" editor-y="374">
       <speak-char idTarget="Conciencia1">
         <resources name="No name" />
-        <text>No puede ser algo normal, parecía totalmente apagado ante la idea de volver con esos hobbies, pero también de hacer todo tipo de cosas en general</text>
+        <text>No puede ser algo normal, parecía totalmente apagado ante la idea de volver con esos hobbies, pero también de hacer todo tipo de cosas en general.</text>
       </speak-char>
       <condition />
       <child nodeindex="10" />
@@ -1198,7 +1208,7 @@
     <dialogue-node nodeindex="10" editor-x="2364" editor-y="263">
       <speak-char idTarget="Conciencia1">
         <resources name="No name" />
-        <text>A parte de sus hábitos, también ha cambiado físicamente</text>
+        <text>A parte de sus hábitos, también ha cambiado físicamente.</text>
       </speak-char>
       <condition />
       <child nodeindex="11" />
@@ -1211,7 +1221,7 @@
       <condition />
       <child nodeindex="12" />
       <speak-player>
-        <text>Ha perdido mucho peso, es como si tampoco quisiera comer</text>
+        <text>Ha perdido mucho peso, es como si tampoco quisiera comer.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
@@ -1255,12 +1265,12 @@
       <condition />
       <speak-char idTarget="Conciencia1">
         <resources name="No name" />
-        <text>Me aseguraré de saber cómo se siente, porque le veo mal y no sé…</text>
+        <text>Me aseguraré de saber cómo se siente, porque le veo mal y no sé… yo no tengo ni idea pero esto tiene pinta de ser algún tipo de trastorno psicológico.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="Conciencia1">
         <resources name="No name" />
-        <text>Además, no sé muy bien como ayudarlo… yo puedo escucharle pero no estoy seguro de que con eso sea suficiente e igual empeoro la situación sin quererlo. </text>
+        <text>Además, no sé muy bien como ayudarlo… yo puedo escucharle pero no estoy seguro de que con eso sea suficiente e igual empeoro la situación sin quererlo.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="Conciencia1">
@@ -1522,7 +1532,7 @@
     <dialogue-node nodeindex="20" editor-x="5422" editor-y="543">
       <speak-char idTarget="Conciencia1">
         <resources name="No name" />
-        <text>#! Seguro que ya lo ha pensado. Esto no ayuda en nada.</text>
+        <text>Seguro que ya lo ha pensado. Esto no ayuda en nada.</text>
       </speak-char>
       <condition />
       <child nodeindex="17" />
@@ -1643,10 +1653,10 @@
         <text>Decir esto no ayuda en nada.</text>
       </speak-char>
       <condition />
-      <speak-player>
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Además no puedo crearle ilusiones sobre el futuro como si lo conociera.</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="28" />
     </dialogue-node>
@@ -1667,10 +1677,10 @@
       <child nodeindex="28" />
     </dialogue-node>
     <dialogue-node nodeindex="32" editor-x="7560" editor-y="916">
-      <speak-player>
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>No debería normalizar cómo se está sintiendo, eso le hará sentir peor.</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="28" />
     </dialogue-node>
@@ -1821,15 +1831,15 @@
       <condition />
       <child nodeindex="45" />
     </dialogue-node>
-    <option-node nodeindex="45" random="yes" keepShowing="yes" preListening="yes" editor-x="10614" editor-y="318" x="10614" y="318">
+    <option-node nodeindex="45" random="yes" keepShowing="yes" preListening="yes" editor-x="10467" editor-y="310" x="10467" y="310">
       <speak-player>
-        <text>Ir a un psicólogo no es de estar loco, simplemente es que te preocupas por tu salud mental. </text>
+        <text>Ir a un psicólogo no es de estar loco, simplemente es que te preocupas por tu salud mental. Anímate a ir y si quieres te acompaño el primer día.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="46" />
     </option-node>
-    <dialogue-node nodeindex="46" editor-x="10943" editor-y="336">
+    <dialogue-node nodeindex="46" editor-x="10989" editor-y="330">
       <speak-char idTarget="German">
         <resources name="No name" />
         <text>Si, tienes razón, iré.</text>
@@ -1840,7 +1850,12 @@
         <text>Muchas gracias por escucharme y por tus consejos.</text>
       </speak-char>
       <condition />
-      <end-conversation />
+      <end-conversation>
+        <effect>
+          <trigger-cutscene idTarget="Epilogo" guid="95e94496-521a-456e-a42f-5cbe39595066" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="A2_DialogoPrimero">
@@ -2238,10 +2253,10 @@
       <condition />
       <child nodeindex="6" />
     </option-node>
-    <dialogue-node nodeindex="4" editor-x="1222" editor-y="0">
+    <dialogue-node nodeindex="4" editor-x="1222" editor-y="1">
       <speak-char idTarget="Conciencia1">
         <resources name="No name" />
-        <text>Pues vaya mierda</text>
+        <text>¿Cómo le voy a decir eso?</text>
       </speak-char>
       <condition />
       <child nodeindex="3" />
@@ -2317,7 +2332,7 @@
       <condition />
       <child nodeindex="9" />
     </option-node>
-    <dialogue-node nodeindex="11" editor-x="2467" editor-y="12">
+    <dialogue-node nodeindex="11" editor-x="2497" editor-y="9">
       <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Es verdad que en su día le dije que se arrepentiría.  Pero no es momento para un “Te lo dije”. </text>
@@ -2385,10 +2400,10 @@
       <child nodeindex="4" />
     </option-node>
     <dialogue-node nodeindex="2" editor-x="1375" editor-y="55">
-      <speak-player>
+      <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Mejor cambio de tema, no parece estar muy contento en ese aspecto...</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>

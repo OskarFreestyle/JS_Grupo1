@@ -2,7 +2,42 @@
 <animation id="EpilogoAnim.eaa.xml" usetransitions="yes" slides="no">
   <documentation />
   <transition type="0" time="0" />
-  <frame uri="assets/animation/Fin.jpg" type="image" time="4000" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/Epilogo1.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Epilogo2.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Epilogo3.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Epilogo4.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Epilogo5.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Epilogo6.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Epilogo7.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Fin.jpg" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>
