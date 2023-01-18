@@ -121,7 +121,7 @@ También nos dijeron que una forma de ayudar e incentivar el que Germán se atre
 Hay varias líneas de diálogo en las que sugerimos que acuda a un médico o un psicólogo, y lo ideal es poner solo al psicólogo ya que lo de sugerir el médico puede verse como intentar poner "una excusa" para la solución del psicólogo, digamos que puede fomentar un poco el estigma.
 
 
-**Angélica López (psicóloga):**
+**Angélica Santa (Psicóloga General Sanitaria):**
 Las personas con depresión suelen tener problemas para dormir/comer bien, suelen
 sentirse solas. Dejan de sentirse motivadas por lo que siempre les ha gustado. En
 su cabeza, no creen que nunca vayan a sentirse mejor, han perdido la esperanza de
