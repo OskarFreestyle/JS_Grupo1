@@ -578,7 +578,7 @@
     <name>
     </name>
   </slidescene>
-  <slidescene id="PrimerActo" start="no" idTarget="SalonAndy" destinyX="-2147483648" destinyY="2147483647" transitionTime="500" transitionType="2" next="new-scene" class="accesible" type="cutscene">
+  <slidescene id="PrimerActo" start="yes" idTarget="SalonAndy" destinyX="-2147483648" destinyY="2147483647" transitionTime="500" transitionType="2" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
     <effect>
@@ -621,7 +621,7 @@
     <name>
     </name>
   </slidescene>
-  <slidescene id="CuartoActo" start="yes" idTarget="Cafetería" destinyX="-2147483648" destinyY="2147483647" transitionTime="0" transitionType="0" next="new-scene" class="accesible" type="cutscene">
+  <slidescene id="CuartoActo" start="no" idTarget="Cafetería" destinyX="-2147483648" destinyY="2147483647" transitionTime="0" transitionType="0" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
     <effect>
@@ -796,7 +796,7 @@
     </dialogue-node>
     <option-node nodeindex="1" random="yes" keepShowing="yes" preListening="yes" editor-x="342" editor-y="97" x="342" y="97">
       <speak-player>
-        <text>Hombreeee Germán! Todo bien tío, y tú qué?</text>
+        <text>Hombreee Germán! Todo bien tío, y tú qué?</text>
         <resources name="No name" />
       </speak-player>
       <condition />
