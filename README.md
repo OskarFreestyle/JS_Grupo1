@@ -98,7 +98,7 @@ Además esto prepara al jugador de cara a responder de la mejor forma posible a 
 
 ## RECOMENDACIONES PROFESIONALES
 
-Asociaciones: hemos conseguido contactar con la Asociación Lassus, que se especializa en depresión para que revisasen los diálogos del juego. Tras una reunión online en la que les enseñamos el juego, nos dieron el siguiente feedback:
+**Asociación Lassus:** hemos contactado con una asociación que se especializa en depresión para que revisasen los diálogos del juego. Tras una reunión online en la que les enseñamos el juego, nos dieron el siguiente feedback:
 
 En el acto 4 Andy hacía alusión al problema de Germán como una enfermedad. Es mejor usar trastorno porque es más preciso y además cuando a alguien con depresión le decimos que está enfermo él va a sentir que al ser una enfermedad no puede hacer nada por curarse, mientras que al ser un trastorno sí que puede intentar tratarlo.
 
@@ -117,7 +117,7 @@ También nos dijeron que una forma de ayudar e incentivar el que Germán se atre
 Hay varias líneas de diálogo en las que sugerimos que acuda a un médico o un psicólogo, y lo ideal es poner solo al psicólogo ya que lo de sugerir el médico puede verse como intentar poner "una excusa" para la solución del psicólogo, digamos que puede fomentar un poco el estigma.
 
 
-Angélica López (psicóloga):
+**Angélica López (psicóloga):**
 Las personas con depresión suelen tener problemas para dormir/comer bien, suelen
 sentirse solas. Dejan de sentirse motivadas por lo que siempre les ha gustado. En
 su cabeza, no creen que nunca vayan a sentirse mejor, han perdido la esperanza de
@@ -150,7 +150,7 @@ Para tratar con alguien con depresión:
     
     ○ Llora siempre que lo necesites
     
-Diego Moraga (psicólogo):
+**Diego Moraga (psicólogo):**
 
 
 ## INTERFAZ
