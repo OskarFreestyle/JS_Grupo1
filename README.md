@@ -151,6 +151,8 @@ Para tratar con alguien con depresión:
     ○ Llora siempre que lo necesites
     
 **Diego Moraga (psicólogo):**
+Nos ha facilitado el téxto del epílogo.
+
 Cambios generales a la hora de "diagnosticar" la depresion en el Acto 3. 
 
 Usar problema psicológico en vez de problema mental.
