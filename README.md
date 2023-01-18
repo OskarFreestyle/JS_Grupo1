@@ -52,8 +52,6 @@ Está deprimido, aunque él no es consciente de ello ni lo expone de forma direc
 Es al visitarlo y al hablar con él cuando el protagonista se va dando cuenta de la situación de Germán.
 
 ## HISTORIA
-**Introducción:** Eliges tu nombre y género.
-Aparece un cuadrito en el que introduces tu nombre y un desplegable en el que eliges tu género (Hombre, mujer, otros).
 
 **1er acto:** Llevabas sin saber de Germán un tiempo y por eso le escribes para ver cómo le va. Habláis un poco de los viejos tiempos y acaba invitándote a su casa.
 
@@ -86,7 +84,7 @@ Además esto prepara al jugador de cara a responder de la mejor forma posible a 
   <img src="https://github.com/OskarFreestyle/JS_Grupo1/blob/main/Assets/Apodyopsis/GDD%20images/DialogoActo3.png">
 </p>
 
-**4o acto:** En esta segunda quedada, intentas hacer ver que Germán tiene un problema y que necesita buscar ayuda profesional.
+**4o acto:** En esta segunda quedada, intentas hacer ver a Germán que tiene un problema y que necesita buscar ayuda profesional.
 
 **Escenario:** Cafetería
 
@@ -94,7 +92,13 @@ Además esto prepara al jugador de cara a responder de la mejor forma posible a 
   <img src="https://github.com/OskarFreestyle/JS_Grupo1/blob/main/Assets/Apodyopsis/GDD%20images/DialogoActo4.png">
 </p>
 
-**Epílogo:** Después de unos meses Germán ha mejorado gracias a haber acudido a ayuda profesional y llegas a la conclusión de que todo sería mejor si las personas con problemas de este tipo se dieran cuenta y fueran al psicólogo.
+**Epílogo:** 
+Germán tomó la decisión de ir a un psicólogo. 
+Actualmente, sigue en terapia y está muy contento con sus avances. 
+Es un espacio en el que se siente escuchado y en el que encuentra herramientas para poder gestionar sus problemas.
+Esto no lo hizo solo, ya que después de hablar contigo …
+sintió que realmente alguien se preocupaba por él, le dio fuerzas para mejorar y tomó la valiente decisión de pedir ayuda a un profesional
+Y todo gracias a tu capacidad para escuchar activamente a Germán, validar sus emociones y demostrarle que te preocupas y que eres un apoyo para él.
 
 ## RECOMENDACIONES PROFESIONALES
 
