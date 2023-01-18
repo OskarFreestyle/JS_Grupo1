@@ -796,7 +796,7 @@
     </dialogue-node>
     <option-node nodeindex="1" random="yes" keepShowing="yes" preListening="yes" editor-x="342" editor-y="97" x="342" y="97">
       <speak-player>
-        <text>Hombreeee Germán! Todo bien tío, y tú qué?</text>
+        <text>Hombreee Germán! Todo bien tío, y tú qué?</text>
         <resources name="No name" />
       </speak-player>
       <condition />
