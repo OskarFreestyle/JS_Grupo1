@@ -151,7 +151,13 @@ Para tratar con alguien con depresión:
     ○ Llora siempre que lo necesites
     
 **Diego Moraga (psicólogo):**
+Cambios generales a la hora de "diagnosticar" la depresion en el Acto 3. 
 
+Usar problema psicológico en vez de problema mental.
+
+No menospreciar los sentimientos de Germán porque le hayan despedido (no invalidar).
+
+Dar más importancia al hecho de que escuchar a Germán ya es una ayuda como tal.
 
 ## INTERFAZ
 Estilo la entrevista creado con uAdventure.
