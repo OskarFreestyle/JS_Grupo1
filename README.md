@@ -35,9 +35,7 @@ no es adecuada, haciéndote elegir una nueva opción.
 En algunos casos habrá varias respuestas correctas, pero la historia será lineal.
 
 ## PERSONAJES
-**Protagonista / jugador:** el género y el nombre será introducido al principio del
-juego para conseguir que el jugador empatice mejor con el personaje que controla.
-Eres un/una joven de 24 años.
+**Protagonista / jugador:** Andy, un joven de 24 años.
 
 **Germán:** es un amigo del colegio. Tiene 24 años igual que el protagonista.
 Con 16 años dejó el instituto sin acabar sus estudios y desde entonces había
@@ -101,15 +99,23 @@ Además esto prepara al jugador de cara a responder de la mejor forma posible a 
 ## RECOMENDACIONES PROFESIONALES
 
 Asociaciones: hemos conseguido contactar con la Asociación Lassus, que se especializa en depresión para que revisasen los diálogos del juego. Tras una reunión online en la que les enseñamos el juego, nos dieron el siguiente feedback:
+
 En el acto 4 Andy hacía alusión al problema de Germán como una enfermedad. Es mejor usar trastorno porque es más preciso y además cuando a alguien con depresión le decimos que está enfermo él va a sentir que al ser una enfermedad no puede hacer nada por curarse, mientras que al ser un trastorno sí que puede intentar tratarlo.
+
 En el acto 3 deberíamos decir que Germán tiene o debe ir al psicólogo, de forma contundente y directa.
 Aludir a que el profesional es alguien que te puede acompañar en todo esto.
+
 Durante la conversación del acto 4 es aconsejable ir de cosas más abstractas a cosas más concretas para evitar el estigma, ya que no sabemos que tipo de "barreras" tiene la otra persona.
+
 Hay una parte en la que Andy le dice a Germán que algo que ha dicho es una estupidez, y no debería decir eso porque está invalidando lo que Germán está sintiendo y además le va a generar rechazo.
+
 La frase de no tienes que sentirte culpable por estar mal sería mejor de la forma "Entiendo que te sientas culpable, yo también me sentiría así seguramente.", ya que empatizas con él.
+
 En cierta ocasión aludimos a que todo el mundo tiene malas rachas, pero con eso estamos normalizando sus problemas. En vez de quitarlo y ya nos recomendaron ponerlo como mala opción y que la conciencia explique el error.
 También nos dijeron que una forma de ayudar e incentivar el que Germán se atreva a ir es que Andy se ofrezca a ir con él la primera sesión para acompañarle y sentirse apoyado.
+
 Hay varias líneas de diálogo en las que sugerimos que acuda a un médico o un psicólogo, y lo ideal es poner solo al psicólogo ya que lo de sugerir el médico puede verse como intentar poner "una excusa" para la solución del psicólogo, digamos que puede fomentar un poco el estigma.
+
 
 Angélica López (psicóloga):
 Las personas con depresión suelen tener problemas para dormir/comer bien, suelen
@@ -125,24 +131,19 @@ Para tratar con alguien con depresión:
   ● Intentar escuchar a la persona sin necesidad de buscar una solución a su problema, muchas veces no tiene solución (por ejemplo, una muerte de un familiar) o no eres quién para decirle cómo solucionarlo y lo único que necesita es alguien con quien hablar.
 
   ● Nunca decir:
-
     ○ No estés triste / anímate
-
-○ No te preocupes
-
-○ Todo estará bien en el futuro
-
-○ No llores
+    ○ No te preocupes
+    ○ Todo estará bien en el futuro
+    ○ No llores
 
   ● En vez de eso, mejor decir:
-
     ○ Te entiendo
-
     ○ Es normal que te sientas así, y no pasa nada porque estés mal
-
     ○ No pasa nada por estar mal durante un tiempo (todos tenemos derecho a estar mal cuando tengamos que estar mal)
-
     ○ Llora siempre que lo necesites
+    
+Diego Moraga (psicólogo):
+
 
 ## INTERFAZ
 Estilo la entrevista creado con uAdventure.
