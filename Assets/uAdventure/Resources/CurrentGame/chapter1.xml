@@ -779,7 +779,7 @@
     <dialogue-node nodeindex="0" editor-x="63" editor-y="100">
       <speak-char idTarget="Movil">
         <resources name="No name" />
-        <text>Hey Pablo! Qué pasa tío?  Hace mazo que no sé de tí, cómo te va? </text>
+        <text>Hey Andy! Qué tal estás?  Hace mazo que no sé de tí, cómo te va? </text>
       </speak-char>
       <condition />
       <child nodeindex="1" />
@@ -1255,17 +1255,17 @@
       <condition />
       <speak-char idTarget="Conciencia1">
         <resources name="No name" />
-        <text>Me aseguraré de saber cómo se siente, pero en cualquiera de los casos le diré que vaya al psicólogo.</text>
+        <text>Me aseguraré de saber cómo se siente, porque le veo mal y no sé…</text>
       </speak-char>
       <condition />
       <speak-char idTarget="Conciencia1">
         <resources name="No name" />
-        <text>Es mejor prevenir que curar.</text>
+        <text>Además, no sé muy bien como ayudarlo… yo puedo escucharle pero no estoy seguro de que con eso sea suficiente e igual empeoro la situación sin quererlo. </text>
       </speak-char>
       <condition />
       <speak-char idTarget="Conciencia1">
         <resources name="No name" />
-        <text>Además, aunque quiero ayudarlo no sé muy bien cómo hacerlo, e igual empeoro la situación sin quererlo </text>
+        <text>Sin duda, debe de ir a un psicólogo o experto. Es mejor prevenir que curar.  </text>
       </speak-char>
       <condition />
       <end-conversation>
@@ -1283,7 +1283,7 @@
           <asset type="image" uri="" />
           <asset type="audio" uri="" />
         </resources>
-        <text>Hola Pablo</text>
+        <text>Hola Andy</text>
       </speak-char>
       <condition />
       <speak-char idTarget="German">
@@ -1619,7 +1619,7 @@
       <condition />
       <child nodeindex="29" />
       <speak-player>
-        <text>Tranquilo, no tienes que sentirte mal por estar mal, todo el mundo tiene sus rachas.</text>
+        <text>Tranquilo, entiendo que te sientas culpable. Yo también me sentiría así.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
@@ -1630,6 +1630,12 @@
       </speak-player>
       <condition />
       <child nodeindex="31" />
+      <speak-player>
+        <text>Tranquilo, todo el mundo tiene malas rachas.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="32" />
     </option-node>
     <dialogue-node nodeindex="29" editor-x="7507" editor-y="0">
       <speak-char idTarget="Conciencia1">
@@ -1644,13 +1650,13 @@
       <condition />
       <child nodeindex="28" />
     </dialogue-node>
-    <dialogue-node nodeindex="30" editor-x="7535" editor-y="335">
+    <dialogue-node nodeindex="30" editor-x="7540" editor-y="292">
       <speak-char idTarget="German">
         <resources name="No name" />
-        <text>Sí... supongo</text>
+        <text>Bueno... supongo</text>
       </speak-char>
       <condition />
-      <child nodeindex="32" />
+      <child nodeindex="33" />
     </dialogue-node>
     <dialogue-node nodeindex="31" editor-x="7545" editor-y="624">
       <speak-char idTarget="Conciencia1">
@@ -1660,35 +1666,43 @@
       <condition />
       <child nodeindex="28" />
     </dialogue-node>
-    <option-node nodeindex="32" random="yes" keepShowing="yes" preListening="yes" editor-x="7872" editor-y="309" x="7872" y="309">
+    <dialogue-node nodeindex="32" editor-x="7560" editor-y="916">
+      <speak-player>
+        <resources name="No name" />
+        <text>No debería normalizar cómo se está sintiendo, eso le hará sentir peor.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="28" />
+    </dialogue-node>
+    <option-node nodeindex="33" random="yes" keepShowing="yes" preListening="yes" editor-x="7872" editor-y="309" x="7872" y="309">
       <speak-player>
         <text>Seguro que en poco tiempo se te pasa.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="33" />
+      <child nodeindex="34" />
       <speak-player>
-        <text>¿Y has pensado en ir a un psicólogo o a un médico que pueda ayudarte?</text>
+        <text>¿Y has pensado en ir a un psicólogo que pueda ayudarte?</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="34" />
+      <child nodeindex="35" />
       <speak-player>
         <text>Yo creo que estás pasando por una depresión</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="35" />
+      <child nodeindex="36" />
     </option-node>
-    <dialogue-node nodeindex="33" editor-x="8178" editor-y="0">
+    <dialogue-node nodeindex="34" editor-x="8178" editor-y="0">
       <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>No creo que le ayude decirle algo que ni siquiera sé si va a pasar.</text>
       </speak-char>
       <condition />
-      <child nodeindex="32" />
+      <child nodeindex="33" />
     </dialogue-node>
-    <dialogue-node nodeindex="34" editor-x="8227" editor-y="351">
+    <dialogue-node nodeindex="35" editor-x="8227" editor-y="351">
       <speak-char idTarget="German">
         <resources name="No name" />
         <text>Eso mismo me dijo mi madre la última vez que hablamos...</text>
@@ -1699,37 +1713,37 @@
         <text>Pero no quiero, no creo que me vaya a ayudar un psicólogo.</text>
       </speak-char>
       <condition />
-      <child nodeindex="36" />
+      <child nodeindex="37" />
     </dialogue-node>
-    <dialogue-node nodeindex="35" editor-x="8223" editor-y="677">
+    <dialogue-node nodeindex="36" editor-x="8223" editor-y="677">
       <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Yo noy quién para hacer un diagnóstico así.</text>
       </speak-char>
       <condition />
-      <child nodeindex="32" />
+      <child nodeindex="33" />
     </dialogue-node>
-    <option-node nodeindex="36" random="yes" keepShowing="yes" preListening="yes" editor-x="8577" editor-y="334" x="8577" y="334">
+    <option-node nodeindex="37" random="yes" keepShowing="yes" preListening="yes" editor-x="8577" editor-y="334" x="8577" y="334">
       <speak-player>
         <text>Claro que te va a ayudar, Germán, ¿por qué piensas eso?</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="37" />
+      <child nodeindex="38" />
       <speak-player>
         <text>¿Por qué no?</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="37" />
+      <child nodeindex="38" />
       <speak-player>
         <text>Bueno pero no pierdes nada por probar, Germán. ¿Qué es lo peor que puede pasar si vas?</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="38" />
+      <child nodeindex="39" />
     </option-node>
-    <dialogue-node nodeindex="37" editor-x="8929" editor-y="208">
+    <dialogue-node nodeindex="38" editor-x="8929" editor-y="208">
       <speak-char idTarget="German">
         <resources name="No name" />
         <text>Porque si ni yo mismo sé por qué estoy así,</text>
@@ -1740,61 +1754,61 @@
         <text>¿qué le voy a decir y cómo me va a ayudar?</text>
       </speak-char>
       <condition />
-      <child nodeindex="39" />
+      <child nodeindex="40" />
     </dialogue-node>
-    <dialogue-node nodeindex="38" editor-x="8933" editor-y="504">
+    <dialogue-node nodeindex="39" editor-x="8933" editor-y="504">
       <speak-char idTarget="German">
         <resources name="No name" />
         <text>Nada, pero tampoco sabría qué decirle ni cómo me va a ayudar.</text>
       </speak-char>
       <condition />
-      <child nodeindex="39" />
+      <child nodeindex="40" />
     </dialogue-node>
-    <option-node nodeindex="39" random="yes" keepShowing="yes" preListening="yes" editor-x="9244" editor-y="320" x="9244" y="320">
+    <option-node nodeindex="40" random="yes" keepShowing="yes" preListening="yes" editor-x="9244" editor-y="320" x="9244" y="320">
       <speak-player>
         <text>Tú cuéntale cómo te sientes. Al fin y al cabo son profesionales en salud mental.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="40" />
+      <child nodeindex="41" />
       <speak-player>
         <text>Los psicólogos están precisamente para esto. Ayudarte a entender lo que te ocurre y a mejorar.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="40" />
+      <child nodeindex="41" />
     </option-node>
-    <dialogue-node nodeindex="40" editor-x="9627" editor-y="338">
+    <dialogue-node nodeindex="41" editor-x="9627" editor-y="338">
       <speak-char idTarget="German">
         <resources name="No name" />
         <text>Pero yo no tengo ninguna enfermedad ni nada.</text>
       </speak-char>
       <condition />
-      <child nodeindex="41" />
-    </dialogue-node>
-    <option-node nodeindex="41" random="yes" keepShowing="yes" preListening="yes" editor-x="9939" editor-y="314" x="9939" y="314">
-      <speak-player>
-        <text>Bueno... la depresión es una enfermedad mental importante.</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
       <child nodeindex="42" />
+    </dialogue-node>
+    <option-node nodeindex="42" random="yes" keepShowing="yes" preListening="yes" editor-x="9939" editor-y="314" x="9939" y="314">
       <speak-player>
-        <text>Eso no importa, los psicólogos no solo tratan a gente con enfermedades mentales.</text>
+        <text>Bueno... la depresión es un trastorno mental importante.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="43" />
+      <speak-player>
+        <text>Eso no importa, los psicólogos también están para ayudarte en situaciones como esta.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="44" />
     </option-node>
-    <dialogue-node nodeindex="42" editor-x="10260" editor-y="0">
+    <dialogue-node nodeindex="43" editor-x="10260" editor-y="0">
       <speak-char idTarget="Conciencia1">
         <resources name="No name" />
         <text>Lo es, pero yo no soy quién para decirle si tiene o no depresión.</text>
       </speak-char>
       <condition />
-      <child nodeindex="41" />
+      <child nodeindex="42" />
     </dialogue-node>
-    <dialogue-node nodeindex="43" editor-x="10275" editor-y="335">
+    <dialogue-node nodeindex="44" editor-x="10275" editor-y="335">
       <speak-char idTarget="German">
         <resources name="No name" />
         <text>Bueno de acuerdo, pero no le digas a nadie que voy a un psicólogo.</text>
@@ -1805,17 +1819,17 @@
         <text>No quiero que nadie piense que estoy loco.</text>
       </speak-char>
       <condition />
-      <child nodeindex="44" />
+      <child nodeindex="45" />
     </dialogue-node>
-    <option-node nodeindex="44" random="yes" keepShowing="yes" preListening="yes" editor-x="10614" editor-y="318" x="10614" y="318">
+    <option-node nodeindex="45" random="yes" keepShowing="yes" preListening="yes" editor-x="10614" editor-y="318" x="10614" y="318">
       <speak-player>
-        <text>Ir a un psicólogo no es de estar loco, eso es una estupidez. Simplemente es que te preocupas por tu salud mental.</text>
+        <text>Ir a un psicólogo no es de estar loco, simplemente es que te preocupas por tu salud mental. </text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="45" />
+      <child nodeindex="46" />
     </option-node>
-    <dialogue-node nodeindex="45" editor-x="10943" editor-y="336">
+    <dialogue-node nodeindex="46" editor-x="10943" editor-y="336">
       <speak-char idTarget="German">
         <resources name="No name" />
         <text>Si, tienes razón, iré.</text>

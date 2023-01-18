@@ -35,9 +35,7 @@ no es adecuada, haciéndote elegir una nueva opción.
 En algunos casos habrá varias respuestas correctas, pero la historia será lineal.
 
 ## PERSONAJES
-**Protagonista / jugador:** el género y el nombre será introducido al principio del
-juego para conseguir que el jugador empatice mejor con el personaje que controla.
-Eres un/una joven de 24 años.
+**Protagonista / jugador:** Andy, un joven de 24 años.
 
 **Germán:** es un amigo del colegio. Tiene 24 años igual que el protagonista.
 Con 16 años dejó el instituto sin acabar sus estudios y desde entonces había
@@ -54,8 +52,6 @@ Está deprimido, aunque él no es consciente de ello ni lo expone de forma direc
 Es al visitarlo y al hablar con él cuando el protagonista se va dando cuenta de la situación de Germán.
 
 ## HISTORIA
-**Introducción:** Eliges tu nombre y género.
-Aparece un cuadrito en el que introduces tu nombre y un desplegable en el que eliges tu género (Hombre, mujer, otros).
 
 **1er acto:** Llevabas sin saber de Germán un tiempo y por eso le escribes para ver cómo le va. Habláis un poco de los viejos tiempos y acaba invitándote a su casa.
 
@@ -88,30 +84,44 @@ Además esto prepara al jugador de cara a responder de la mejor forma posible a 
   <img src="https://github.com/OskarFreestyle/JS_Grupo1/blob/main/Assets/Apodyopsis/GDD%20images/DialogoActo3.png">
 </p>
 
-**4o acto:** En esta segunda quedada, intentas hacer ver que Germán tiene un problema y que necesita buscar ayuda profesional.
+**4o acto:** En esta segunda quedada, intentas hacer ver a Germán que tiene un problema y que necesita buscar ayuda profesional.
 
-**Escenario:** Da igual de momento reusar casa German.
+**Escenario:** Cafetería
 
 <p align="center" width="400">
   <img src="https://github.com/OskarFreestyle/JS_Grupo1/blob/main/Assets/Apodyopsis/GDD%20images/DialogoActo4.png">
 </p>
 
-**Epílogo:** Después de unos meses Germán ha mejorado gracias a haber acudido a ayuda profesional y llegas a la conclusión de que todo sería mejor si las personas con problemas de este tipo se dieran cuenta y fueran al psicólogo.
+**Epílogo:** 
+Germán tomó la decisión de ir a un psicólogo. 
+Actualmente, sigue en terapia y está muy contento con sus avances. 
+Es un espacio en el que se siente escuchado y en el que encuentra herramientas para poder gestionar sus problemas.
+Esto no lo hizo solo, ya que después de hablar contigo …
+sintió que realmente alguien se preocupaba por él, le dio fuerzas para mejorar y tomó la valiente decisión de pedir ayuda a un profesional
+Y todo gracias a tu capacidad para escuchar activamente a Germán, validar sus emociones y demostrarle que te preocupas y que eres un apoyo para él.
 
 ## RECOMENDACIONES PROFESIONALES
 
-Asociaciones: hemos conseguido contactar con la Asociación Lassus, que se especializa en depresión para que revisasen los diálogos del juego. Tras una reunión online en la que les enseñamos el juego, nos dieron el siguiente feedback:
+**Asociación Lassus:** hemos contactado con una asociación que se especializa en depresión para que revisasen los diálogos del juego. Tras una reunión online en la que les enseñamos el juego, nos dieron el siguiente feedback:
+
 En el acto 4 Andy hacía alusión al problema de Germán como una enfermedad. Es mejor usar trastorno porque es más preciso y además cuando a alguien con depresión le decimos que está enfermo él va a sentir que al ser una enfermedad no puede hacer nada por curarse, mientras que al ser un trastorno sí que puede intentar tratarlo.
+
 En el acto 3 deberíamos decir que Germán tiene o debe ir al psicólogo, de forma contundente y directa.
 Aludir a que el profesional es alguien que te puede acompañar en todo esto.
+
 Durante la conversación del acto 4 es aconsejable ir de cosas más abstractas a cosas más concretas para evitar el estigma, ya que no sabemos que tipo de "barreras" tiene la otra persona.
+
 Hay una parte en la que Andy le dice a Germán que algo que ha dicho es una estupidez, y no debería decir eso porque está invalidando lo que Germán está sintiendo y además le va a generar rechazo.
+
 La frase de no tienes que sentirte culpable por estar mal sería mejor de la forma "Entiendo que te sientas culpable, yo también me sentiría así seguramente.", ya que empatizas con él.
+
 En cierta ocasión aludimos a que todo el mundo tiene malas rachas, pero con eso estamos normalizando sus problemas. En vez de quitarlo y ya nos recomendaron ponerlo como mala opción y que la conciencia explique el error.
 También nos dijeron que una forma de ayudar e incentivar el que Germán se atreva a ir es que Andy se ofrezca a ir con él la primera sesión para acompañarle y sentirse apoyado.
+
 Hay varias líneas de diálogo en las que sugerimos que acuda a un médico o un psicólogo, y lo ideal es poner solo al psicólogo ya que lo de sugerir el médico puede verse como intentar poner "una excusa" para la solución del psicólogo, digamos que puede fomentar un poco el estigma.
 
-Angélica López (psicóloga):
+
+**Angélica López (psicóloga):**
 Las personas con depresión suelen tener problemas para dormir/comer bien, suelen
 sentirse solas. Dejan de sentirse motivadas por lo que siempre les ha gustado. En
 su cabeza, no creen que nunca vayan a sentirse mejor, han perdido la esperanza de
@@ -125,24 +135,35 @@ Para tratar con alguien con depresión:
   ● Intentar escuchar a la persona sin necesidad de buscar una solución a su problema, muchas veces no tiene solución (por ejemplo, una muerte de un familiar) o no eres quién para decirle cómo solucionarlo y lo único que necesita es alguien con quien hablar.
 
   ● Nunca decir:
-
+    
     ○ No estés triste / anímate
-
-○ No te preocupes
-
-○ Todo estará bien en el futuro
-
-○ No llores
+    
+    ○ No te preocupes
+    
+    ○ Todo estará bien en el futuro
+    
+    ○ No llores
 
   ● En vez de eso, mejor decir:
-
+    
     ○ Te entiendo
-
+    
     ○ Es normal que te sientas así, y no pasa nada porque estés mal
-
+    
     ○ No pasa nada por estar mal durante un tiempo (todos tenemos derecho a estar mal cuando tengamos que estar mal)
-
+    
     ○ Llora siempre que lo necesites
+    
+**Diego Moraga (psicólogo):**
+Nos ha facilitado el téxto del epílogo.
+
+Cambios generales a la hora de "diagnosticar" la depresion en el Acto 3. 
+
+Usar problema psicológico en vez de problema mental.
+
+No menospreciar los sentimientos de Germán porque le hayan despedido (no invalidar).
+
+Dar más importancia al hecho de que escuchar a Germán ya es una ayuda como tal.
 
 ## INTERFAZ
 Estilo la entrevista creado con uAdventure.
@@ -150,8 +171,7 @@ Estilo la entrevista creado con uAdventure.
 ## REFERENCIAS
 - La entrevista (Videojuego)
 
-- https://www.hacerfamilia.com/psicologia/ideas-ser-apoyo-amigo-familiar-depr
-esion-20220214103737.html
+- https://www.hacerfamilia.com/psicologia/ideas-ser-apoyo-amigo-familiar-depresion-20220214103737.html
 
 - https://psicologosanimae.com/que-decir-y-que-no-decir-a-alguien-con-depresion/
 
