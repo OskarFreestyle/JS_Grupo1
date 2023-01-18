@@ -96,11 +96,21 @@ Además esto prepara al jugador de cara a responder de la mejor forma posible a 
   <img src="https://github.com/OskarFreestyle/JS_Grupo1/blob/main/Assets/Apodyopsis/GDD%20images/DialogoActo4.png">
 </p>
 
-**Epílogo (si da tiempo):** Después de unos meses Germán ha mejorado gracias a haber acudido a ayuda profesional y llegas a la conclusión de que todo sería mejor si las personas con problemas de este tipo se dieran cuenta y fueran al psicólogo.
+**Epílogo:** Después de unos meses Germán ha mejorado gracias a haber acudido a ayuda profesional y llegas a la conclusión de que todo sería mejor si las personas con problemas de este tipo se dieran cuenta y fueran al psicólogo.
 
 ## RECOMENDACIONES PROFESIONALES
 
-Asociaciones: aún no nos han respondido
+Asociaciones: hemos conseguido contactar con la Asociación Lassus, que se especializa en depresión para que revisasen los diálogos del juego. Tras una reunión online en la que les enseñamos el juego, nos dieron el siguiente feedback:
+En el acto 4 Andy hacía alusión al problema de Germán como una enfermedad. Es mejor usar trastorno porque es más preciso y además cuando a alguien con depresión le decimos que está enfermo él va a sentir que al ser una enfermedad no puede hacer nada por curarse, mientras que al ser un trastorno sí que puede intentar tratarlo.
+En el acto 3 deberíamos decir que Germán tiene o debe ir al psicólogo, de forma contundente y directa.
+Aludir a que el profesional es alguien que te puede acompañar en todo esto.
+Durante la conversación del acto 4 es aconsejable ir de cosas más abstractas a cosas más concretas para evitar el estigma, ya que no sabemos que tipo de "barreras" tiene la otra persona.
+Hay una parte en la que Andy le dice a Germán que algo que ha dicho es una estupidez, y no debería decir eso porque está invalidando lo que Germán está sintiendo y además le va a generar rechazo.
+La frase de no tienes que sentirte culpable por estar mal sería mejor de la forma "Entiendo que te sientas culpable, yo también me sentiría así seguramente.", ya que empatizas con él.
+En cierta ocasión aludimos a que todo el mundo tiene malas rachas, pero con eso estamos normalizando sus problemas. En vez de quitarlo y ya nos recomendaron ponerlo como mala opción y que la conciencia explique el error.
+También nos dijeron que una forma de ayudar e incentivar el que Germán se atreva a ir es que Andy se ofrezca a ir con él la primera sesión para acompañarle y sentirse apoyado.
+Hay varias líneas de diálogo en las que sugerimos que acuda a un médico o un psicólogo, y lo ideal es poner solo al psicólogo ya que lo de sugerir el médico puede verse como intentar poner "una excusa" para la solución del psicólogo, digamos que puede fomentar un poco el estigma.
+
 Angélica López (psicóloga):
 Las personas con depresión suelen tener problemas para dormir/comer bien, suelen
 sentirse solas. Dejan de sentirse motivadas por lo que siempre les ha gustado. En
