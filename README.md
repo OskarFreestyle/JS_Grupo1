@@ -131,15 +131,23 @@ Para tratar con alguien con depresión:
   ● Intentar escuchar a la persona sin necesidad de buscar una solución a su problema, muchas veces no tiene solución (por ejemplo, una muerte de un familiar) o no eres quién para decirle cómo solucionarlo y lo único que necesita es alguien con quien hablar.
 
   ● Nunca decir:
+    
     ○ No estés triste / anímate
+    
     ○ No te preocupes
+    
     ○ Todo estará bien en el futuro
+    
     ○ No llores
 
   ● En vez de eso, mejor decir:
+    
     ○ Te entiendo
+    
     ○ Es normal que te sientas así, y no pasa nada porque estés mal
+    
     ○ No pasa nada por estar mal durante un tiempo (todos tenemos derecho a estar mal cuando tengamos que estar mal)
+    
     ○ Llora siempre que lo necesites
     
 Diego Moraga (psicólogo):
