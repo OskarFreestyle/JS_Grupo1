@@ -88,7 +88,7 @@ Además esto prepara al jugador de cara a responder de la mejor forma posible a 
 
 **4o acto:** En esta segunda quedada, intentas hacer ver que Germán tiene un problema y que necesita buscar ayuda profesional.
 
-**Escenario:** Da igual de momento reusar casa German.
+**Escenario:** Cafetería
 
 <p align="center" width="400">
   <img src="https://github.com/OskarFreestyle/JS_Grupo1/blob/main/Assets/Apodyopsis/GDD%20images/DialogoActo4.png">
