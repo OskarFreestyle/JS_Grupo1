@@ -16,6 +16,7 @@ PC
 
 ## DESCRIPCIÓN
 Apodyopsis trata sobre un chico de 24 años llamado Germán al cual le empiezan a afectar varios cambios en su vida y le acaban causando una depresión, aunque él no es consciente de ello. El jugador controlará a un amigo de Germán y tendrá que aconsejar a este para que se dé cuenta de que tiene un problema y necesita ayuda profesional.
+
 Vídeo Gameplay: https://drive.google.com/file/d/16vZODeM3N0Z5Rqblr8Fj3W-SK4qehqXY/view?usp=share_link
 
 ## OBJETIVO
