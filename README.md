@@ -167,8 +167,7 @@ Estilo la entrevista creado con uAdventure.
 ## REFERENCIAS
 - La entrevista (Videojuego)
 
-- https://www.hacerfamilia.com/psicologia/ideas-ser-apoyo-amigo-familiar-depr
-esion-20220214103737.html
+- https://www.hacerfamilia.com/psicologia/ideas-ser-apoyo-amigo-familiar-depresion-20220214103737.html
 
 - https://psicologosanimae.com/que-decir-y-que-no-decir-a-alguien-con-depresion/
 
